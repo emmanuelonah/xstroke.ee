@@ -1,0 +1,1 @@
+{ "baseUrl": "http://locahost:3000", "ignoreTestFile": "**/examples/*", "viewportHeight": 768, "viewportWeight": 1024 }

@@ -17,7 +17,7 @@
     "babel-loader": "^8.1.0"
   },
   "scripts": {
-    "test": "npm test",
+    "test": "npx cypress run",
     "start": "lite-server",
     "tsc": "tsc ./public/component/*.ts --watch"
   },
