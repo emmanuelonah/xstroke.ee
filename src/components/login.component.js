@@ -18,6 +18,6 @@ window.addEventListener("DOMContentLoaded", _ => {
   document.querySelector(".estonian__id").addEventListener("click", e => {
     e.stopPropagation();
     e.preventDefault();
-    window.location.assign("./estonian-id-login.component.html");
+    window.location.assign("/estonian-id-login");
   });
 });

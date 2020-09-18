@@ -21,7 +21,7 @@
   "scripts": {
     "start": "lite-server",
     "test": "npx cypress run",
-    "dev": "parcel  *.html watch",
+    "start": "parcel  *.html watch",
     "build": "parcel build *.html --out-dir prod",
     "tsc": "tsc src/components/*.ts --watch"
   },

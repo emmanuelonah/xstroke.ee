@@ -15,6 +15,6 @@ window.addEventListener("DOMContentLoaded", _ => {
   document.querySelector(".email__login").addEventListener("click", e => {
     e.stopPropagation();
     e.preventDefault();
-    window.location.assign("./login.component.html");
+    window.location.assign("/login");
   });
 });

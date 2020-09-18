@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     };
 
     console.log(_diagnosisFormValue);
-    window.location.assign("./instant-result.component.html");
+    window.location.assign("/instant-result");
     form.reset();
   });
 });
