@@ -23,38 +23,6 @@
   cursor: pointer;
 }
 
-/* Menu Items */
-.menu--items {
-  width: 90%;
-  margin: 0 auto;
-  background-color: var(--tertiary);
-  border-radius: 30px;
-  box-shadow: 0 3px 2px 2px #dfdfdf;
-  padding: 30px 20px;
-  font-size: 0.8rem;
-  position: absolute;
-  z-index: 2;
-  clear: both;
-  display: none;
-}
-
-.menu--items--displayer {
-  display: block;
-}
-
-.menu--items li {
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-.menu--items li a {
-  color: var(--primary);
-}
-
-.menu--items li:hover {
-  transform: translate(5px, 0);
-}
-
 /* Diagnosis form */
 .stroke--diagnosis--form {
   width: 100%;
