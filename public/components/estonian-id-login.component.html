@@ -6,13 +6,13 @@
     <meta name="application-name" content="XSTROKE EE" />
     <meta name="author" name="Emmanuel Onah AfricLite" />
     <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
-    <title>Sign up| XSTROKE EE</title>
+    <title>Estonian ID Login| XSTROKE EE</title>
     <!-- Browser Fav icon -->
     <link rel="icon" href="https://i.ibb.co/bsFfPhM/logo.jpg" />
     <!-- Styles -->
     <link rel="stylesheet" href="../../src/styles/&__general.style.css" />
     <link rel="stylesheet" href="./login.style.css" />
-    <link rel="stylesheet" href="./signup.style.css" />
+    <link rel="stylesheet" href="./estonian-id-login.style.css" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
@@ -26,25 +26,22 @@
 
       <div class="login--container--row--two">
         <h2 class="logo">XSTROKE EE</h2>
-        <h1>Signup</h1>
-        <p class="new--to--xstroke">Already have account? <a href="./login.component.html">Log in</a></p>
-        <form class="signup--form">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="You email address" required />
-
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters" required />
-
+        <h1>Welcome Back</h1>
+        <p class="new--to--xstroke">New to XSTROKE EE? <a href="./signup.component.html">Sign up</a></p>
+        <form class="estonian--id--login--form">
           <label for="estonianId">Estonian ID</label>
-          <input type="text" name="estonian_id" id="estonianId" placeholder="32922xxxx12" required />
-          <input type="submit" value="Signup" id="signup" aria-label="Click to signup" />
+          <input type="text" name="estonian_id" id="estonianId" placeholder="Your estonian Id" required />
+          <input type="submit" value="Login" id="login" aria-label="Click to login" />
 
+          <p class="or--login--with">Or log in with</p>
+          <button class="estonian__id email__login">Email</button>
+          <span class="checkbox--wrapper"> </span>
           <p class="terms--and--privacy">By continuing you accept our <a href="./terms.component.html">Terms of Use</a> and <a href="./privacy-policy.component.html">Privacy Policy</a>.</p>
         </form>
       </div>
     </div>
 
     <!-- Scripts -->
-    <script src="./signup.component.js"></script>
+    <script src="./estonian-id-login.component.js"></script>
   </body>
 </html>

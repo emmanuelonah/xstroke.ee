@@ -67,10 +67,6 @@
     text-align: start;
   }
 
-  .text__content__wrapper p:first-child {
-    border-top: solid 3px var(--tertiary);
-  }
-
   .landing--page--content--wrapper h1 {
     max-width: 70%;
     font-size: 1.2rem;
