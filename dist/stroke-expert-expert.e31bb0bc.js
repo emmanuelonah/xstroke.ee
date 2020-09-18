@@ -117,11 +117,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../index.js":[function(require,module,exports) {
+})({"index.js":[function(require,module,exports) {
 window.addEventListener("DOMContentLoaded", function (_) {
   document.querySelector(".giver__try").addEventListener("click", function (e) {
     e.preventDefault();
-    location.replace("./src/components/login.component.html");
+    location.replace("/login");
   });
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -328,5 +328,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../../index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/stroke-expert-expert.e31bb0bc.js.map
