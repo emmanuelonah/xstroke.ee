@@ -1,6 +1,8 @@
 node_modules
-/.cache/*
-/.vscode/*
-/prod/*
-/dist/*
-package.json
+.cache/
+.vscode/
+prod/
+dist/
+cypress/screenshots
+cypress/videos
+package-lock.json
