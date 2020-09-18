@@ -1,17 +1,17 @@
               # for root
              /*                        /index.html   200
             # for the rest
-           /about/*                 /about.component.html                     200
-          /diagnosis/*             /diagnosis.component.html                  200
-         /estonian-id-login/*     /estonian-id-login.component.html           200
-        /forgot-password/*       /forgot-password.component.html              200
-       /instant-result/*        /instant-result.component.html                200
-      /login/*                 /login.component.html                          200
-     /privacy-policy/*        /privacy-policy.component.html                  200
-    /security/*              /security.component.html                         200
-   /server-error-page/*     /server-error-page.component.html                 200
-  /signup/*                /signup.component.html                             200                         200 
- /terms/*                 /terms.component.html                                200
-/user-profile/*          /user-profile.component.html                          200
+           /about/*                 /about.html                     200
+          /diagnosis/*             /diagnosis.html                  200
+         /estonian-id-login/*     /estonian-id-login.html           200
+        /forgot-password/*       /forgot-password.html              200
+       /instant-result/*        /instant-result.html                200
+      /login/*                 /login.html                          200
+     /privacy-policy/*        /privacy-policy.html                  200
+    /security/*              /security.html                         200
+   /server-error-page/*     /server-error-page.html                 200
+  /signup/*                /signup.html                             200                         200 
+ /terms/*                 /terms.html                               200
+/user-profile/*          /user-profile.html                         200
     
 

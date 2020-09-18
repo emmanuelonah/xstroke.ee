@@ -20,21 +20,21 @@
 }
 
 .security--list li:nth-child(1)::before {
-  content: url(../../src/assets/images/gdpr.png);
+  content: url(../assets/images/gdpr.png);
   width: 10px !important;
   height: 10px !important;
   padding-right: 5px;
 }
 
 .security--list li:nth-child(2)::before {
-  content: url(../../src/assets/images/file-encrypted2.png);
+  content: url(../assets/images/file-encrypted2.png);
   width: 10px !important;
   height: 10px !important;
   padding-right: 5px;
 }
 
 .security--list li:nth-child(3)::before {
-  content: url(../../src/assets/images/data-encryption.png);
+  content: url(../assets/images/data-encryption.png);
   width: 10px !important;
   height: 10px !important;
   padding-right: 5px;
