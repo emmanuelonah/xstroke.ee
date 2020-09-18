@@ -29,7 +29,6 @@
 }
 
 .login--container--row--two h1 {
-  font-size: 1.2rem;
   padding-bottom: 10px;
 }
 
@@ -67,8 +66,6 @@ input[type="submit"] {
 .checkbox--wrapper {
   margin-top: 20px;
 }
-
-
 
 label[for="rememberDevice"] {
   padding: 0 10px;

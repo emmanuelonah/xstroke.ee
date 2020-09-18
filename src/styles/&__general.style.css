@@ -10,16 +10,33 @@
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
   font-size: 16px;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px 20px 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+h3 {
+  font-size: 0.9rem;
 }
 
 button {

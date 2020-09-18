@@ -13,16 +13,11 @@
   padding-left: 0;
 }
 
-.terms--page--container h1 {
-  font-size: 1.5rem;
-}
-
 .heading--h1 {
   margin-top: 20px;
 }
 
 .terms--page--container p {
-  font-size: 0.8rem;
   text-align: justify;
 }
 

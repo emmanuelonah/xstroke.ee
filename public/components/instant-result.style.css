@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.instant--logo {
+  padding-left: 0;
+}
+
 .instant--result--page--container img {
   width: 80%;
 }

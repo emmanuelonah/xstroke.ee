@@ -13,14 +13,6 @@
   justify-content: space-between;
 }
 
-.cookies--wrapper div h3 {
-  font-size: 0.9rem;
-}
-
-.cookies--wrapper div p {
-  font-size: 0.7rem;
-}
-
 .cookies--wrapper div a {
   color: #1e90ff;
 }

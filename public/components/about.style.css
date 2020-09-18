@@ -22,10 +22,6 @@
   font-size: 1rem;
 }
 
-.testing--steps--wrapper p {
-  font-size: 0.8rem;
-}
-
 .steps--scroller--wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
