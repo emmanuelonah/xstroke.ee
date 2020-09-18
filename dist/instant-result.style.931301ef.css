@@ -1,0 +1,95 @@
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --tertiary: #011220;
+}
+
+/* Mobile Style */
+.instant--result--page--container {
+  width: 100%;
+}
+
+.instant--logo {
+  padding-left: 0;
+}
+
+.instant--result--page--container img {
+  width: 80%;
+}
+
+.stroke--result--wrapper h1 {
+  font-size: 1rem;
+}
+
+/* Stroke risk */
+.stoke--risk,
+.stroke--suggestion {
+  background-color: var(--primary);
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 2px #eee;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+}
+
+.risk--number {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: solid 1px var(--secondary);
+  justify-content: space-between;
+}
+
+.risk--number span {
+  border: solid 1px var(--tertiary);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.risk--number span:nth-child(3) {
+  background-color: #ffa500;
+}
+
+.risk--number span:hover:nth-child(1) {
+  background-color: #008000;
+}
+
+.risk--number span:hover:nth-child(5) {
+  background-color: #ff0000;
+}
+
+/* Suggestion */
+.stroke--suggestion ul li {
+  padding: 20px 0;
+  border-bottom: solid 1px #cfcfcf;
+  font-size: 0.8rem;
+}
+
+/* Redirection buttons */
+.redirection--button--wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.redirection--button--wrapper button i {
+  padding-right: 5px;
+}
+/* mini ipad screen*/
+@media screen and (min-width: 620px) {
+}
+
+/* max ipad and mini laptop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* desktop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+/*# sourceMappingURL=/instant-result.style.931301ef.css.map */

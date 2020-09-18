@@ -1,0 +1,62 @@
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --tertiary: #011220;
+}
+
+/* Menu Items */
+.menu--items {
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--tertiary);
+  box-shadow: 0 3px 2px 2px #dfdfdf;
+  padding: 30px 20px;
+  font-size: 0.8rem;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  clear: both;
+  display: none;
+  height: 100vh;
+}
+
+.menu--items--displayer {
+  display: block;
+}
+
+.menu--items li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-bottom: solid 1px #011e36;
+}
+
+.menu--items li a {
+  color: var(--primary);
+}
+
+.menu--items li:hover {
+  transform: translate(5px, 0);
+}
+
+/* mini ipad screen*/
+@media screen and (min-width: 620px) {
+}
+
+/* max ipad and mini laptop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* desktop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+/*# sourceMappingURL=/&__menu-items.style.5e0ad533.css.map */

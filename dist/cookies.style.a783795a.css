@@ -1,0 +1,89 @@
+.cookies--wrapper {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.cookies--wrapper div:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cookies--wrapper div a {
+  color: #1e90ff;
+}
+
+.decline__cookies__button,
+.accept__cookies__button {
+  border-radius: 5px;
+  width: 120px;
+  color: #000;
+}
+
+.decline__cookies__button {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+}
+
+.accept__cookies__button {
+  background-color: #000;
+  color: #fff;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 620px) {
+}
+
+@media screen and (min-width: 960px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .cookies--wrapper {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 10px;
+  }
+
+  .cookies--wrapper img {
+    width: 15%;
+    padding-right: 40px;
+  }
+
+  .cookies--wrapper div:nth-child(2) {
+    width: 50%;
+    padding-right: 40px;
+  }
+
+  .cookies--wrapper div:nth-child(3) {
+    width: 15%;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .cookies--wrapper div:nth-child(3) button {
+    margin-top: 0;
+  }
+
+  .cookies--wrapper div:nth-child(3) button:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+/***
+ *
+ * this is short cookies documentation
+ * the div that wraps the cookies has a class called cookies--wrapper
+ * then the wrapper has an img with a cookies image resource
+ * the another div with heading and p tag
+ * and lastly a div with two buttons(accept__cookies__button and decline__cookies__button)
+ */
+
+
+/*# sourceMappingURL=/cookies.style.a783795a.css.map */

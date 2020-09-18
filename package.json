@@ -18,11 +18,11 @@
     "babel-loader": "^8.1.0"
   },
   "scripts": {
-    "test": "npx cypress run",
     "start": "lite-server",
-    "dev": "parcel **/*.html ",
-    "build": "parcel build **/*.html --out-dir pro",
-    "babel": "npx babel ./public/components/*.js",
+    "test": "npx cypress run",
+    "dev": "parcel watch *.html",
+    "build": "parcel build *.html --out-dir prod",
+    "babel": "npx babel *.js",
     "tsc": "tsc ./public/components/*.ts --watch"
   },
   "author": "Emmanuel Onah AfricLite",

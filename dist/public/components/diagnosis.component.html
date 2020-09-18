@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application-name" content="XSTROKE EE">
+    <meta name="author">
+    <meta name="keywords">
+    <title>Diagnosis| XSTROKE EE</title>
+    <!-- Browser Fav icon -->
+    <link rel="icon" href="https://i.ibb.co/bsFfPhM/logo.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/&__general.style.132fefcf.css">
+    <link rel="stylesheet" href="/&__header.style.6e8a83da.css">
+    <link rel="stylesheet" href="/&__footer.style.675f4143.css">
+    <link rel="stylesheet" href="/&__menu-items.style.5e0ad533.css">
+    <link rel="stylesheet" href="/diagnosis.style.aa8b6f54.css">
+  </head>
+  <body>
+    <div class="container diagonosis--page--container" role="main">
+      <!-- Header -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/index.html">XSTROKE EE</a></li>
+            <li>
+              <a href="#"><i class="fa fa-user-alt"></i>User Profile</a>
+            </li>
+          </ul>
+          <!-- Menu Bar -->
+          <div class="menu--bar">
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Menu items -->
+      <ul class="menu--items">
+        <li><a href="/public/components/about.component.html">About</a></li>
+        <li><a href="/public/components/diagnosis.component.html">Diagnosis</a></li>
+        <li><a href="#">Health history</a></li>
+        <li><a href="/public/components/login.component.html">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><a href="/public/components/signup.component.html">Sign up</a></li>
+      </ul>
+
+      <!-- Stroke prevention form -->
+      <form class="stroke--diagnosis--form">
+        <h3>Stroke Prevention System <time class="system--date"></time></h3>
+        <p>Please provide your today's data</p>
+        <!-- Blood pressure section -->
+        <div class="blood--pressure--wrapper">
+          <h4>Blood Pressure</h4>
+          <label for="systolic">Systolic</label>
+          <span role="input"><input required="" type="text" name="systolic" id="systolic" placeholder="Systolic"> mm Hg</span>
+
+          <label for="diastolic">Diastolic</label>
+          <span role="input"><input required="" type="text" name="diastolic" id="diastolic" placeholder="Diastolic"> mm Hg</span>
+        </div>
+        <!-- Body mass index -->
+        <div class="body--mass--index--wrapper">
+          <h4>Body mass index</h4>
+          <label for="height">Height</label>
+          <span role="input"><input required="" type="text" name="height" id="height" placeholder="Height"> cm</span>
+          <label for="weight">Weight</label>
+          <span role="input"><input required="" type="text" name="weight" id="weight" placeholder="Weight"> kg</span>
+        </div>
+        <!-- Cigarettes smoked -->
+        <div class="cigarretes--smoked--wrapper">
+          <h4>Cigarettes smoked</h4>
+          <span role="input"><input required="" type="number" id="cigarettes-smoked" name="cigarettesSmoked" value="0" aria-label="Cigarettes smoked"> Pcs</span>
+        </div>
+        <!-- Physical activity -->
+        <div class="physical--activity--wrapper">
+          <h4>Physical activity</h4>
+          <span role="input"><input required="" type="text" name="hours" id="hours" value="0" aria-label="hours"> h</span>
+          <span role="input"><input required="" type="text" name="minutes" id="minutes" value="30" aria-label="hours"> min</span>
+        </div>
+        <!-- Buttons -->
+        <div class="form--buttons--wrapper">
+          <input type="submit" value="Ok" id="okay-button" name="okay-button" aria-label="Submit report button">
+          <input type="reset" value="Clear" id="clear-button" aria-label="Clear form button">
+        </div>
+      </form>
+
+      <!-- Footer -->
+      <footer>
+        <!-- Internationalization row1 or col2 -->
+        <select name="internationalization" id="internationalization">
+          <option value="English US-EN">English</option>
+          <option value="Estonian Es-es">Estonian</option>
+        </select>
+
+        <!-- row 2 or col 2 -->
+        <div>
+          <h2 class="logo">XSTROKE EE</h2>
+          <ul class="terms--privacy--wrapper">
+            <li><a href="/public/components/terms.component.html">Terms of Services</a></li>
+            <li><a href="/public/components/privacy-policy.component.html">Privacy Policy</a></li>
+            <li><a href="/public/components/security.component.html">Security</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+
+          <ul class="social--media">
+            <li>
+              <a href="https://www.instagram.com/emmanuelonahafriclite/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Jeremia82064196" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/chiboy.joseph.142" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- row 3 or col 3 -->
+        <div class="copyright">&copy;<time class="system--date"></time>. made with <span role="img"> ❤️ </span> by <a href="https://www.youmustknowjs.com/" target="_blank"> AfricLite</a></div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/diagnosis.component.9f27c9cb.js" defer=""></script>
+  </body>
+</html>
