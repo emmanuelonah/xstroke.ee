@@ -1,1 +1,6 @@
 node_modules
+/.cache/*
+/.vscode/*
+/prod/*
+/dist/*
+package.json

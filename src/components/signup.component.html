@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="XSTROKE EE" />
+    <meta name="author" name="Emmanuel Onah AfricLite" />
+    <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
+    <title>Sign up| XSTROKE EE</title>
+    <!-- Browser Fav icon -->
+    <link rel="icon" href="https://i.ibb.co/bsFfPhM/logo.jpg" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/&__general.style.css" />
+    <link rel="stylesheet" href="./login.style.css" />
+    <link rel="stylesheet" href="./signup.style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container login--container" role="main">
+      <a href="../../index" aria-describedat="This is an icon button that takes you back to the landing page"><i class="fa fa-home"></i></a>
+      <img src="../assets/images/login-page-bg.png" alt="" class="login--bg--img" />
+
+      <div class="login--container--row--two">
+        <h2 class="logo">XSTROKE EE</h2>
+        <h1>Signup</h1>
+        <p class="new--to--xstroke">Already have account? <a href="./login">Log in</a></p>
+        <form class="signup--form">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="You email address" required />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters" required />
+
+          <label for="estonianId">Estonian ID</label>
+          <input type="text" name="estonian_id" id="estonianId" placeholder="32922xxxx12" required />
+          <input type="submit" value="Signup" id="signup" aria-label="Click to signup" />
+
+          <p class="terms--and--privacy">By continuing you accept our <a href="./terms">Terms of Use</a> and <a href="./privacy-policy">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./signup.component.js"></script>
+  </body>
+</html>

@@ -10,9 +10,8 @@
      /privacy-policy/*        /privacy-policy.component.html                  200
     /security/*              /security.component.html                         200
    /server-error-page/*     /server-error-page.component.html                 200
-  /signup/*                /signup.component.html                             200
- /site-map/*              /site-map.component.html                            200 
-/terms/*                 /terms.component.html                                200
-/user-profile/*         /user-profile.component.html                          200
+  /signup/*                /signup.component.html                             200                         200 
+ /terms/*                 /terms.component.html                                200
+/user-profile/*          /user-profile.component.html                          200
     
 

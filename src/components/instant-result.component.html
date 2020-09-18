@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="XSTROKE EE" />
+    <meta name="author" name="Emmanuel Onah AfricLite" />
+    <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
+    <title>Result| XSTROKE EE</title>
+    <!-- Browser Fav icon -->
+    <link rel="icon" href="https://i.ibb.co/bsFfPhM/logo.jpg" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/&__general.style.css" />
+    <link rel="stylesheet" href="../styles/&__header.style.css" />
+    <link rel="stylesheet" href="../styles/&__footer.style.css" />
+    <link rel="stylesheet" href="./diagnosis.style.css" />
+    <link rel="stylesheet" href="../styles/&__menu-items.style.css" />
+    <link rel="stylesheet" href="./instant-result.style.css" />
+  </head>
+  <body>
+    <div class="container instant--result--page--container" role="main">
+      <!-- Header -->
+      <header>
+        <nav>
+          <ul>
+            <li class="instant--logo"><a href="/index">XSTROKE EE</a></li>
+            <li>
+              <a href="#"><i class="fa fa-user-alt"></i>User Profile</a>
+            </li>
+          </ul>
+          <!-- Menu Bar -->
+          <div class="menu--bar">
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Menu items -->
+      <ul class="menu--items">
+        <li><a href="./about">About</a></li>
+        <li><a href="./diagnosis">Diagnosis</a></li>
+        <li><a href="#">Health history</a></li>
+        <li><a href="./login">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><a href="./signup">Sign up</a></li>
+      </ul>
+
+      <img src="../assets/images/instant-result-bg.png" alt="" />
+      <!-- Stroke Result -->
+      <div class="stroke--result--wrapper">
+        <!-- Stroke risk -->
+        <div class="stoke--risk">
+          <h1>Your stroke level is currently</h1>
+          <div class="risk--number">
+            <span>0</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+          </div>
+        </div>
+
+        <!-- Stroke Suggestion -->
+        <div class="stroke--suggestion">
+          <h1>We Suggest that</h1>
+          <ul>
+            <li>Increase your physical activities to 2.4 hr/week.</li>
+            <li>Decrease your blood pressure by agents describe by a doctor.</li>
+            <li>Decrease your body mass index to reach the target of 25 to 29.99</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Redirection buttons -->
+      <div class="redirection--button--wrapper">
+        <button class="diagonise"><i class="fa fa-stethoscope"></i>Diagonise</button>
+        <button class="home"><i class="fa fa-home"></i>Home</button>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <!-- Internationalization row1 or col2 -->
+        <select name="internationalization" id="internationalization">
+          <option value="English US-EN">English</option>
+          <option value="Estonian Es-es">Estonian</option>
+        </select>
+
+        <!-- row 2 or col 2 -->
+        <div>
+          <h2 class="logo">XSTROKE EE</h2>
+          <ul class="terms--privacy--wrapper">
+            <li><a href="./terms">Terms of Services</a></li>
+            <li><a href="./privacy-policy">Privacy Policy</a></li>
+            <li><a href="./security">Security</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+
+          <ul class="social--media">
+            <li>
+              <a href="https://www.instagram.com/emmanuelonahafriclite/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Jeremia82064196" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/chiboy.joseph.142" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- row 3 or col 3 -->
+        <div class="copyright">&copy;<time class="system--date"></time>. made with <span role="img"> ❤️ </span> by <a href="https://www.youmustknowjs.com/" target="_blank"> AfricLite</a></div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./diagnosis.component.js" defer></script>
+    <script src="./instant-result.component.js"></script>
+  </body>
+</html>

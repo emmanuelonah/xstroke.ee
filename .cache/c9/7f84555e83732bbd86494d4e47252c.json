@@ -1,1 +1,0 @@
-{"id":"dist/node_modules/browser-sync-ui/static/components/heading.html","dependencies":[],"generated":{"html":"<div bs-panel=\"controls outline\">\n    <h1 bs-heading=\"\">\n        <svg bs-svg-icon=\"\"><use xlink:href=\"#svg-cog\"></use></svg>\n        Server Info\n    </h1>\n</div>"},"sourceMaps":null,"error":null,"hash":"b521a8dd6ca5a1aeb7fed5f895db67e3","cacheData":{}}
