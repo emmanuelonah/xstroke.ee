@@ -6,6 +6,7 @@
   "dependencies": {
     "cypress": "^5.2.0",
     "lite-server": "^2.5.4",
+    "parcel": "^1.12.4",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
@@ -19,6 +20,9 @@
   "scripts": {
     "test": "npx cypress run",
     "start": "lite-server",
+    "dev": "parcel /*.html ",
+    "build": "parcel build /*.html --out-dir pro",
+    "babel": "npx babel ./src/component/*.js",
     "tsc": "tsc ./public/component/*.ts --watch"
   },
   "author": "Emmanuel Onah AfricLite",
