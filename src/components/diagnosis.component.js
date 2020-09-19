@@ -18,11 +18,6 @@ window.addEventListener("DOMContentLoaded", _ => {
     time.textContent = new Date().getFullYear();
   });
 
-  document.querySelector(".menu--bar").addEventListener("click", e => {
-    e.stopPropagation();
-    document.querySelector(".menu--items").classList.toggle("menu--items--displayer");
-  });
-
   ///submit diagnosis to backend
   form.addEventListener("submit", e => {
     e.preventDefault();

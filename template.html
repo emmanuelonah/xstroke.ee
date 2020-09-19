@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./src/components/diagnosis.style.css" />
     <link rel="stylesheet" href="./src/styles/&__menu-items.style.css" />
     <link rel="stylesheet" href="./src/components/terms.style.css" />
+    <link rel="stylesheet" href="./src/styles/&__error&success.modal.style.css" />
+    <link rel="stylesheet" href="./src/styles/&__error-404.style.css" />
   </head>
   <body>
     <div class="container terms--page--container" role="main">
@@ -50,6 +52,30 @@
         <li><a href="#">Logout</a></li>
         <li><a href="./signup">Sign up</a></li>
       </ul>
+
+      <!-- Success Modal container-->
+      <div class="modal success--modal">
+        <div class="menu--bar modal__menu__icon">
+          <span class="top"></span>
+          <span class="bottom"></span>
+        </div>
+        <img src="./src/assets/images/success.png" alt="" />
+        <h4>Successful</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button class="okay--button success__ok">Go to profile</button>
+      </div>
+
+      <!-- Error Message Modal -->
+      <div class="modal error--modal">
+        <div class="menu--bar modal__menu__icon">
+          <span class="top"></span>
+          <span class="bottom"></span>
+        </div>
+        <img src="./src/assets/images/error.png" alt="" />
+        <h4>Error</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button class="okay--button error__button">Ok</button>
+      </div>
 
       <!-- Content Goes Here -->
       <!-- Footer -->
@@ -87,8 +113,31 @@
         <div class="copyright">&copy;<time class="system--date"></time>. made with <span role="img"> ❤️ </span> by <a href="https://www.youmustknowjs.com/" target="_blank"> AfricLite</a></div>
       </footer>
     </div>
+    <!-- Noscript tage -->
+    <noscript class="noscript">
+      <img src="./src/assets/images/error-404.png" alt="" />
+      <h1>Something's missing</h1>
+      <p>
+        For full functionality of this site its necessary you enable javascript.
+        <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank">Instructions on how to do that</a>
+      </p>
+    </noscript>
 
     <!-- Scripts -->
     <script src="./src/components/diagnosis.component.js" defer></script>
+
+    <script>
+      const cancelIcon = document.querySelectorAll(".modal__menu__icon");
+      const parentNode = document.querySelector(".terms--page--container");
+      cancelIcon.forEach(btn => {
+        btn.addEventListener("click", e => {
+          const btnParentElement = e.target.parentElement;
+          const parentNodeOfBtnParentElement = btnParentElement.parentElement;
+
+          console.log(btnParentElement);
+          parentNode.removeChild(parentNodeOfBtnParentElement);
+        });
+      });
+    </script>
   </body>
 </html>

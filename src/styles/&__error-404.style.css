@@ -1,0 +1,42 @@
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --tertiary: #011220;
+}
+
+/* Mobile */
+.noscript {
+  width: 100%;
+  padding: 10px 30px;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px 4px #ececec;
+  box-sizing: border-box;
+}
+
+.noscript img {
+  width: 80% !important;
+  margin: 0 auto;
+}
+
+.noscript h1 {
+  font-size: 1.2rem;
+}
+/* mini ipad screen*/
+@media screen and (min-width: 620px) {
+}
+
+/* max ipad and mini laptop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* desktop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
