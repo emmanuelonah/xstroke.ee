@@ -1,17 +1,23 @@
 const firestore = {
   get(collection = "") {
+    const getOperation = db.collection(collection).onSnapshot(snapshot => {
+      snapshot.onChanges.map(change => {});
+    });
     return; //
   },
 
   post(collection = "", body = {}) {
-    return; //
+    const postOperation = db.collection(collection).add(body);
+    return postOperation;
   },
 
   put(collection = "", docId = "") {
-    return; //
+    const putOperation = db.collection(collection).doc(docId).update();
+    return putOperation;
   },
 
   delete(collection = "", docId = "") {
-    return; //
+    const deleteOperation = db.collection(collection).doc(docId).delete();
+    return deleteOperation; //
   },
 };

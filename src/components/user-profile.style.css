@@ -1,0 +1,165 @@
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --tertiary: #011220;
+}
+
+.user--profile--page--container {
+  padding-left: 0 !important;
+}
+
+.user--profile--page--container .logo {
+  padding-left: 0;
+}
+
+/* Mobile style */
+.user--profile--container2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* sidebar style */
+.sidebar--wrapper {
+  width: 40%;
+  background-color: var(--tertiary);
+  color: var(--primary);
+  font-size: 0.8rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sidebar--wrapper a {
+  color: #1e90ff;
+  text-decoration: underline;
+  font-size: 0.7rem;
+}
+
+.sidebar--wrapper p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.trp--number {
+  margin-top: 0;
+}
+
+.user--profile {
+  width: 40px;
+  max-width: 40px;
+  border: solid 1.5px var(--primary);
+  border-radius: 50px;
+}
+
+.sidebar--wrapper--user--profile {
+  margin: 0 auto;
+}
+
+.update--profile {
+  border-radius: 5px;
+  background: var(--primary);
+  color: var(--secondary);
+  font-size: 0.8rem;
+  width: 70%;
+  height: 30px;
+  margin: 0 auto;
+  margin-left: 20px !important;
+  margin-top: 30px;
+  text-align: center;
+  transition: all 0.3 ease;
+}
+
+.update--profile:hover {
+  background: #1c3146;
+  color: var(--primary);
+}
+
+/* history style */
+.sidebar--panel {
+  width: 70%;
+  max-width: 70%;
+  padding: 10px;
+  border-top: solid 1px #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.health--history--header {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.health--history--wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #1c3146;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.history--date {
+  font-size: 0.7rem;
+  color: #eee;
+}
+
+.history--heading {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #c9c9c9;
+}
+
+.stoke--level {
+  border: solid 2px #ffa500;
+  text-align: center;
+  width: fit-content;
+  color: var(--primary);
+  margin-top: 20px;
+}
+
+.stoke--level--is {
+  background-color: #ffa500;
+  padding: 10px;
+}
+
+.out--of--5 {
+  background-color: red;
+  padding: 10px;
+}
+
+.suggestion--heading {
+  border-top: double 2px var(--tertiary);
+  margin-top: 10px;
+}
+
+.health--history--wrapper ul {
+  padding-left: 10px;
+}
+
+.health--history--wrapper ul li {
+  font-size: 0.7rem;
+  color: var(--primary);
+  list-style: georgian;
+}
+
+footer {
+  padding-left: 20px;
+}
+/* mini ipad screen*/
+@media screen and (min-width: 620px) {
+}
+
+/* max ipad and mini laptop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* desktop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
