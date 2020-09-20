@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     successButtonNavigationLink: "/login",
     successModalH4Text: "Successful",
     errorModalH4Text: "Error",
-    htmlBodyToInsertTheModalIn: document.querySelector(".signup--form"),
+    htmlBodyToInsertTheModalIn: document.querySelector("body"),
   };
 
   const _body = document.querySelector("body");
@@ -26,10 +26,10 @@ window.addEventListener("DOMContentLoaded", _ => {
   };
   ///1...Work with Cookies and LocalStorage to Set user signup status
   ///2...modal function
-  const returnSuccessWidget = (modalClass, modalType, modalImg, modalButtonClass, successMessage, buttonText, buttonNavigationLink, htmlBodyToInsertTheModalIn) => {
+  const messageModal = (modalClass, modalType, modalImg, modalButtonClass, successMessage, buttonText, buttonNavigationLink, htmlBodyToInsertTheModalIn) => {
     ///div modal container
-    const successModalContainer = document.createElement("div");
-    successModalContainer.setAttribute("class", modalClass);
+    const modalContainer = document.createElement("div");
+    modalContainer.setAttribute("class", modalClass);
 
     ///div menuIcon wrapper
     const menuIconDiv = document.createElement("div");
@@ -65,16 +65,16 @@ window.addEventListener("DOMContentLoaded", _ => {
     button.setAttribute("class", modalButtonClass);
     button.textContent = buttonText;
 
-    ///Append all elements to successModalContainer
-    successModalContainer.append(menuIconDiv);
-    successModalContainer.append(img);
-    successModalContainer.append(h4);
-    successModalContainer.append(p);
-    successModalContainer.append(button);
+    ///Append all elements to modalContainer
+    modalContainer.append(menuIconDiv);
+    modalContainer.append(img);
+    modalContainer.append(h4);
+    modalContainer.append(p);
+    modalContainer.append(button);
 
     ///remove this element parent from the DOM when menuIconDiv is clicked
     menuIconDiv.addEventListener("click", _ => {
-      htmlBodyToInsertTheModalIn.removeChild(successModalContainer);
+      htmlBodyToInsertTheModalIn.removeChild(modalContainer);
     });
 
     ///click event on button
@@ -82,8 +82,8 @@ window.addEventListener("DOMContentLoaded", _ => {
       window.location.assign(buttonNavigationLink);
     });
 
-    ///Insert the modal to the htmlBodyElement argument
-    htmlBodyToInsertTheModalIn.insertBefore(successModalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
+    ///Insert the modal to the htmlBodyElement 
+    htmlBodyToInsertTheModalIn.insertBefore(modalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
   };
 
   ///3...user signup function
@@ -104,7 +104,7 @@ window.addEventListener("DOMContentLoaded", _ => {
         .createUserWithEmailAndPassword(signupData.email, signupData.password)
         .then(res => {
           console.log("Success", res);
-          returnSuccessWidget(
+          messageModal(
             modalDetails.successModalContainer,
             modalDetails.successModalH4Text,
             modalDetails.successModalButtonClass,
@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", _ => {
         .catch(function (error) {
           // Handle Errors here.
           const errorMessage = error.message;
-          returnSuccessWidget(
+          messageModal(
             modalDetails.errorModalContainer,
             modalDetails.errorModalH4Text,
             modalDetails.errorModalImg,

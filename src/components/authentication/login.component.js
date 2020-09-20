@@ -10,9 +10,17 @@ window.addEventListener("DOMContentLoaded", _ => {
       password: form.password.value,
     };
 
-    console.log(loginData);
-
     ///perform api login operation here and then if successfully, take user to their respective profile
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(loginData.email, loginData.password)
+      .then(() => {
+        window.localStorage.setItem("signInEmail", loginData.email);
+        window.location.replace("/user-profile");
+      })
+      .catch(err => {
+        window.alert(err);
+      });
   });
   ///redirect user to email login form
   document.querySelector(".estonian__id").addEventListener("click", e => {

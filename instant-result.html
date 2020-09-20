@@ -46,9 +46,9 @@
       <ul class="menu--items">
         <li><a href="./about">About</a></li>
         <li><a href="./diagnosis">Diagnosis</a></li>
-        <li><a href="#">Health history</a></li>
+        <li><a href="./user-profile">Health history</a></li>
         <li><a href="./login">Login</a></li>
-        <li><a href="#">Logout</a></li>
+        <li class="logout"><a href="#">Logout</a></li>
         <li><a href="./signup">Sign up</a></li>
       </ul>
 
@@ -129,8 +129,33 @@
         <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank">Instructions on how to do that</a>
       </p>
     </noscript>
+     <!-- Firebase Configuration -->
+    <!-- Script Files and Firebase CDNS -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCDHJOXGHOD1Aaf87PRw9G0R58S8RI46C8",
+        authDomain: "xstroke-ee.firebaseapp.com",
+        databaseURL: "https://xstroke-ee.firebaseio.com",
+        projectId: "xstroke-ee",
+        storageBucket: "xstroke-ee.appspot.com",
+        messagingSenderId: "258650641006",
+        appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
+        measurementId: "G-597LPMLF5W",
+      };
+      Object.freeze(firebaseConfig);
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //firebase.analytics();
+      const db = firebase.firestore();
+    </script>
     <!-- Scripts -->
     <script src="./src/components/armburger-menu.component.js" defer></script>
+    <script src="./src/components/authentication/signout.component.js"></script>
     <script src="./src/components/instant-result.component.js" defer></script>
   </body>
 </html>
