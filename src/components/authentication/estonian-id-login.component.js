@@ -8,8 +8,9 @@ window.addEventListener("DOMContentLoaded", _ => {
     db.collection("users").onSnapshot(snapshot => {
       snapshot.docChanges().filter(change => {
         const data = change.doc.data();
-        console.log(data);
+
         if (change.type === "added" && data.estonian_id === estonian_id) {
+          window.localStorage.setItem("userLoggedIn", true);
           window.location.replace("/user-profile");
         } else {
           window.alert("🚨 this user is not recognized or registered");
