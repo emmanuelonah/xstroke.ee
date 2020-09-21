@@ -5,10 +5,12 @@ window.addEventListener("DOMContentLoaded", _ => {
   ///Accept Terms
   acceptanceButton.addEventListener("click", _ => {
     window.localStorage.setItem("acceptTerms", true);
+    window.location.replace("/login");
   });
 
   /// Decline Terms
   declineButton.addEventListener("click", _ => {
     window.localStorage.setItem("acceptTerms", false);
+    window.location.replace("/index");
   });
 });
