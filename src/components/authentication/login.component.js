@@ -15,7 +15,12 @@ window.addEventListener("DOMContentLoaded", _ => {
       .auth()
       .signInWithEmailAndPassword(loginData.email, loginData.password)
       .then(() => {
-        window.localStorage.setItem("signInEmail", loginData.email);
+        window.localStorage.setItem("userLoggedIn", true);
+        window.localStorage.setItem("loggedInDetails", {
+          user_is_logged_in: true,
+          user_email: loginData.email,
+          user_password: loginData.password,
+        });
         window.location.replace("/user-profile");
       })
       .catch(err => {

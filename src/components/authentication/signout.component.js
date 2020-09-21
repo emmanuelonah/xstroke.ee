@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", _ => {
       .auth()
       .signOut()
       .then(function () {
+        window.localStorage.removeItem("loggedInDetails");
+        window.localStorage.setItem("userLoggedIn", false);
         // Sign-out successful.
         window.location.replace("/login");
       })
