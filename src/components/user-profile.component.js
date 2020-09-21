@@ -1,9 +1,9 @@
 ///update title tag to user name before
 window.addEventListener("DOMContentLoaded", _ => {
   ///Do verfication
-  const userLogInStatus = window.localStorage.getItem("userLoggedIn");
+  const userLoggedIn = window.localStorage.getItem("userLoggedIn");
   console.log("Testing", userLogInStatus);
-  if (userLogInStatus === "false" || !userLogInStatus) {
+  if (userLoggedIn === "false" || !userLoggedIn) {
     window.location.replace("/login");
   }
 });

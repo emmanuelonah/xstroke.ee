@@ -4,13 +4,12 @@ window.addEventListener("DOMContentLoaded", _ => {
       .auth()
       .signOut()
       .then(function () {
-        window.localStorage.removeItem("loggedInDetails");
         window.localStorage.setItem("userLoggedIn", false);
-        // Sign-out successful.
+        window.localStorage.removeItem("userLoggedInEmail");
+        window.localStorage.removeItem("userLoggedInPassword");
         window.location.replace("/login");
       })
       .catch(function (error) {
-        // An error happened.
         window.alert("Error Occured", error);
       });
   });

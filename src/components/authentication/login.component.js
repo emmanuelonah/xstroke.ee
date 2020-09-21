@@ -10,17 +10,13 @@ window.addEventListener("DOMContentLoaded", _ => {
       password: form.password.value,
     };
 
-    ///perform api login operation here and then if successfully, take user to their respective profile
     firebase
       .auth()
       .signInWithEmailAndPassword(loginData.email, loginData.password)
       .then(() => {
         window.localStorage.setItem("userLoggedIn", true);
-        window.localStorage.setItem("loggedInDetails", {
-          user_is_logged_in: true,
-          user_email: loginData.email,
-          user_password: loginData.password,
-        });
+        window.localStorage.setItem("userLoggedInEmail", loginData.email);
+        window.localStorage.setItem("userLoggedInPassword", loginData.password);
         window.location.replace("/user-profile");
       })
       .catch(err => {
