@@ -21,20 +21,20 @@
   text-align: justify;
 }
 
-.terms--accept--delcine--button--wrapper {
+.terms--accept--decline--button--wrapper {
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
 }
 
-.terms--accept--delcine--button--wrapper button:nth-child(1) {
+.terms--accept--decline--button--wrapper button:nth-child(1) {
   border-radius: 5px;
   background-color: var(--primary);
   box-shadow: 0 2px 2px 2px #dbdbdb;
   color: var(--secondary);
 }
 
-.terms--accept--delcine--button--wrapper button:nth-child(2) {
+.terms--accept--decline--button--wrapper button:nth-child(2) {
   border-radius: 5px;
   box-shadow: 0 2px 2px 2px #dbdbdb;
 }
