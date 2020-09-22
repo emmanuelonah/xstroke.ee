@@ -28,17 +28,21 @@
   font-size: 0.8rem;
   padding: 10px;
   box-sizing: border-box;
-}
-
-.sidebar--wrapper a {
-  color: #1e90ff;
-  text-decoration: underline;
-  font-size: 0.7rem;
+  text-align: center;
 }
 
 .sidebar--wrapper p {
   margin-top: 10px;
+}
+
+.user--mail {
+  display: block;
+  color: #1e90ff;
+  text-decoration: underline;
+  font-size: 0.5rem;
+  max-width: 80%;
   text-align: center;
+  margin: 0 auto;
 }
 
 .trp--number {
@@ -64,7 +68,6 @@
   width: 70%;
   height: 30px;
   margin: 0 auto;
-  margin-left: 20px !important;
   margin-top: 30px;
   text-align: center;
   transition: all 0.3 ease;
@@ -158,8 +161,22 @@ footer {
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+
+  .update--profile {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 20px;
+  }
+
+  .sidebar--wrapper {
+    width: 35%;
   }
 }

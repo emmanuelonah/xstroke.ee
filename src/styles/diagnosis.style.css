@@ -139,6 +139,14 @@
   margin: 5px 0;
 }
 
+#stroke--test--form .passed__regexp {
+  border-bottom: solid 1px #008000 !important;
+}
+
+#stroke--test--form .failed__regexp {
+  border-bottom: solid 1px #ff0000 !important;
+}
+
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
 }
@@ -151,8 +159,11 @@
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+  .diagonosis--page--container {
+    padding: 0 60px;
   }
 }

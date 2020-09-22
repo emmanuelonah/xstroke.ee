@@ -1,11 +1,15 @@
 .cookies--wrapper {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   background-color: #eee;
   display: flex;
   flex-direction: column;
   padding: 20px;
   align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
 }
 
 .cookies--wrapper div:nth-child(3) {
@@ -36,21 +40,21 @@
   margin-right: 5px;
 }
 
-@media screen and (min-width: 620px) {
+.learn__more {
+  text-decoration: underline;
 }
 
-@media screen and (min-width: 960px) {
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 760px) {
   .cookies--wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     flex-direction: row;
     justify-content: center;
     padding: 50px 10px;
   }
+}
 
+@media screen and (min-width: 1200px) {
   .cookies--wrapper img {
     width: 15%;
     padding-right: 40px;

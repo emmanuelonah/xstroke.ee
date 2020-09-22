@@ -22,7 +22,7 @@
 }
 
 /* Stroke risk */
-.stoke--risk,
+.stroke--risk,
 .stroke--suggestion {
   background-color: var(--primary);
   border-radius: 5px;
@@ -58,10 +58,15 @@
 }
 
 /* Suggestion */
+.stroke--suggestion ul {
+  padding-left: 10px;
+}
+
 .stroke--suggestion ul li {
   padding: 20px 0;
   border-bottom: solid 1px #cfcfcf;
   font-size: 0.8rem;
+  list-style: georgian;
 }
 
 /* Redirection buttons */
@@ -85,8 +90,21 @@
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+
+  .instant--result--page--container {
+    padding: 0 60px;
+  }
+
+  .redirection--button--wrapper {
+    flex-direction: column;
+  }
+
+  .instant--result--bg {
+    width: 50% !important;
+    margin: 0 auto;
   }
 }

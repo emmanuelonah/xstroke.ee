@@ -24,22 +24,24 @@
   <body>
     <div class="container login--container" role="main">
       <a href="/index" aria-describedat="This is an icon button that takes you back to the landing page"><i class="fa fa-home"></i></a>
-      <img src="./src/assets/images/login-page-bg.png" alt="" class="login--bg--img" />
+      <div class="img--form--wrapper">
+        <img src="./src/assets/images/login-page-bg.png" alt="" class="login--bg--img" />
 
-      <div class="login--container--row--two">
-        <h2 class="logo">XSTROKE EE</h2>
-        <h1>Welcome Back</h1>
-        <p class="new--to--xstroke">New to XSTROKE EE? <a href="./signup">Sign up</a></p>
-        <form class="estonian--id--login--form">
-          <label for="estonianId">Estonian ID</label>
-          <input type="text" name="estonian_id" id="estonianId" placeholder="Your estonian Id" required />
-          <input type="submit" value="Login" id="login" aria-label="Click to login" />
+        <div class="login--container--row--two">
+          <h2 class="logo">XSTROKE EE</h2>
+          <h1>Welcome Back</h1>
+          <p class="new--to--xstroke">New to XSTROKE EE? <a href="./signup">Sign up</a></p>
+          <form class="estonian--id--login--form">
+            <label for="estonianId">Estonian ID</label>
+            <input type="text" name="estonian_id" id="estonianId" placeholder="Your estonian Id" required />
+            <input type="submit" value="Login" id="login" aria-label="Click to login" />
 
-          <p class="or--login--with">Or log in with</p>
-          <button class="estonian__id email__login">Email</button>
-          <span class="checkbox--wrapper"> </span>
-          <p class="terms--and--privacy">By continuing you accept our <a href="./terms">Terms of Use</a> and <a href="./privacy-policy">Privacy Policy</a>.</p>
-        </form>
+            <p class="or--login--with">Or log in with</p>
+            <button class="estonian__id email__login">Email</button>
+            <span class="checkbox--wrapper"> </span>
+            <p class="terms--and--privacy">By continuing you accept our <a href="./terms">Terms of Use</a> and <a href="./privacy-policy">Privacy Policy</a>.</p>
+          </form>
+        </div>
       </div>
     </div>
     <!-- Noscript tage -->

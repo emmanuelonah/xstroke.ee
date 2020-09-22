@@ -12,6 +12,7 @@ footer {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 footer ul li a {
@@ -50,7 +51,20 @@ select {
 }
 
 /* mini ipad screen*/
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 760px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .footer--row {
+    width: 33%;
+  }
+
+  select {
+    height: 50px;
+  }
 }
 
 /* max ipad and mini laptop screen*/
@@ -61,7 +75,7 @@ select {
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
   }

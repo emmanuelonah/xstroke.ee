@@ -4,6 +4,10 @@
   --tertiary: #011220;
 }
 
+.heading--h1 {
+  padding-top: 50px;
+}
+
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
 }
@@ -16,7 +20,7 @@
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
   }

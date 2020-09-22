@@ -82,7 +82,10 @@ a[href="../../index.html"] {
 }
 
 /* mini ipad screen*/
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 768px) {
+  .img--form--wrapper {
+    padding: 0 60px;
+  }
 }
 
 /* max ipad and mini laptop screen*/
@@ -90,11 +93,35 @@ a[href="../../index.html"] {
   html {
     font-size: 18px;
   }
+
+  .img--form--wrapper {
+    padding: 0 100px;
+  }
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   html {
     font-size: 20px;
+  }
+
+  .img--form--wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+  }
+
+  .login--bg--img {
+    width: 50%;
+    padding: 0;
+  }
+
+  .login--container--row--two {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .login--container--row--two form {
+    width: 100%;
   }
 }
