@@ -9,7 +9,7 @@
 }
 
 .user--profile--page--container .logo {
-  padding-left: 0;
+  padding-left: 10px;
 }
 
 /* Mobile style */
@@ -169,14 +169,13 @@ footer {
   .update--profile {
     height: 40px;
   }
+  .sidebar--wrapper {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 1400px) {
   html {
     font-size: 20px;
-  }
-
-  .sidebar--wrapper {
-    width: 35%;
   }
 }

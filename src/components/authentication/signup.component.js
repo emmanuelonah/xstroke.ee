@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", _ => {
       window.location.assign(buttonNavigationLink);
     });
 
-    ///Insert the modal to the htmlBodyElement 
+    ///Insert the modal to the htmlBodyElement
     htmlBodyToInsertTheModalIn.insertBefore(modalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
   };
 
@@ -113,7 +113,6 @@ window.addEventListener("DOMContentLoaded", _ => {
             modalDetails.successButtonNavigationLink,
             modalDetails.htmlBodyToInsertTheModalIn
           );
-          window.localStorage.setItem("signedEmail", signupData.email);
         })
         .catch(function (error) {
           // Handle Errors here.

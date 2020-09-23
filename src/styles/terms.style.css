@@ -18,7 +18,7 @@
 }
 
 .terms--page--container p {
-  text-align: justify;
+  font-size: 0.9rem;
 }
 
 .terms--accept--decline--button--wrapper {
@@ -50,6 +50,10 @@
   html {
     font-size: 18px;
   }
+
+  .terms--page--container p {
+    text-align: justify;
+  }
 }
 
 /* desktop screen*/
@@ -61,5 +65,9 @@
   .terms--page--container {
     padding: 0 100px;
     padding-bottom: 20px;
+  }
+
+  .terms--page--container p {
+    text-align: justify;
   }
 }

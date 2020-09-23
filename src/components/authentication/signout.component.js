@@ -7,6 +7,8 @@ window.addEventListener("DOMContentLoaded", _ => {
         window.localStorage.setItem("userLoggedIn", false);
         window.localStorage.removeItem("userLoggedInEmail");
         window.localStorage.removeItem("userLoggedInPassword");
+        window.localStorage.removeItem("userLoggedInEstonianId");
+        window.localStorage.removeItem("acceptTerms");
         window.location.replace("/login");
       })
       .catch(function (error) {
