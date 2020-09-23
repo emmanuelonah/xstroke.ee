@@ -47,11 +47,24 @@
   html {
     font-size: 18px;
   }
+
+  .about--page--container {
+    padding: 0 70px;
+  }
 }
 
 /* desktop screen*/
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+
+  .about--page--container {
+    padding: 0 70px;
+  }
+
+  .testing--steps--wrapper div img {
+    width: 60%;
+    margin: 0 auto;
   }
 }
