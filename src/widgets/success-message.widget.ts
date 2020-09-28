@@ -19,7 +19,7 @@ class SuccessWidget {
     menuSpan2.setAttribute("class", "bottom");
 
     ///append menu spans to menuIcon wrapper
-    menuIconDiv.append(menuIconDiv);
+    menuIconDiv.append(menuSpan1);
     menuIconDiv.append(menuSpan2);
 
     ///img

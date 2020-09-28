@@ -19,7 +19,7 @@ class ErrorWidget {
     menuSpan2.setAttribute("class", "bottom");
 
     ///append menu spans to menuIcon wrapper
-    menuIconDiv.append(menuIconDiv);
+    menuIconDiv.append(menuSpan1);
     menuIconDiv.append(menuSpan2);
 
     ///img
@@ -54,14 +54,14 @@ class ErrorWidget {
 
     ///click event on button
     button.addEventListener("click", e => {
-      //  window.location.assign("/index");
+      window.location.assign("/index");
       htmlBodyToInsertTheModalIn.removeChild(errorModalContainer);
     });
 
     ///Insert the modal to the htmlBodyElement argument
     htmlBodyToInsertTheModalIn.insertBefore(errorModalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
 
-    return errorModalContainer
+    return errorModalContainer;
   }
 }
 
