@@ -23,6 +23,9 @@ body {
 
 .view--body {
   padding: 50px 50px;
+  background-image: url(../assets/images/auth-bg.png);
+  background-repeat: repeat;
+  background-position: center;
 }
 
 .container {
