@@ -6,10 +6,13 @@
   --doctorate: #1e90ff;
 }
 
-.login--container {
+.login--container,
+.form--container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px 2px #dadada;
 }
 
 .fa-home {
@@ -50,6 +53,7 @@ input[type="submit"] {
   border: 0;
   font-size: 0.9rem;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .or--login--with {
@@ -91,7 +95,7 @@ a[href="../../index.html"] {
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .img--form--wrapper {
@@ -102,7 +106,7 @@ a[href="../../index.html"] {
 /* desktop screen*/
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .img--form--wrapper {
@@ -118,7 +122,7 @@ a[href="../../index.html"] {
   }
 
   .login--container--row--two {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
   .login--container--row--two form {

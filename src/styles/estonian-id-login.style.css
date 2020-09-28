@@ -1,0 +1,17 @@
+/* mini ipad screen*/
+@media screen and (min-width: 620px) {
+}
+
+/* max ipad and mini laptop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* desktop screen*/
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+}

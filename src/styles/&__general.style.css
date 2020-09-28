@@ -21,6 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.view--body {
+  padding: 50px 50px;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
