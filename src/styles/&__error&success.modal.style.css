@@ -19,7 +19,8 @@
   align-items: center;
   border-radius: 30px;
   padding: 10px 20px;
-  box-shadow: 2px 2px 5px 4px #ececec;
+  /* box-shadow: 2px 2px 5px 4px #ececec; */
+  border: solid 0.8px rgb(218, 218, 218);
   position: absolute;
   z-index: 2;
   clear: both;
@@ -86,5 +87,14 @@
 @media screen and (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+
+  .modal {
+    width: 40%;
+  }
+
+  .okay--button,
+  .error__button {
+    width: 50%;
   }
 }

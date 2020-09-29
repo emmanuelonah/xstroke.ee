@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -37,14 +38,12 @@ body {
 }
 
 textarea,
-input.text,
-input[type="text"],
-input[type="button"],
-input[type="submit"],
+input,
 select {
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
+  font-size: 0.9em;
 }
 
 h1 {
@@ -146,14 +145,7 @@ input[type="checkbox"] {
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
   html {
-    font-size: 18px;
-  }
-}
-
-/* desktop screen*/
-@media screen and (min-width: 960px) {
-  html {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .heading--h1 {

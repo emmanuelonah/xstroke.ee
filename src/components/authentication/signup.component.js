@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     ///span
     const menuSpan1 = document.createElement("span");
-    menuSpan1.setAttribute("click", "top");
+    menuSpan1.setAttribute("class", "top");
 
     ///span
     const menuSpan2 = document.createElement("span");
@@ -106,49 +106,51 @@ window.addEventListener("DOMContentLoaded", _ => {
         estonian_id: form.estonian_id.value,
       };
 
-      if (RegExp.user_name.test(user_name) && RegExp.email.test(email) && RegExp.password.test(password) && RegExp.estonian_id.test(estonian_id)) {
-        ///firebase signup
-        firebase
-          .auth()
-          .createUserWithEmailAndPassword(signupData.email, signupData.password)
-          .then(res => {
-            console.log("Success", res);
-            messageModal(
-              modalDetails.successModalContainer,
-              modalDetails.successModalH4Text,
-              modalDetails.successModalImg,
-              modalDetails.successModalButtonClass,
-              `${signupData.email} have been successfully created`,
-              modalDetails.successButtonText,
-              modalDetails.successButtonNavigationLink,
-              modalDetails.htmlBodyToInsertTheModalIn
-            );
+      const { user_name, email, password, estonian_id } = signupData;
 
-            ///send user data to users table**document in firestore:::this is only ones
-            db.collection("users")
-              .add(signupData)
-              .then(res => {
-                console.log("new user created");
-              })
-              .catch(err => console.error(err));
-          })
-          .catch(function (error) {
-            // Handle Errors here.
-            const errorMessage = error.message;
-            messageModal(
-              modalDetails.errorModalContainer,
-              modalDetails.errorModalH4Text,
-              modalDetails.errorModalImg,
-              modalDetails.errorModalButtonClass,
-              `${signupData.email} was not created because ${errorMessage}`,
-              modalDetails.errorButtonText,
-              modalDetails.errorButtonNavigationLink,
-              modalDetails.htmlBodyToInsertTheModalIn
-            );
+      //if (RegExp.user_name.test(user_name) && RegExp.email.test(email) && RegExp.password.test(password) && RegExp.estonian_id.test(estonian_id)) {
+      ///firebase signup
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(signupData.email, signupData.password)
+        .then(res => {
+          console.log("Success", res);
+          messageModal(
+            modalDetails.successModalContainer,
+            modalDetails.successModalH4Text,
+            modalDetails.successModalImg,
+            modalDetails.successModalButtonClass,
+            `${signupData.email} have been successfully created`,
+            modalDetails.successButtonText,
+            modalDetails.successButtonNavigationLink,
+            modalDetails.htmlBodyToInsertTheModalIn
+          );
 
-            console.error(errorMessage);
-          });
-      }
+          ///send user data to users table**document in firestore:::this is only ones
+          db.collection("users")
+            .add(signupData)
+            .then(res => {
+              console.log("new user created");
+            })
+            .catch(err => console.error(err));
+        })
+        .catch(function (error) {
+          // Handle Errors here.
+          const errorMessage = error.message;
+          messageModal(
+            modalDetails.errorModalContainer,
+            modalDetails.errorModalH4Text,
+            modalDetails.errorModalImg,
+            modalDetails.errorModalButtonClass,
+            `${signupData.email} was not created because ${errorMessage}`,
+            modalDetails.errorButtonText,
+            modalDetails.errorButtonNavigationLink,
+            modalDetails.htmlBodyToInsertTheModalIn
+          );
+
+          console.error(errorMessage);
+        });
+      //}
     });
   };
   signupUser();
