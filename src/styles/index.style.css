@@ -82,7 +82,7 @@
     max-width: 80%;
     font-size: 1.5rem;
     font-weight: 900;
-    text-transform: lowercase !important;
+    text-transform: lowercase;
     font-family: "Open Sans", sans-serif;
   }
 
