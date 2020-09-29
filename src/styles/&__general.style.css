@@ -41,9 +41,10 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
-.input-checkbox {
+select {
   -webkit-appearance: none;
   border-radius: 0;
+  -webkit-border-radius: 0;
 }
 
 h1 {
