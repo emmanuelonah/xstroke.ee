@@ -16,7 +16,6 @@ window.addEventListener("DOMContentLoaded", _ => {
     htmlBodyToInsertTheModalIn: document.querySelector("body"),
   };
 
-  const _body = document.querySelector("body");
   const form = document.querySelector(".signup--form");
   const RegExp = {
     user_name: /^[a-z]{2,}$/i,
@@ -107,6 +106,7 @@ window.addEventListener("DOMContentLoaded", _ => {
           messageModal(
             modalDetails.successModalContainer,
             modalDetails.successModalH4Text,
+            modalDetails.successModalImg,
             modalDetails.successModalButtonClass,
             `${signupData.email} have been successfully created`,
             modalDetails.successButtonText,

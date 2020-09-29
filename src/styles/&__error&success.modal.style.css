@@ -20,7 +20,12 @@
   border-radius: 30px;
   padding: 10px 20px;
   box-shadow: 2px 2px 5px 4px #ececec;
-  position: relative;
+  position: absolute;
+  z-index: 2;
+  clear: both;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .modal__displayer {
