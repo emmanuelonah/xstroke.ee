@@ -48,7 +48,7 @@
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .terms--page--container p {
@@ -59,15 +59,14 @@
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
   html {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .terms--page--container {
-    padding: 0 100px;
-    padding-bottom: 20px;
+    padding: 0 100px 20px 100px;
   }
 
   .terms--page--container p {
-    text-align: justify;
+    text-align: start;
   }
 }

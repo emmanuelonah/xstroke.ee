@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
+
 :root {
   --primary: #fff;
   --secondary: #000;
@@ -141,5 +143,22 @@ input[type="checkbox"] {
 @media screen and (min-width: 960px) {
   html {
     font-size: 20px;
+  }
+
+  .heading--h1 {
+    color: var(--tertiary);
+    font-size: 2.5rem;
+    font-family: "Londrina Sketch", cursive;
+  }
+
+  #email:focus,
+  #password:focus,
+  #estonianId:focus,
+  #userName:focus,
+  #resetEmail:focus,
+  .auth--input:focus {
+    border: solid 0.5px #333;
+    padding: 20px 5px;
+    border-left: solid 3px #02335c;
   }
 }
