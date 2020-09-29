@@ -10,7 +10,6 @@
  **********************************************/
 
 window.addEventListener("DOMContentLoaded", _ => {
-
   const form = document.querySelector(".stroke--diagnosis--form");
   const time = document.querySelectorAll(".system--date");
 

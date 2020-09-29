@@ -30,7 +30,7 @@
       <header>
         <nav>
           <ul>
-            <li><a href="/index">XSTROKE EE</a></li>
+            <li class="logo"><a href="/index">🩺XSTROKE EE</a></li>
             <li>
               <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
             </li>
@@ -73,7 +73,7 @@
 
         <!-- row 2 or col 2 -->
         <div class="footer--row footer--row--two">
-          <h2 class="logo">🩺XSTROKE EE</h2>
+          <h2 class="logo">XSTROKE EE</h2>
           <ul class="terms--privacy--wrapper">
             <li><a href="./terms">Terms of Services</a></li>
             <li><a href="./privacy-policy">Privacy Policy</a></li>
@@ -133,9 +133,10 @@
       const db = firebase.firestore();
     </script>
     <!-- Scripts -->
-    <script src="./src/components/authentication/user-verification.js"></script>
+    <script src="./src/components/authentication/user-verification.js" defer></script>
     <script src="./src/components/armburger-menu.component.js" defer></script>
-    <script src="./src/components/authentication/signout.component.js"></script>
+    <script src="./src/components/authentication/signout.component.js" defer></script>
     <script src="./src/components/terms.component.js" defer></script>
+    <script src="./src/components/footer.component.js" defer></script>
   </body>
 </html>
