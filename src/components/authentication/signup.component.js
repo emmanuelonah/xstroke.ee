@@ -85,7 +85,16 @@ window.addEventListener("DOMContentLoaded", _ => {
     htmlBodyToInsertTheModalIn.insertBefore(modalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
   };
 
-  ///3...user signup function
+  ///3...form validation event
+  form.addEventListener("keydown", e => {
+    if (RegExp[e.target.name].test(e.target.value)) {
+      e.target.style.borderBottomColor = "green";
+    } else {
+      e.target.style.borderBottomColor = "red";
+    }
+  });
+
+  ///4...user signup function
   const signupUser = _ => {
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -97,57 +106,50 @@ window.addEventListener("DOMContentLoaded", _ => {
         estonian_id: form.estonian_id.value,
       };
 
-      ///firebase signup
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(signupData.email, signupData.password)
-        .then(res => {
-          console.log("Success", res);
-          messageModal(
-            modalDetails.successModalContainer,
-            modalDetails.successModalH4Text,
-            modalDetails.successModalImg,
-            modalDetails.successModalButtonClass,
-            `${signupData.email} have been successfully created`,
-            modalDetails.successButtonText,
-            modalDetails.successButtonNavigationLink,
-            modalDetails.htmlBodyToInsertTheModalIn
-          );
-        })
-        .catch(function (error) {
-          // Handle Errors here.
-          const errorMessage = error.message;
-          messageModal(
-            modalDetails.errorModalContainer,
-            modalDetails.errorModalH4Text,
-            modalDetails.errorModalImg,
-            modalDetails.errorModalButtonClass,
-            `${signupData.email} was not created because ${errorMessage}`,
-            modalDetails.errorButtonText,
-            modalDetails.errorButtonNavigationLink,
-            modalDetails.htmlBodyToInsertTheModalIn
-          );
+      if (RegExp.user_name.test(user_name) && RegExp.email.test(email) && RegExp.password.test(password) && RegExp.estonian_id.test(estonian_id)) {
+        ///firebase signup
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(signupData.email, signupData.password)
+          .then(res => {
+            console.log("Success", res);
+            messageModal(
+              modalDetails.successModalContainer,
+              modalDetails.successModalH4Text,
+              modalDetails.successModalImg,
+              modalDetails.successModalButtonClass,
+              `${signupData.email} have been successfully created`,
+              modalDetails.successButtonText,
+              modalDetails.successButtonNavigationLink,
+              modalDetails.htmlBodyToInsertTheModalIn
+            );
 
-          console.error(errorMessage);
-        });
+            ///send user data to users table**document in firestore:::this is only ones
+            db.collection("users")
+              .add(signupData)
+              .then(res => {
+                console.log("new user created");
+              })
+              .catch(err => console.error(err));
+          })
+          .catch(function (error) {
+            // Handle Errors here.
+            const errorMessage = error.message;
+            messageModal(
+              modalDetails.errorModalContainer,
+              modalDetails.errorModalH4Text,
+              modalDetails.errorModalImg,
+              modalDetails.errorModalButtonClass,
+              `${signupData.email} was not created because ${errorMessage}`,
+              modalDetails.errorButtonText,
+              modalDetails.errorButtonNavigationLink,
+              modalDetails.htmlBodyToInsertTheModalIn
+            );
 
-      ///send user data to users table**document
-      db.collection("users")
-        .add(signupData)
-        .then(res => {
-          console.log("new user created");
-        })
-        .catch(err => console.error(err));
+            console.error(errorMessage);
+          });
+      }
     });
   };
   signupUser();
-
-  ///4...form verification
-  form.addEventListener("keydown", e => {
-    if (RegExp[e.target.name].test(e.target.value)) {
-      e.target.style.borderBottomColor = "green";
-    } else {
-      e.target.style.borderBottomColor = "red";
-    }
-  });
 });
