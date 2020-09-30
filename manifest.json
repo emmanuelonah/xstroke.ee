@@ -1,0 +1,27 @@
+"name": — Displayed in the Chrome Web Store and in the Chrome browser
+"version": — The version of the metadata, incremented
+"icons": — An array specifying the icons your item uses
+
+{
+    "name":"Xstroke EE",
+    "version":"0.0.0.1",
+    "icons":["./src/assets/images/auth-bg.png",
+             "./src/assets/images/data-encryption.png",
+            "./src/assets/images/error-404.png",
+            "./src/assets/images/error.png",
+            "./src/assets/images/file-encrypted2.png",
+            "./src/assets/images/gdpr.png",
+            "./src/assets/images/instant-result-bg.png",
+            "./src/assets/images/landing-page-bg.png",
+            "./src/assets/images/login-page-bg.png",
+            "./src/assets/images/result.jpg",
+            "./src/assets/images/security-bg2.png",
+            "./src/assets/images/success.png",
+            "./src/assets/images/test-suggestion.jpg",
+            "./src/assets/images/test.png",
+            "./src/assets/images/test2.jpg",
+            "./src/assets/images/transfer-encrytion.png",
+            "./src/assets/images/user.png"
+            
+            ]
+}

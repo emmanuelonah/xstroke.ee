@@ -39,7 +39,7 @@ body {
 
 textarea,
 input,
-select {
+input:not([type="checkbox"]) {
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
