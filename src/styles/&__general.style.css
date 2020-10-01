@@ -25,7 +25,7 @@ body {
 }
 
 .view--body {
-  padding: 50px 50px;
+  padding: 10px 20px;
   background-image: url(../assets/images/auth-bg.png);
   background-repeat: repeat;
   background-position: center;
@@ -108,6 +108,7 @@ a:visited {
 
 ::placeholder {
   color: #6b6b6b;
+  font-size: 0.8em;
 }
 
 /* Form Styling */
