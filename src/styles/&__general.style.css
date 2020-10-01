@@ -151,8 +151,6 @@ input[type="checkbox"] {
 
   .heading--h1 {
     color: var(--tertiary);
-    font-size: 2.5rem;
-    font-family: "Londrina Sketch", cursive;
   }
 
   #email:focus,
