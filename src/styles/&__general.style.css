@@ -38,8 +38,8 @@ body {
 }
 
 textarea,
-input,
-input:not([type="checkbox"]) {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
