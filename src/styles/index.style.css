@@ -11,12 +11,14 @@
 .landing--page--container {
   width: 100%;
   overflow: hidden;
+  height: fit-content;
 }
 
 .landing--page--content--wrapper {
-  padding: 40px;
+  padding: 40px 30px 30px 30px;
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
 .landing--page--content--wrapper img {
@@ -37,7 +39,7 @@
 .give__try {
   height: 50px;
   width: 200px;
-  font-size: 0.8rem;
+  font-size: 0.98em;
 }
 
 /* .clipath--div {
