@@ -15,7 +15,8 @@
 }
 
 .landing--page--content--wrapper {
-  padding: 40px 30px 30px 30px;
+  padding: 70px 30px 30px 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -70,6 +71,7 @@
     flex-direction: row;
     align-items: center;
     align-content: center;
+    margin-top: 70px;
   }
 
   .landing--page--content--wrapper img {

@@ -13,6 +13,7 @@
   right: 0;
   box-sizing: border-box;
   border-top: solid 0.5px #bebebe;
+  transition: all 0.7s ease;
 }
 
 .cookies--wrapper div:nth-child(3) {
@@ -32,9 +33,12 @@
 
 .decline__cookies__button,
 .accept__cookies__button {
-  border-radius: 5px;
+  font-size: 1em;
   width: 50%;
+  height: 50px;
   color: #000;
+  font-weight: 500;
+  transition: all 1.5s ease;
 }
 
 .decline__cookies__button {
@@ -47,6 +51,16 @@
   background-color: #000;
   color: #fff;
   margin-right: 5px;
+}
+
+.accept__cookies__button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.decline__cookies__button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .learn__more {

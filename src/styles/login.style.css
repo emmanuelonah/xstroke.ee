@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  height: fit-content;
 }
 
 .fa-home {
@@ -88,6 +89,10 @@ a[href="../../index.html"] {
 @media screen and (min-width: 768px) {
   .img--form--wrapper {
     padding: 0 60px;
+  }
+
+  .form--container {
+    border-radius: 0;
   }
 }
 
