@@ -24,7 +24,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -33,7 +32,8 @@ body {
 
 textarea,
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-border-radius: 0;
