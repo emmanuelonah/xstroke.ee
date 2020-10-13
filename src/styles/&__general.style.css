@@ -24,12 +24,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.view--body {
-  padding: 10px 20px;
-  background-image: url(../assets/images/auth-bg.png);
-  background-repeat: repeat;
-  background-position: center;
-}
 
 .container {
   width: 100%;
