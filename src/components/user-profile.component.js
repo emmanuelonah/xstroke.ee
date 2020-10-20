@@ -1,2 +1,31 @@
 ///update title tag to user name before
-window.addEventListener("DOMContentLoaded", _ => {});
+window.addEventListener("DOMContentLoaded", (_) => {
+    const _userMail = document.querySelector(".user--mail");
+    const _userName = document.querySelector(".user--name");
+    const _trpNumber = document.querySelector(".trp--number");
+    const _title = document.querySelector("title");
+    const _userLoggedInMail = window.localStorage.getItem("userLoggedInEmail");
+
+    /*-----------------------------
+     update user details fn
+    -------------------------------*/
+    const updateUserProfile = () => {
+        db.collection("users")
+            .orderBy("email")
+            .onSnapshot((snapshot) => {
+                snapshot.docChanges().forEach((change) => {
+                    const data = change.doc.data();
+                    if (
+                        change.type === "added" &&
+                        data.email.toString() === _userLoggedInMail.toString()
+                    ) {
+                        _title.textContent = data.user_name;
+                        _userMail.textContent = data.email;
+                        _userName.textContent = data.user_name;
+                        _trpNumber.textContent = data.estonian_id;
+                    }
+                });
+            });
+    };
+    updateUserProfile();
+});
