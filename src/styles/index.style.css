@@ -86,12 +86,28 @@
 }
 
 .footer {
+    background-color: #072448;
     padding-top: 50px;
     border-top: solid 1px #eee;
+    color: var(--primary);
+}
+.footer .list-item-container li {
+    padding: 10px 0;
+}
+
+.footer select {
+    margin-bottom: 30px;
+}
+
+.footer .list-item-container li a {
+    color: var(--primary);
 }
 
 /* mini ipad screen*/
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+    }
 }
 
 /* min laptop screen*/
