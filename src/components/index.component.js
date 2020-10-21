@@ -7,9 +7,9 @@ window.addEventListener("DOMContentLoaded", (_) => {
         if (_acceptTerms === "true" && (_userLoggedInStatus === "false") | undefined) {
             window.location.replace("/login");
         } else if (_acceptTerms === "true" && _userLoggedInStatus === "true") {
-            window.location.replace("/user-profile");
+            window.location.assign("/user-profile");
         } else {
-            window.location.replace("/terms");
+            window.location.assign("/terms");
         }
     });
 });
