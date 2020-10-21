@@ -13,7 +13,8 @@ window.addEventListener("DOMContentLoaded", (_) => {
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 state.isUserLoggedIn = true;
-                window.localStorage.getItem("uid", user.uid);
+                window.localStorage.setItem("userLoggedIn", true);
+                window.localStorage.setItem("uid", user.uid);
                 window.localStorage.setItem("userLoggedInEmail", user.email);
                 console.log(user.uid, state.isUserLoggedIn);
 
@@ -37,8 +38,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
             .auth()
             .signInWithEmailAndPassword(loginData.email, loginData.password)
             .then(() => {
-                window.localStorage.setItem("userLoggedIn", true);
-
                 updateUserLogInState();
             })
             .catch((err) => {

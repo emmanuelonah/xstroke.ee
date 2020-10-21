@@ -141,8 +141,9 @@ window.addEventListener("DOMContentLoaded", (_) => {
                     db.collection("users")
                         .add(signupData)
                         .then((res) => {
-                            console.log(res.id);
-                            window.localStorage.setItem("userDocId", res.id);
+                            const userDocId = res.id;
+                            window.localStorage.setItem("userDocId", userDocId);
+
                             console.log("New user successfully created");
                         })
                         .catch((err) => console.error(err));
