@@ -1,133 +1,133 @@
 .cookies--wrapper {
-  width: 100%;
-  height: 400px;
-  margin: 0 auto;
-  background-color: #eee;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  box-sizing: border-box;
-  border-top: solid 0.5px #bebebe;
-  transition: all 0.7s ease;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border-top: solid 0.5px #bebebe;
+    transition: all 0.7s ease;
 }
 
 .cookies--wrapper div:nth-child(3) {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .cookies--wrapper div a {
-  color: #1e90ff;
+    color: #1e90ff;
 }
 
 .cookies--button--wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .decline__cookies__button,
 .accept__cookies__button {
-  font-size: 1em;
-  width: 50%;
-  height: 50px;
-  color: #000;
-  font-weight: 500;
-  transition: all 1.5s ease;
+    font-size: 0.8em;
+    width: 50%;
+    height: 35px;
+    color: #000;
+    font-weight: 500;
+    transition: all 1.5s ease;
 }
 
 .decline__cookies__button {
-  background-color: #fff;
-  color: #000;
-  border: solid 1px #000;
+    background-color: #fff;
+    color: #000;
+    border: solid 1px #000;
 }
 
 .accept__cookies__button {
-  background-color: #000;
-  color: #fff;
-  margin-right: 5px;
+    background-color: #000;
+    color: #fff;
+    margin-right: 5px;
 }
 
 .accept__cookies__button:hover {
-  color: #000;
-  background-color: #fff;
+    color: #000;
+    background-color: #fff;
 }
 
 .decline__cookies__button:hover {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 .learn__more {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 760px) {
-  .cookies--wrapper {
-    width: 100%;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 50px 10px;
-  }
+    .cookies--wrapper {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        padding: 50px 10px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-  html,
-  body {
-    font-size: 16px;
-  }
+    html,
+    body {
+        font-size: 16px;
+    }
 
-  .cookies--wrapper {
-    width: 80%;
-    height: 600px;
-    top: 90px;
-    left: 0;
-  }
+    .cookies--wrapper {
+        width: 98%;
+        height: 600px;
+        top: 0;
+        left: 0;
+    }
 
-  .cookies--wrapper img {
-    width: 15%;
-    padding-right: 40px;
-  }
+    .cookies--wrapper img {
+        width: 15%;
+        padding-right: 40px;
+    }
 
-  .cookies--wrapper div:nth-child(2) {
-    width: 50%;
-    padding-right: 40px;
-  }
+    .cookies--wrapper div:nth-child(2) {
+        width: 50%;
+        padding-right: 40px;
+    }
 
-  .cookies--wrapper div:nth-child(3) {
-    width: 15%;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+    .cookies--wrapper div:nth-child(3) {
+        width: 15%;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 
-  .cookies--wrapper div:nth-child(3) button {
-    margin-top: 0;
-  }
+    .cookies--wrapper div:nth-child(3) button {
+        margin-top: 0;
+    }
 
-  .cookies--wrapper div:nth-child(3) button:first-child {
-    margin-bottom: 5px;
-  }
+    .cookies--wrapper div:nth-child(3) button:first-child {
+        margin-bottom: 5px;
+    }
 
-  .cookies--wrapper p {
-    font-size: 0.8rem;
-  }
+    .cookies--wrapper p {
+        font-size: 0.8rem;
+    }
 
-  .cookies--button--wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+    .cookies--button--wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 
-  .decline__cookies__button,
-  .accept__cookies__button {
-    width: 100%;
-  }
+    .decline__cookies__button,
+    .accept__cookies__button {
+        width: 100%;
+    }
 }
 
 /***

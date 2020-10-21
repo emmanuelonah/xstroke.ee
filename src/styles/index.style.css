@@ -55,6 +55,11 @@
     background-color: transparent;
     border: solid 2px var(--primary);
     border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.give__try:hover {
+    transform: scale(1.1);
 }
 
 .blue-bg-overlay {
