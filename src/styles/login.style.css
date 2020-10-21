@@ -1,134 +1,133 @@
 /* variables */
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
-  --doctorate: #1e90ff;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
+    --doctorate: #1e90ff;
 }
 
 .form--container {
-  background-color: var(--primary);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 
 .fa-home {
-  color: var(--secondary);
-  text-align: right;
+    color: var(--secondary);
+    text-align: right;
 }
 
 .login--bg--img {
-  max-width: 80%;
-  margin: 0 auto;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .login--container--row--two h2 {
-  font-size: 0.9rem;
-  padding: 30px 0;
-  color: var(--tertiary);
-  font-family: "Metal Mania", cursive;
+    font-size: 0.9rem;
+    padding: 30px 0;
+    color: var(--tertiary);
 }
 
 .login--container--row--two h1 {
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .new--to--xstroke {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .login--container--row--two a {
-  font-size: 0.8rem;
-  color: var(--doctorate);
-  text-decoration: underline;
+    font-size: 0.8rem;
+    color: var(--doctorate);
+    text-decoration: underline;
 }
 
 input[type="submit"] {
-  padding: 10px 10px;
-  background-color: var(--tertiary);
-  color: var(--primary);
-  border: 0;
-  font-size: 0.9rem;
-  margin-top: 20px;
-  border-radius: 5px;
+    padding: 10px 10px;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    border: 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .or--login--with {
-  font-size: 0.9rem;
-  padding: 10px 0;
+    font-size: 0.9rem;
+    padding: 10px 0;
 }
 
 .estonian__id {
-  font-size: 0.8rem;
-  width: 100px;
-  background: linear-gradient(to right, var(--doctorate), var(--tertiary));
-  border-radius: 50px;
+    font-size: 0.8rem;
+    width: 100px;
+    background: linear-gradient(to right, var(--doctorate), var(--tertiary));
+    border-radius: 50px;
 }
 
 .checkbox--wrapper {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 label[for="rememberDevice"] {
-  padding: 0 10px;
+    padding: 0 10px;
 }
 
 .terms--and--privacy {
-  font-size: 0.8rem;
-  padding-top: 20px;
+    font-size: 0.8rem;
+    padding-top: 20px;
 }
 
 a[href="../../index.html"] {
-  color: var(--secondary);
+    color: var(--secondary);
 }
 
 /* mini ipad screen*/
 @media screen and (min-width: 768px) {
-  .img--form--wrapper {
-    padding: 0 60px;
-  }
+    .img--form--wrapper {
+        padding: 0 60px;
+    }
 
-  .form--container {
-    border-radius: 0;
-  }
+    .form--container {
+        border-radius: 0;
+    }
 }
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 
-  .img--form--wrapper {
-    padding: 0 100px;
-  }
+    .img--form--wrapper {
+        padding: 0 100px;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1000px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 
-  .img--form--wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-  }
+    .img--form--wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+    }
 
-  .login--bg--img {
-    width: 50%;
-    padding: 0;
-  }
+    .login--bg--img {
+        width: 50%;
+        padding: 0;
+    }
 
-  .login--container--row--two {
-    width: 40%;
-    margin: 0 auto;
-  }
-  .login--container--row--two form {
-    width: 100%;
-  }
+    .login--container--row--two {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .login--container--row--two form {
+        width: 100%;
+    }
 }
