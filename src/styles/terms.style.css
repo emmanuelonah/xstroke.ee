@@ -1,72 +1,73 @@
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 
 /* Mobile Style */
 .terms--page--container {
-  padding: 0 30px;
+    padding: 0 30px;
 }
 
 .terms--page--container header nav ul li:first-child {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .heading--h1 {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .terms--page--container p {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 .terms--accept--decline--button--wrapper {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
 }
 
 .terms--accept--decline--button--wrapper button:nth-child(1) {
-  border-radius: 5px;
-  background-color: var(--primary);
-  box-shadow: 0 2px 2px 2px #dbdbdb;
-  color: var(--secondary);
+    border-radius: 5px;
+    background-color: var(--primary);
+    box-shadow: 0 2px 2px 2px #dbdbdb;
+    color: var(--secondary);
+    margin-top: 40px;
 }
 
 .terms--accept--decline--button--wrapper button:nth-child(2) {
-  border-radius: 5px;
-  box-shadow: 0 2px 2px 2px #dbdbdb;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 2px #dbdbdb;
 }
 /* mini ipad screen*/
 @media screen and (min-width: 760px) {
-  .terms--accept--decline--button--wrapper {
-    flex-direction: column !important;
-  }
+    .terms--accept--decline--button--wrapper {
+        flex-direction: column !important;
+    }
 }
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 17px;
-  }
+    html {
+        font-size: 17px;
+    }
 
-  .terms--page--container p {
-    text-align: start;
-  }
+    .terms--page--container p {
+        text-align: start;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 17px;
-  }
+    html {
+        font-size: 17px;
+    }
 
-  .terms--page--container {
-    padding: 0 100px 20px 100px;
-  }
+    .terms--page--container {
+        padding: 0 100px 20px 100px;
+    }
 
-  .terms--page--container p {
-    text-align: start;
-  }
+    .terms--page--container p {
+        text-align: start;
+    }
 }
