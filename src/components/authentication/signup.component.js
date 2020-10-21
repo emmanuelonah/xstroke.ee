@@ -112,15 +112,13 @@ window.addEventListener("DOMContentLoaded", (_) => {
             e.preventDefault();
 
             const signupData = {
+                user_avatar: form.user_avatar.value,
                 user_name: form.user_name.value,
                 email: form.email.value,
                 password: form.password.value,
                 estonian_id: form.estonian_id.value,
             };
 
-            const { user_name, email, password, estonian_id } = signupData;
-
-            //if (RegExp.user_name.test(user_name) && RegExp.email.test(email) && RegExp.password.test(password) && RegExp.estonian_id.test(estonian_id)) {}
             ///firebase signup
             firebase
                 .auth()
@@ -147,9 +145,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
                         })
                         .catch((err) => console.error(err));
                 })
-                .catch(function (error) {
-                    // Handle Errors here.
-                    const errorMessage = error.message;
+                .catch(function () {
                     messageModal(
                         modalDetails.errorModalContainer,
                         modalDetails.errorModalH4Text,
@@ -160,10 +156,9 @@ window.addEventListener("DOMContentLoaded", (_) => {
                         modalDetails.errorButtonNavigationLink,
                         modalDetails.htmlBodyToInsertTheModalIn
                     );
-
-                    console.error(errorMessage);
                 });
-            //}
+
+            e.target.reset();
         });
     };
     signupUser();
