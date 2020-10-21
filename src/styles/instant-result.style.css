@@ -5,7 +5,7 @@
 }
 
 /* Mobile Style */
-.instant--result--page--container {
+.instant-result-page-container{
   width: 100%;
 }
 
@@ -13,7 +13,7 @@
   padding-left: 0;
 }
 
-.instant--result--page--container img {
+.instant-result-page-containerimg {
   width: 80%;
 }
 
@@ -95,7 +95,7 @@
     font-size: 20px;
   }
 
-  .instant--result--page--container {
+  .instant-result-page-container{
     padding: 0 60px;
   }
 
