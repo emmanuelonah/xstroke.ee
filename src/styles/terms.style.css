@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: row !important;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .terms--accept--decline--button--wrapper button:nth-child(1) {
@@ -32,7 +33,6 @@
     background-color: var(--primary);
     box-shadow: 0 2px 2px 2px #dbdbdb;
     color: var(--secondary);
-    margin-top: 40px;
 }
 
 .terms--accept--decline--button--wrapper button:nth-child(2) {
