@@ -10,13 +10,12 @@ window.addEventListener("DOMContentLoaded", (_) => {
         isUserLoggedIn: false,
     };
     const updateUserLogInState = () => {
-        firebase.auth().onAuthStateChanged(function (user) {
+        firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 state.isUserLoggedIn = true;
                 window.localStorage.setItem("userLoggedIn", true);
                 window.localStorage.setItem("uid", user.uid);
                 window.localStorage.setItem("userLoggedInEmail", user.email);
-                console.log(user.uid, state.isUserLoggedIn);
 
                 ///send user to their profile ones verified
                 window.location.replace("/user-profile");

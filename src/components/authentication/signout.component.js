@@ -4,7 +4,10 @@ window.addEventListener("DOMContentLoaded", () => {
             .auth()
             .signOut()
             .then(() => {
-                window.localStorage.clear();
+                // window.localStorage.clear();
+                window.localStorage.removeItem("userLoggedIn");
+                window.localStorage.removeItem("uid");
+                window.localStorage.removeItem("userLoggedInEmail");
                 window.location.replace("/login");
             })
             .catch((error) => {
