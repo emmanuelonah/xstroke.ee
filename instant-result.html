@@ -1,166 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="application-name" content="XSTROKE EE" />
-    <meta name="author" name="Emmanuel Onah AfricLite" />
-    <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Result| XSTROKE EE</title>
-    <!-- Browser Fav icon -->
-    <link rel="icon" href="./src/assets/images/xstroke-logo.png" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
-    <!-- Manifest link -->
-    <link rel="manifest" href="./manifest.webmanifest" />
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
-    <!-- Styles -->
-    <link rel="stylesheet" href="./src/styles/&__general.style.css" />
-    <link rel="stylesheet" href="./src/styles/&__header.style.css" />
-    <link rel="stylesheet" href="./src/styles/&__footer.style.css" />
-    <link rel="stylesheet" href="./src/styles/&__menu-items.style.css" />
-    <link rel="stylesheet" href="./src/styles/&__error-404.style.css" />
-    <link rel="stylesheet" href="./src/styles/&__error&success.modal.style.css" />
-    <link rel="stylesheet" href="./src/styles/instant-result.style.css" />
-  </head>
-  <body>
-    <div class="container instant--result--page--container" role="main">
-      <!-- Header -->
-      <header>
-        <nav>
-          <ul>
-            <li class="instant--logo"><a href="/index">🩺XSTROKE EE</a></li>
-            <li>
-              <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
-            </li>
-          </ul>
-          <!-- Menu Bar -->
-          <div class="menu--bar">
-            <span class="top"></span>
-            <span class="bottom"></span>
-          </div>
-        </nav>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="application-name" content="XSTROKE EE" />
+        <meta name="author" name="Emmanuel Onah AfricLite" />
+        <meta
+            name="keywords"
+            name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <title>Result| XSTROKE EE</title>
+        <!-- Browser Fav icon -->
+        <link rel="icon" href="./src/assets/images/xstroke-logo.png" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Manifest link -->
+        <link rel="manifest" href="./manifest.webmanifest" />
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
+        <!-- Styles -->
+        <link rel="stylesheet" href="./src/styles/&__general.style.css" />
+        <link rel="stylesheet" href="./src/styles/&__header.style.css" />
+        <link rel="stylesheet" href="./src/styles/&__footer.style.css" />
+        <link rel="stylesheet" href="./src/styles/&__menu-items.style.css" />
+        <link rel="stylesheet" href="./src/styles/&__error-404.style.css" />
+        <link rel="stylesheet" href="./src/styles/&__error&success.modal.style.css" />
+        <link rel="stylesheet" href="./src/styles/instant-result.style.css" />
+    </head>
+    <body>
+        <div class="container instant--result--page--container" role="main">
+            <!-- Header -->
+            <header>
+                <nav>
+                    <ul>
+                        <li class="instant--logo"><a href="/index">🩺XSTROKE EE</a></li>
+                        <li>
+                            <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
+                        </li>
+                    </ul>
+                    <!-- Menu Bar -->
+                    <div class="menu--bar">
+                        <span class="top"></span>
+                        <span class="bottom"></span>
+                    </div>
+                </nav>
+            </header>
 
-      <!-- Menu items -->
-      <ul class="menu--items">
-        <li><a href="./about">About</a></li>
-        <li><a href="./diagnosis">Diagnosis</a></li>
-        <li><a href="./user-profile">Health history</a></li>
-        <li><a href="./login">Login</a></li>
-        <li class="logout"><a href="#">Logout</a></li>
-        <li><a href="./signup">Sign up</a></li>
-      </ul>
+            <!-- Menu items -->
+            <ul class="menu--items">
+                <li><a href="./about">About</a></li>
+                <li><a href="./diagnosis">Diagnosis</a></li>
+                <li><a href="./user-profile">Health history</a></li>
+                <li class="logout"><a href="#">Logout</a></li>
+            </ul>
 
-      <img src="./src/assets/images/instant-result-bg.png" alt="" class="instant--result--bg" />
-      <!-- Stroke Result -->
-      <div class="stroke--result--wrapper">
-        <!-- Stroke risk -->
-        <div class="stroke--risk">
-          <h1>Your stroke level is currently</h1>
-          <div class="risk--number">
-            <span>0</span>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-          </div>
+            <img
+                src="./src/assets/images/instant-result-bg.png"
+                alt=""
+                class="instant--result--bg"
+            />
+            <!-- Stroke Result -->
+            <div class="stroke--result--wrapper">
+                <!-- Stroke risk -->
+                <div class="stroke--risk">
+                    <h1>Your stroke level is currently</h1>
+                    <div class="risk--number">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <!-- Stroke Suggestion -->
+                <div class="stroke--suggestion">
+                    <h1>We Suggest that</h1>
+                    <ul>
+                        <li>Increase your physical activities to 2.4 hr/week.</li>
+                        <li>Decrease your blood pressure by agents describe by a doctor.</li>
+                        <li>Decrease your body mass index to reach the target of 25 to 29.99</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Redirection buttons -->
+            <div class="redirection--button--wrapper">
+                <button class="diagonise"><i class="fa fa-stethoscope"></i>Diagonise</button>
+                <button class="home"><i class="fa fa-home"></i>Home</button>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <!-- Internationalization row1 or col2 -->
+                <select
+                    name="internationalization"
+                    id="internationalization"
+                    class="footer--row footer--row--one"
+                >
+                    <option value="English US-EN">English</option>
+                    <option value="Estonian Es-es">Estonian</option>
+                </select>
+
+                <!-- row 2 or col 2 -->
+                <div class="footer--row footer--row--two">
+                    <h2 class="logo">XSTROKE EE</h2>
+                    <ul class="terms--privacy--wrapper">
+                        <li><a href="./terms">Terms of Services</a></li>
+                        <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        <li><a href="./security">Security</a></li>
+                    </ul>
+
+                    <ul class="social--media footer--row footer--row--three">
+                        <li>
+                            <a
+                                href="https://www.instagram.com/emmanuelonahafriclite/"
+                                target="_blank"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Jeremia82064196" target="_blank"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/chiboy.joseph.142" target="_blank"
+                                ><i class="fab fa-facebook-f"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- row 3 or col 3 -->
+                <div class="copyright">
+                    &copy;<time class="system--date"></time>. made with
+                    <span role="img"> ❤️ </span> by
+                    <a href="https://www.youmustknowjs.com/" target="_blank"> AfricLite</a>
+                </div>
+            </footer>
         </div>
 
-        <!-- Stroke Suggestion -->
-        <div class="stroke--suggestion">
-          <h1>We Suggest that</h1>
-          <ul>
-            <li>Increase your physical activities to 2.4 hr/week.</li>
-            <li>Decrease your blood pressure by agents describe by a doctor.</li>
-            <li>Decrease your body mass index to reach the target of 25 to 29.99</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Redirection buttons -->
-      <div class="redirection--button--wrapper">
-        <button class="diagonise"><i class="fa fa-stethoscope"></i>Diagonise</button>
-        <button class="home"><i class="fa fa-home"></i>Home</button>
-      </div>
-
-      <!-- Footer -->
-      <footer>
-        <!-- Internationalization row1 or col2 -->
-        <select name="internationalization" id="internationalization" class="footer--row footer--row--one">
-          <option value="English US-EN">English</option>
-          <option value="Estonian Es-es">Estonian</option>
-        </select>
-
-        <!-- row 2 or col 2 -->
-        <div class="footer--row footer--row--two">
-          <h2 class="logo">XSTROKE EE</h2>
-          <ul class="terms--privacy--wrapper">
-            <li><a href="./terms">Terms of Services</a></li>
-            <li><a href="./privacy-policy">Privacy Policy</a></li>
-            <li><a href="./security">Security</a></li>
-            <li><a href="#">Sitemap</a></li>
-          </ul>
-
-          <ul class="social--media footer--row footer--row--three">
-            <li>
-              <a href="https://www.instagram.com/emmanuelonahafriclite/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/Jeremia82064196" target="_blank"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/chiboy.joseph.142" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- row 3 or col 3 -->
-        <div class="copyright">&copy;<time class="system--date"></time>. made with <span role="img"> ❤️ </span> by <a href="https://www.youmustknowjs.com/" target="_blank"> AfricLite</a></div>
-      </footer>
-    </div>
-
-    <!-- Noscript tage -->
-    <noscript class="noscript">
-      <img src="./src/assets/images/error-404.png" alt="" />
-      <h1>Something's missing</h1>
-      <p>
-        For full functionality of this site its necessary you enable javascript.
-        <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank">Instructions on how to do that</a>
-      </p>
-    </noscript>
-    <!-- Firebase Configuration -->
-    <!-- Script Files and Firebase CDNS -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      var firebaseConfig = {
-        apiKey: "AIzaSyCDHJOXGHOD1Aaf87PRw9G0R58S8RI46C8",
-        authDomain: "xstroke-ee.firebaseapp.com",
-        databaseURL: "https://xstroke-ee.firebaseio.com",
-        projectId: "xstroke-ee",
-        storageBucket: "xstroke-ee.appspot.com",
-        messagingSenderId: "258650641006",
-        appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
-        measurementId: "G-597LPMLF5W",
-      };
-      Object.freeze(firebaseConfig);
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      //firebase.analytics();
-      const db = firebase.firestore();
-    </script>
-    <!-- Scripts -->
-    <script src="./src/components/authentication/user-verification.js" defer></script>
-    <script src="./src/components/armburger-menu.component.js" defer></script>
-    <script src="./src/components/authentication/signout.component.js" defer></script>
-    <script src="./src/components/instant-result.component.js" defer></script>
-    <script src="./src/components/footer.component.js" defer></script>
-  </body>
+        <!-- Noscript tage -->
+        <noscript class="noscript">
+            <img src="./src/assets/images/error-404.png" alt="" />
+            <h1>Something's missing</h1>
+            <p>
+                For full functionality of this site its necessary you enable javascript.
+                <a
+                    href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE"
+                    taregt="_blank"
+                    >Instructions on how to do that</a
+                >
+            </p>
+        </noscript>
+        <!-- Firebase Configuration -->
+        <!-- Script Files and Firebase CDNS -->
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCDHJOXGHOD1Aaf87PRw9G0R58S8RI46C8",
+                authDomain: "xstroke-ee.firebaseapp.com",
+                databaseURL: "https://xstroke-ee.firebaseio.com",
+                projectId: "xstroke-ee",
+                storageBucket: "xstroke-ee.appspot.com",
+                messagingSenderId: "258650641006",
+                appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
+                measurementId: "G-597LPMLF5W",
+            };
+            Object.freeze(firebaseConfig);
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            //firebase.analytics();
+            const db = firebase.firestore();
+        </script>
+        <!-- Scripts -->
+        <script src="./src/components/authentication/user-verification.js" defer></script>
+        <script src="./src/components/armburger-menu.component.js" defer></script>
+        <script src="./src/components/authentication/signout.component.js" defer></script>
+        <script src="./src/components/instant-result.component.js" defer></script>
+        <script src="./src/components/footer.component.js" defer></script>
+    </body>
 </html>
