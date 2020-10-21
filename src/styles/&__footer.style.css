@@ -1,82 +1,91 @@
 /* Variable */
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 
 /* Mobile Style */
 footer {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column-reverse;
-  padding-top: 70px;
-  padding-bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 30px;
+    padding-bottom: 20px;
+    background-color: #072448;
+    border-top: solid 1px #eee;
+    color: var(--primary);
+    margin-top: 50px;
 }
 
 footer ul li a {
-  color: var(--tertiary);
-  font-size: 0.8rem;
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+footer ul li {
+    padding: 10px 0;
+}
+
+footer select {
+    background-color: var(--tertiary);
+    border: 0;
+    box-shadow: none;
+    color: var(--primary);
+    padding: 10px 0;
+    cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .social--media {
-  display: flex;
-  justify-content: space-between;
-}
-
-select {
-  background-color: var(--tertiary);
-  border: 0;
-  box-shadow: none;
-  color: var(--primary);
-  padding: 10px 0;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .copyright {
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: row !important;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row !important;
 }
 
 .copyright span[role="img"] {
-  padding: 0 3px;
+    padding: 0 3px;
 }
 
 .copyright a {
-  color: #1e90ff;
-  text-decoration: underline;
-  padding: 0 3px;
+    color: #1e90ff;
+    text-decoration: underline;
+    padding: 0 3px;
 }
 
 /* mini ipad screen*/
 @media screen and (min-width: 760px) {
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 
-  .footer--row {
-    width: 33%;
-  }
+    .footer--row {
+        width: 33%;
+    }
 
-  select {
-    height: 50px;
-  }
+    select {
+        height: 50px;
+    }
 }
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
+    html {
+        font-size: 20px;
+    }
 }
