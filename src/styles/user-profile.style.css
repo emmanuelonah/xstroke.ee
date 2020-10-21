@@ -116,7 +116,9 @@
     flex-direction: column;
     margin: 0 auto;
     position: absolute;
-    right: 0;
+    z-index: -1;
+    clear: both;
+    right: 0 !important;
 }
 
 .health--history--header {
