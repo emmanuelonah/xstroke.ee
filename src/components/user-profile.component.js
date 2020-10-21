@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
     const _userName = document.querySelector(".user--name");
     const _trpNumber = document.querySelector(".trp--number");
     const _userAvatar = document.querySelector(".user--profile");
+    const _userProfileContainer = document.querySelector(".sidebar--wrapper");
     const _title = document.querySelector("title");
     const _userLoggedInMail = window.localStorage.getItem("userLoggedInEmail");
 
@@ -21,12 +22,14 @@ window.addEventListener("DOMContentLoaded", (_) => {
                         data.email.toString() === _userLoggedInMail.toString()
                     ) {
                         if (data.user_avatar) {
+                            _userProfileContainer.setAttribute("data-id", change.doc.id);
                             _userAvatar.src = data.user_avatar;
                             _title.textContent = data.user_name;
                             _userMail.textContent = data.email;
                             _userName.textContent = data.user_name;
                             _trpNumber.textContent = data.estonian_id;
                         } else {
+                            _userProfileContainer.setAttribute("data-id", change.doc.id);
                             _title.textContent = data.user_name;
                             _userMail.textContent = data.email;
                             _userName.textContent = data.user_name;

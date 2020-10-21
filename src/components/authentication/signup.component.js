@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
 
     const form = document.querySelector(".signup--form");
     const RegExp = {
+        user_avatar: / /,
         user_name: /^[a-z]{2,}$/i,
         email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
         password: /^[\w@-]{8,20}$/i,
@@ -123,8 +124,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(signupData.email, signupData.password)
-                .then((res) => {
-                    console.log("Success", res);
+                .then(() => {
                     window.localStorage.setItem("userLoggedInEmail", signupData.email);
                     messageModal(
                         modalDetails.successModalContainer,
@@ -140,12 +140,15 @@ window.addEventListener("DOMContentLoaded", (_) => {
                     ///send user data to users table**document in firestore:::this is only ones
                     db.collection("users")
                         .add(signupData)
-                        .then(() => {
-                            console.log("new user created");
+                        .then((res) => {
+                            console.log(res.id);
+                            window.localStorage.setItem("userDocId", res.id);
+                            console.log("New user successfully created");
                         })
                         .catch((err) => console.error(err));
                 })
-                .catch(function () {
+                .catch((error) => {
+                    console.error("User not created", error);
                     messageModal(
                         modalDetails.errorModalContainer,
                         modalDetails.errorModalH4Text,
