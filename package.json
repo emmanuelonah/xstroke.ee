@@ -22,8 +22,10 @@
     "start": "lite-server",
     "test": "npx cypress run",
     "dev": "parcel  *.html watch",
+    "babel":"npx babel *.html watch",
     "build": "parcel build *.html --out-dir /public/prod",
     "tsc": "tsc /src/components/*.ts --watch"
+
   },
   "author": "Emmanuel Onah AfricLite",
   "license": "ISC"

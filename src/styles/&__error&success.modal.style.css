@@ -1,70 +1,69 @@
 /* Variable */
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
-  --success: #008000;
-  --yellow: #ffd000;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
+    --success: #008000;
+    --yellow: #ffd000;
 }
 
 /* mobile style */
 .modal {
-  background-color: var(--primary);
-  width: 90%;
-  height: 250px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  padding: 10px 20px;
-  /* box-shadow: 2px 2px 5px 4px #ececec; */
-  border: solid 0.8px rgb(218, 218, 218);
-  position: absolute;
-  z-index: 2;
-  clear: both;
-  left: 0;
-  right: 0;
-  top: 0;
+    background-color: var(--primary);
+    width: 90%;
+    height: 250px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: solid 0.8px rgb(218, 218, 218);
+    position: absolute;
+    z-index: 2;
+    clear: both;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .modal__displayer {
-  display: block;
+    display: block;
 }
 
 .modal__menu__icon {
-  position: absolute;
-  right: 20px;
-  top: 30px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
 }
 
 .modal__menu__icon .top {
-  transform: rotate(50deg);
-  margin: 0;
-  width: 15px !important;
+    transform: rotate(50deg);
+    margin: 0;
+    width: 15px !important;
 }
 
 .modal__menu__icon .bottom {
-  transform: rotate(135deg);
-  width: 15px !important;
-  margin: 0;
-  margin-top: -2.7px;
+    transform: rotate(135deg);
+    width: 15px !important;
+    margin: 0;
+    margin-top: -2.7px;
 }
 
 .modal img {
-  width: 50px;
+    width: 50px;
 }
 
 .okay--button {
-  border-radius: 50px;
-  width: 80%;
-  background: var(--success);
+    border-radius: 50px;
+    width: 80%;
+    background: var(--success);
 }
 
 .error__button {
-  background: var(--yellow);
-  color: var(--secondary);
+    background: var(--yellow);
+    color: var(--secondary);
 }
 
 /* mini ipad screen*/
@@ -73,28 +72,28 @@
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 
-  .modal {
-    width: 60%;
-    margin: 0 auto;
-  }
+    .modal {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
+    html {
+        font-size: 20px;
+    }
 
-  .modal {
-    width: 40%;
-  }
+    .modal {
+        width: 40%;
+    }
 
-  .okay--button,
-  .error__button {
-    width: 50%;
-  }
+    .okay--button,
+    .error__button {
+        width: 50%;
+    }
 }

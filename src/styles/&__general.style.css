@@ -1,136 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
 
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-  font-size: 16px;
-  scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px 20px 20px 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px 20px 20px;
 }
 
 textarea,
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  -webkit-appearance: none;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  font-size: 0.9em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: 0.9em;
 }
 
 h1 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 p {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 h3 {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 button {
-  cursor: pointer;
-  width: 170px;
-  height: 40px;
-  font-size: 0.8rem;
-  background: var(--tertiary);
-  border: 0;
-  color: var(--primary);
-  margin-top: 20px;
+    cursor: pointer;
+    width: 170px;
+    height: 40px;
+    font-size: 0.8rem;
+    background: var(--tertiary);
+    border: 0;
+    color: var(--primary);
+    margin-top: 20px;
 }
 
 img {
-  display: block;
+    display: block;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a:link {
-}
-
-a:hover {
-}
-
-a:active {
-}
-
-a:visited {
-}
-
-:disabled {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 :required {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 :focus {
-  outline: none;
+    outline: none;
 }
 
 ::placeholder {
-  color: #6b6b6b;
-  font-size: 0.8em;
+    color: #6b6b6b;
+    font-size: 0.8em;
 }
 
 /* Form Styling */
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 form input:not([type="submit"]) {
-  background: transparent;
-  border: 0;
-  border-bottom: solid 1px var(--tertiary);
+    background: transparent;
+    border: 0;
+    border-bottom: solid 1px var(--tertiary);
 }
 
 label {
-  font-size: 0.8rem;
-  padding: 15px 0;
+    font-size: 0.8rem;
+    padding: 15px 0;
 }
 
 button,
 input[type="submit"],
 input[type="checkbox"] {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .logo {
-  font-size: 0.9rem;
-  font-family: "Metal Mania", cursive;
+    font-size: 0.9rem;
+    font-family: "Metal Mania", cursive;
+}
+
+.container-flex {
+    /* display: flex; */
 }
 
 /* mini ipad screen*/
@@ -139,22 +128,22 @@ input[type="checkbox"] {
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 17px;
-  }
+    html {
+        font-size: 17px;
+    }
 
-  .heading--h1 {
-    color: var(--tertiary);
-  }
+    .heading--h1 {
+        color: var(--tertiary);
+    }
 
-  #email:focus,
-  #password:focus,
-  #estonianId:focus,
-  #userName:focus,
-  #resetEmail:focus,
-  .auth--input:focus {
-    border: solid 0.5px #333;
-    padding: 20px 5px;
-    border-left: solid 3px #02335c;
-  }
+    #email:focus,
+    #password:focus,
+    #estonianId:focus,
+    #userName:focus,
+    #resetEmail:focus,
+    .auth--input:focus {
+        border: solid 0.5px #333;
+        padding: 20px 5px;
+        border-left: solid 3px #02335c;
+    }
 }

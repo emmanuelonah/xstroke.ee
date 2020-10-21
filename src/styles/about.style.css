@@ -1,42 +1,42 @@
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 
 /* Mobile style */
-.about--page--container .logo {
-  padding-left: 0;
+.about-page-container.logo {
+    padding-left: 0;
 }
 
-.testing--steps--wrapper div {
-  margin-top: 30px;
+.testing-steps-wrapper div {
+    margin-top: 30px;
 }
 
-.testing--steps--wrapper div img {
-  width: 70%;
-  margin: 0 auto;
+.testing-steps-wrapper div img {
+    width: 70%;
+    margin: 0 auto;
 }
 
-.testing--steps--wrapper h3 {
-  font-size: 1rem;
+.testing-steps-wrapper h3 {
+    font-size: 1rem;
 }
 
-.steps--scroller--wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-  border: solid 1px var(--secondary);
-  margin-top: 40px;
+.steps-scroller-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    border: solid 1px var(--secondary);
+    margin-top: 40px;
 }
 
-.steps--scroller--wrapper li {
-  border: solid 1px var(--tertiary);
+.steps-scroller-wrapper li {
+    border: solid 1px var(--tertiary);
 }
 
-.steps--scroller--wrapper li a {
-  font-size: 0.7rem;
-  color: var(--tertiary);
+.steps-scroller-wrapper li a {
+    font-size: 0.7rem;
+    color: var(--tertiary);
 }
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
@@ -44,27 +44,27 @@
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 
-  .about--page--container {
-    padding: 0 70px;
-  }
+    .about-page-container {
+        padding: 0 70px;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
+    html {
+        font-size: 20px;
+    }
 
-  .about--page--container {
-    padding: 0 70px;
-  }
+    .about-page-container {
+        padding: 0 70px;
+    }
 
-  .testing--steps--wrapper div img {
-    width: 60%;
-    margin: 0 auto;
-  }
+    .testing-steps-wrapper div img {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
