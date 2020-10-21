@@ -78,6 +78,11 @@
     padding: 20px;
 }
 
+.footer {
+    padding-top: 50px;
+    border-top: solid 1px #eee;
+}
+
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
 }
