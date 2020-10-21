@@ -38,7 +38,7 @@ footer select {
     margin-bottom: 30px;
 }
 
-.social--media {
+.social-media {
     display: flex;
     justify-content: space-between;
 }
@@ -67,7 +67,7 @@ footer select {
         justify-content: space-between;
     }
 
-    .footer--row {
+    .footer-row {
         width: 33%;
     }
 

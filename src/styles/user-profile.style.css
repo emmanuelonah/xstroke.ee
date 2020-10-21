@@ -4,12 +4,12 @@
     --tertiary: #011220;
 }
 
-.user--profile--page--container {
+.user-profile-page-container {
     padding-left: 0 !important;
     width: 100%;
 }
 
-.user--profile--page--container header nav {
+.user-profile-page-container header nav {
     background-color: var(--primary);
     position: fixed;
     top: 0;
@@ -25,11 +25,11 @@
     padding: 10px 20px;
 }
 
-.user--profile--page--container header nav ul .logo {
+.user-profile-page-container header nav ul .logo {
     padding-left: 0 !important;
 }
 
-.user--profile--page--container .logo {
+.user-profile-page-container .logo {
     padding-left: 10px;
 }
 
