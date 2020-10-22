@@ -83,6 +83,11 @@
     box-sizing: 2px 2px 2px 2px #eee;
     border-radius: 10px;
     padding: 20px;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.step__wrapper:hover {
+    transform: scale(1.1);
 }
 
 .footer {
