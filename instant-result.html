@@ -36,71 +36,76 @@
         <link rel="stylesheet" href="./src/styles/instant-result.style.css" />
     </head>
     <body>
-        <div class="container instant-result-page-container" role="main">
-            <!-- Header -->
-            <header>
-                <nav>
-                    <ul>
-                        <li class="instant--logo"><a href="/index">🩺XSTROKE EE</a></li>
-                        <li>
-                            <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
-                        </li>
-                    </ul>
-                    <!-- Menu Bar -->
-                    <div class="menu--bar">
-                        <span class="top"></span>
-                        <span class="bottom"></span>
+        <div>
+            <div class="container instant-result-page-container" role="main">
+                <!-- Header -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li class="instant--logo"><a href="/index">🩺XSTROKE EE</a></li>
+                            <li>
+                                <a href="./user-profile"
+                                    ><i class="fa fa-user-alt"></i>User Profile</a
+                                >
+                            </li>
+                        </ul>
+                        <!-- Menu Bar -->
+                        <div class="menu--bar">
+                            <span class="top"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- Menu items -->
+                <ul class="menu--items">
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./diagnosis">Diagnosis</a></li>
+                    <li><a href="./user-profile">Health history</a></li>
+                    <li class="logout"><a href="#">Logout</a></li>
+                </ul>
+
+                <img
+                    src="./src/assets/images/instant-result-bg.png"
+                    alt=""
+                    class="instant--result--bg"
+                />
+                <!-- Stroke Result -->
+                <div class="stroke--result--wrapper">
+                    <!-- Stroke risk -->
+                    <div class="stroke--risk">
+                        <h1>Your stroke level is currently</h1>
+                        <div class="risk--number">
+                            <span>0</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
                     </div>
-                </nav>
-            </header>
 
-            <!-- Menu items -->
-            <ul class="menu--items">
-                <li><a href="./about">About</a></li>
-                <li><a href="./diagnosis">Diagnosis</a></li>
-                <li><a href="./user-profile">Health history</a></li>
-                <li class="logout"><a href="#">Logout</a></li>
-            </ul>
-
-            <img
-                src="./src/assets/images/instant-result-bg.png"
-                alt=""
-                class="instant--result--bg"
-            />
-            <!-- Stroke Result -->
-            <div class="stroke--result--wrapper">
-                <!-- Stroke risk -->
-                <div class="stroke--risk">
-                    <h1>Your stroke level is currently</h1>
-                    <div class="risk--number">
-                        <span>0</span>
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
+                    <!-- Stroke Suggestion -->
+                    <div class="stroke--suggestion">
+                        <h1>We Suggest that</h1>
+                        <ul>
+                            <li>Increase your physical activities to 2.4 hr/week.</li>
+                            <li>Decrease your blood pressure by agents describe by a doctor.</li>
+                            <li>
+                                Decrease your body mass index to reach the target of 25 to 29.99
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Stroke Suggestion -->
-                <div class="stroke--suggestion">
-                    <h1>We Suggest that</h1>
-                    <ul>
-                        <li>Increase your physical activities to 2.4 hr/week.</li>
-                        <li>Decrease your blood pressure by agents describe by a doctor.</li>
-                        <li>Decrease your body mass index to reach the target of 25 to 29.99</li>
-                    </ul>
+                <!-- Redirection buttons -->
+                <div class="redirection--button--wrapper">
+                    <button class="diagonise"><i class="fa fa-stethoscope"></i>Diagonise</button>
+                    <button class="home"><i class="fa fa-home"></i>Home</button>
                 </div>
             </div>
 
-            <!-- Redirection buttons -->
-            <div class="redirection--button--wrapper">
-                <button class="diagonise"><i class="fa fa-stethoscope"></i>Diagonise</button>
-                <button class="home"><i class="fa fa-home"></i>Home</button>
-            </div>
-
             <!-- Footer -->
-            <!-- Footer -->
-            <footer>
+            <footer class="container">
                 <!-- Internationalization row1 or col2 -->
                 <select
                     name="internationalization"

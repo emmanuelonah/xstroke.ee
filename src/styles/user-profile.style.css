@@ -9,30 +9,6 @@
     width: 100%;
 }
 
-.user-profile-page-container header nav {
-    background-color: var(--primary);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    border-bottom: solid 0.5px #d4d4d4;
-    padding: 10px 20px;
-}
-
-.user-profile-page-container header nav ul .logo {
-    padding-left: 0 !important;
-}
-
-.user-profile-page-container .logo {
-    padding-left: 10px;
-}
-
 /* Mobile style */
 .user--profile--container2 {
     width: 100%;

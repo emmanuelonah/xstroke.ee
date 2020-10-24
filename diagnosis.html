@@ -36,151 +36,153 @@
         <link rel="stylesheet" href="./src/styles/diagnosis.style.css" />
     </head>
     <body>
-        <div class="container diagonosis--page--container" role="main">
-            <!-- Header -->
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="./index">🩺XSTROKE EE</a></li>
-                        <li>
-                            <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
-                        </li>
-                    </ul>
-                    <!-- Menu Bar -->
-                    <div class="menu--bar">
-                        <span class="top"></span>
-                        <span class="bottom"></span>
+        <div>
+            <div class="container diagonosis--page--container" role="main">
+                <!-- Header -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="./index">🩺XSTROKE EE</a></li>
+                            <li>
+                                <a href="./user-profile"
+                                    ><i class="fa fa-user-alt"></i>User Profile</a
+                                >
+                            </li>
+                        </ul>
+                        <!-- Menu Bar -->
+                        <div class="menu--bar">
+                            <span class="top"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- Menu items -->
+                <ul class="menu--items">
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./diagnosis">Diagnosis</a></li>
+                    <li><a href="./user-profile.html">Health history</a></li>
+                    <li class="logout"><a href="#">Logout</a></li>
+                </ul>
+
+                <!-- Stroke prevention form -->
+                <form class="stroke--diagnosis--form" id="stroke--test--form">
+                    <h3>Stroke Prevention System <time class="system--date"></time></h3>
+                    <p>Please provide your today's data</p>
+                    <!-- Blood pressure section -->
+                    <div class="blood--pressure--wrapper">
+                        <h4>Blood Pressure</h4>
+                        <label for="systolic">Systolic</label>
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="systolic"
+                                id="systolic"
+                                placeholder="Systolic"
+                            />
+                            mm Hg</span
+                        >
+
+                        <label for="diastolic">Diastolic</label>
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="diastolic"
+                                id="diastolic"
+                                placeholder="Diastolic"
+                            />
+                            mm Hg</span
+                        >
                     </div>
-                </nav>
-            </header>
-
-            <!-- Menu items -->
-            <ul class="menu--items">
-                <li><a href="./about">About</a></li>
-                <li><a href="./diagnosis">Diagnosis</a></li>
-                <li><a href="./user-profile.html">Health history</a></li>
-                <li class="logout"><a href="#">Logout</a></li>
-            </ul>
-
-            <!-- Stroke prevention form -->
-            <form class="stroke--diagnosis--form" id="stroke--test--form">
-                <h3>Stroke Prevention System <time class="system--date"></time></h3>
-                <p>Please provide your today's data</p>
-                <!-- Blood pressure section -->
-                <div class="blood--pressure--wrapper">
-                    <h4>Blood Pressure</h4>
-                    <label for="systolic">Systolic</label>
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="systolic"
-                            id="systolic"
-                            placeholder="Systolic"
+                    <!-- Body mass index -->
+                    <div class="body--mass--index--wrapper">
+                        <h4>Body mass index</h4>
+                        <label for="height">Height</label>
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="height"
+                                id="height"
+                                placeholder="Height"
+                            />
+                            cm</span
+                        >
+                        <label for="weight">Weight</label>
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="weight"
+                                id="weight"
+                                placeholder="Weight"
+                            />
+                            kg</span
+                        >
+                    </div>
+                    <!-- Cigarettes smoked -->
+                    <div class="cigarretes--smoked--wrapper">
+                        <h4>Cigarettes smoked</h4>
+                        <span role="input"
+                            ><input
+                                required
+                                type="number"
+                                id="cigarettes-smoked"
+                                name="cigarettesSmoked"
+                                value="0"
+                                aria-label="Cigarettes smoked"
+                            />
+                            Pcs</span
+                        >
+                    </div>
+                    <!-- Physical activity -->
+                    <div class="physical--activity--wrapper">
+                        <h4>Physical activity</h4>
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="hours"
+                                id="hours"
+                                value="0"
+                                aria-label="hours"
+                            />
+                            h</span
+                        >
+                        <span role="input"
+                            ><input
+                                required
+                                type="text"
+                                name="minutes"
+                                id="minutes"
+                                value="30"
+                                aria-label="hours"
+                            />
+                            min</span
+                        >
+                    </div>
+                    <!-- Buttons -->
+                    <div class="form--buttons--wrapper">
+                        <input
+                            type="reset"
+                            value="Clear"
+                            id="clear-button"
+                            aria-label="Clear form button"
                         />
-                        mm Hg</span
-                    >
-
-                    <label for="diastolic">Diastolic</label>
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="diastolic"
-                            id="diastolic"
-                            placeholder="Diastolic"
+                        <input
+                            type="submit"
+                            value="Ok"
+                            id="okay-button"
+                            name="okay-button"
+                            aria-label="Submit report button"
                         />
-                        mm Hg</span
-                    >
-                </div>
-                <!-- Body mass index -->
-                <div class="body--mass--index--wrapper">
-                    <h4>Body mass index</h4>
-                    <label for="height">Height</label>
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="height"
-                            id="height"
-                            placeholder="Height"
-                        />
-                        cm</span
-                    >
-                    <label for="weight">Weight</label>
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="weight"
-                            id="weight"
-                            placeholder="Weight"
-                        />
-                        kg</span
-                    >
-                </div>
-                <!-- Cigarettes smoked -->
-                <div class="cigarretes--smoked--wrapper">
-                    <h4>Cigarettes smoked</h4>
-                    <span role="input"
-                        ><input
-                            required
-                            type="number"
-                            id="cigarettes-smoked"
-                            name="cigarettesSmoked"
-                            value="0"
-                            aria-label="Cigarettes smoked"
-                        />
-                        Pcs</span
-                    >
-                </div>
-                <!-- Physical activity -->
-                <div class="physical--activity--wrapper">
-                    <h4>Physical activity</h4>
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="hours"
-                            id="hours"
-                            value="0"
-                            aria-label="hours"
-                        />
-                        h</span
-                    >
-                    <span role="input"
-                        ><input
-                            required
-                            type="text"
-                            name="minutes"
-                            id="minutes"
-                            value="30"
-                            aria-label="hours"
-                        />
-                        min</span
-                    >
-                </div>
-                <!-- Buttons -->
-                <div class="form--buttons--wrapper">
-                    <input
-                        type="reset"
-                        value="Clear"
-                        id="clear-button"
-                        aria-label="Clear form button"
-                    />
-                    <input
-                        type="submit"
-                        value="Ok"
-                        id="okay-button"
-                        name="okay-button"
-                        aria-label="Submit report button"
-                    />
-                </div>
-            </form>
-
+                    </div>
+                </form>
+            </div>
             <!-- Footer -->
-            <!-- Footer -->
-            <footer>
+            <footer class="container">
                 <!-- Internationalization row1 or col2 -->
                 <select
                     name="internationalization"
