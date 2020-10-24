@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
     };
     const updateUserLogInState = () => {
         firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
+            if (user && window.localStorage.getItem("userDocId")) {
                 state.isUserLoggedIn = true;
                 window.localStorage.setItem("userLoggedIn", true);
                 window.localStorage.setItem("uid", user.uid);
@@ -37,7 +37,16 @@ window.addEventListener("DOMContentLoaded", (_) => {
             .auth()
             .signInWithEmailAndPassword(loginData.email, loginData.password)
             .then(() => {
-                updateUserLogInState();
+                db.collection("users")
+                    .where("email", "==", loginData.email)
+                    .get()
+                    .then((res) => {
+                        res.forEach((doc) => {
+                            window.localStorage.setItem("userDocId", doc.id);
+                            //After setting it, then execute the below method because the method depends on the above ajax operation
+                            updateUserLogInState();
+                        });
+                    });
             })
             .catch((err) => {
                 window.alert(err);
