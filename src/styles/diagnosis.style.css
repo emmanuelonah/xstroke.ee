@@ -1,40 +1,40 @@
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 
 /* Menubar */
 .diagonosis--page--container {
-  background-color: #eee;
-  position: relative;
+    background-color: #eee;
+    position: relative;
 }
 
 .diagonosis--page--container div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .diagonosis--page--container div span {
-  font-size: 0.6rem;
+    font-size: 0.6rem;
 }
 
 .menu--bar {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* Diagnosis form */
 .stroke--diagnosis--form {
-  width: 100%;
-  margin: 0 auto;
-  background-color: var(--primary);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  padding: 10px 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--primary);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 /* Body pressure */
@@ -42,109 +42,109 @@
 .body--mass--index--wrapper,
 .cigarretes--smoked--wrapper,
 .physical--activity--wrapper {
-  background: var(--tertiary);
-  color: var(--primary);
-  padding-left: 8px;
-  padding-bottom: 10px;
-  margin-top: 20px;
+    background: var(--tertiary);
+    color: var(--primary);
+    padding-left: 8px;
+    padding-bottom: 10px;
+    margin-top: 20px;
 }
 
 .blood--pressure--wrapper input,
 .body--mass--index--wrapper input,
 .cigarretes--smoked--wrapper input,
 .physical--activity--wrapper input {
-  border-bottom: solid 1px var(--primary) !important;
+    border-bottom: solid 1px var(--primary) !important;
 }
 
 .blood--pressure--wrapper ::placeholder,
 .body--mass--index--wrapper ::placeholder,
 .cigarretes--smoked--wrapper ::placeholder,
 .physical--activity--wrapper ::placeholder {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 /* Body mass index */
 .body--mass--index--wrapper {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 .body--mass--index--wrapper input {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 /* Blood pressure */
 .blood--pressure--wrapper {
-  background-color: #eee;
-  color: var(--secondary);
+    background-color: #eee;
+    color: var(--secondary);
 }
 .blood--pressure--wrapper input {
-  color: var(--secondary) !important;
-  border-bottom: solid 1px var(--secondary) !important;
+    color: var(--secondary) !important;
+    border-bottom: solid 1px var(--secondary) !important;
 }
 .blood--pressure--wrapper ::placeholder {
-  color: var(--secondary) !important;
+    color: var(--secondary) !important;
 }
 
 /* cigarretes smoked */
 .cigarretes--smoked--wrapper {
-  color: var(--secondary) !important;
-  background-color: #eee;
+    color: var(--secondary) !important;
+    background-color: #eee;
 }
 .cigarretes--smoked--wrapper input {
-  color: var(--secondary) !important;
-  border-bottom: solid 1px var(--secondary) !important;
+    color: var(--secondary) !important;
+    border-bottom: solid 1px var(--secondary) !important;
 }
 
 /* Physical activity */
 .physical--activity--wrapper {
-  color: var(--primary) !important;
+    color: var(--primary) !important;
 }
 .physical--activity--wrapper input {
-  color: var(--primary) !important;
+    color: var(--primary) !important;
 }
 
 .stroke--diagnosis--form div * {
-  width: 80%;
+    width: 80%;
 }
 
 .stroke--diagnosis--form div label {
-  padding: 5px 0;
+    padding: 5px 0;
 }
 
 .stroke--diagnosis--form div h4 {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .physical--activity--wrapper span {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .form--buttons--wrapper {
-  display: flex;
+    display: flex;
 }
 
 .form--buttons--wrapper #okay-button {
-  background: var(--tertiary) !important;
-  color: var(--primary);
+    background: var(--tertiary) !important;
+    color: var(--primary);
 }
 
 .form--buttons--wrapper #okay-button,
 .form--buttons--wrapper #clear-button {
-  width: 100px;
-  border-radius: 0;
-  border: solid 1.5px #000;
-  padding: 7px 10px;
-  background-color: #fff;
-  cursor: pointer;
-  margin: 5px 0;
+    width: 100px;
+    border-radius: 0;
+    border: solid 1.5px #000;
+    padding: 7px 10px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 5px 0;
 }
 
 #stroke--test--form .passed__regexp {
-  border-bottom: solid 1px #008000 !important;
+    border-bottom: solid 1px #008000 !important;
 }
 
 #stroke--test--form .failed__regexp {
-  border-bottom: solid 1px #ff0000 !important;
+    border-bottom: solid 1px #ff0000 !important;
 }
 
 /* mini ipad screen*/
@@ -153,17 +153,17 @@
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
-  .diagonosis--page--container {
-    padding: 0 60px;
-  }
+    html {
+        font-size: 20px;
+    }
+    .diagonosis--page--container {
+        padding: 40px 60px;
+    }
 }

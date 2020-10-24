@@ -60,11 +60,15 @@
     }
 
     .about-page-container {
-        padding: 0 70px;
+        padding-top: 40px;
+    }
+
+    .testing-steps-wrapper {
+        text-align: center;
     }
 
     .testing-steps-wrapper div img {
-        width: 60%;
+        width: 40%;
         margin: 0 auto;
     }
 }

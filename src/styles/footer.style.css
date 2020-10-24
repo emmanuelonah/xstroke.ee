@@ -85,6 +85,11 @@ footer select {
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
+    footer {
+        margin-top: 20px !important;
+        padding-top: 30px !important;
+    }
+
     html {
         font-size: 20px;
     }

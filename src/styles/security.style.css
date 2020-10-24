@@ -1,47 +1,47 @@
 :root {
-  --primary: #fff;
-  --secondary: #000;
-  --tertiary: #011220;
+    --primary: #fff;
+    --secondary: #000;
+    --tertiary: #011220;
 }
 /* mobile style */
 .security--heading {
-  font-size: 1.5rem;
-  margin-top: 50px;
+    font-size: 1.5rem;
+    margin-top: 50px;
 }
 
 .security--page--container .logo {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .security--page--container .security--bg {
-  width: 80%;
-  margin-top: 50px;
+    width: 80%;
+    margin-top: 50px;
 }
 
 .security--list {
-  font-size: 0.9rem;
-  margin-top: 30px;
+    font-size: 0.9rem;
+    margin-top: 30px;
 }
 
 .security--list li:nth-child(1)::before {
-  content: url(../assets/images/gdpr.png);
-  width: 10px !important;
-  height: 10px !important;
-  padding-right: 5px;
+    content: url(../assets/images/gdpr.png);
+    width: 10px !important;
+    height: 10px !important;
+    padding-right: 5px;
 }
 
 .security--list li:nth-child(2)::before {
-  content: url(../assets/images/file-encrypted2.png);
-  width: 10px !important;
-  height: 10px !important;
-  padding-right: 5px;
+    content: url(../assets/images/file-encrypted2.png);
+    width: 10px !important;
+    height: 10px !important;
+    padding-right: 5px;
 }
 
 .security--list li:nth-child(3)::before {
-  content: url(../assets/images/data-encryption.png);
-  width: 10px !important;
-  height: 10px !important;
-  padding-right: 5px;
+    content: url(../assets/images/data-encryption.png);
+    width: 10px !important;
+    height: 10px !important;
+    padding-right: 5px;
 }
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
@@ -49,23 +49,23 @@
 
 /* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 
-  .security--page--container .security--bg {
-    width: 50% !important;
-    max-width: 50%;
-  }
+    .security--page--container .security--bg {
+        width: 50% !important;
+        max-width: 50%;
+    }
 }
 
 /* desktop screen*/
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 
-  .security--page--container {
-    padding: 0 50px;
-  }
+    .security--page--container {
+        padding-top: 40px;
+    }
 }

@@ -7,7 +7,6 @@
 /* Mobile Style */
 .terms--page--container {
     padding: 10px 30px;
-    height: 100vh;
 }
 
 .terms--page--container header nav ul li:first-child {
@@ -65,7 +64,7 @@
     }
 
     .terms--page--container {
-        padding: 0 100px 20px 100px;
+        padding-top: 40px;
     }
 
     .terms--page--container p {
