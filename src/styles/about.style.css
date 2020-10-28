@@ -38,6 +38,14 @@
     font-size: 0.7rem;
     color: var(--tertiary);
 }
+
+.step-wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px #e4e4e4;
+    padding: 0 20px 20px 20px;
+}
+
 /* mini ipad screen*/
 @media screen and (min-width: 620px) {
 }
