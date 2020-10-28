@@ -42,9 +42,11 @@ footer select {
 
 .social-media {
     display: flex;
-    justify-content: space-between;
 }
 
+.social-media li {
+    padding-right: 10px;
+}
 .copyright {
     font-size: 0.8rem;
     display: flex;
