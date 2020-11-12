@@ -10,7 +10,7 @@
      /privacy-policy/*        /privacy-policy.html                  200
     /security/*              /security.html                         200
    /server-error-page/*     /server-error-page.html                 200
-  /signup/*                /signup.html                             200                         200 
+  /signup/*                /signup.html                             200                       
  /terms/*                 /terms.html                               200
 /user-profile/*          /user-profile.html                         200
     
