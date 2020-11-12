@@ -9,9 +9,7 @@
     --tertiary: #011220;
 }
 
-*,
-*::after,
-*::before {
+* {
     margin: 0;
     padding: 0;
     line-height: 1.6;
