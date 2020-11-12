@@ -1,4 +1,3 @@
-///update title tag to user name before
 window.addEventListener("DOMContentLoaded", (_) => {
     const _userMail = document.querySelector(".user--mail");
     const _userName = document.querySelector(".user--name");
@@ -9,9 +8,9 @@ window.addEventListener("DOMContentLoaded", (_) => {
     const _userLoggedInMail = window.localStorage.getItem("userLoggedInEmail");
     const _userId = window.localStorage.getItem("userDocId");
 
-    /*-----------------------------
-     update user details fn
-    -------------------------------*/
+    //******************************
+    //update user details fn
+    //*******************************
     const updateUserProfile = () => {
         db.collection("users")
             .where(firebase.firestore.FieldPath.documentId(), "==", _userId)

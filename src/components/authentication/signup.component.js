@@ -1,4 +1,4 @@
-import { genericModal } from "../../components/modal/generic.modal";
+import { genericModal } from "../../components/modal/generic.modal.js";
 import { modalDetails } from "../utils/modal.setup.js";
 
 window.addEventListener("DOMContentLoaded", () => {
