@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user && window.localStorage.getItem("userDocId")) {
                 state.isUserLoggedIn = true;
-                window.localStorage.setItem("userLoggedIn", true);
+                window.localStorage.setItem("userLoggedIn", state.isUserLoggedIn);
                 window.localStorage.setItem("uid", user.uid);
                 window.localStorage.setItem("userLoggedInEmail", user.email);
 
@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
                 window.location.replace("/user-profile");
             } else {
                 state.isUserLoggedIn = false;
+                window.localStorage.setItem("userLoggedIn", state.isUserLoggedIn);
             }
         });
     };
