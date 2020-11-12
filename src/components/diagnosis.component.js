@@ -1,7 +1,13 @@
-window.addEventListener("DOMContentLoaded", (_) => {
+import {
+    bloodPressure,
+    bodyMassIndex,
+    cigarettesSmokedPerWeek,
+    physicalActivity,
+} from "./utils/diagnosis.js";
+
+window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".stroke--diagnosis--form");
     const time = document.querySelectorAll(".system--date");
-
     const RegExp = {
         systolic: /^[\d]{0,}$/,
         diastolic: /^[\d]{0,}$/,
@@ -12,44 +18,53 @@ window.addEventListener("DOMContentLoaded", (_) => {
         minutes: /^[\d]{0,}$/,
     };
 
-    ///Update The Date of the System
+    //*********************************************
+    //@update() The Date of the System
+    //*********************************************
     time.forEach((time) => {
         time.textContent = new Date().getFullYear();
     });
 
-    ///submit diagnosis to backend
-    const sendDiagonosisToBackend = (_) => {
+    //*********************************************
+    //@submition() of diagnosis to db function
+    //*********************************************
+    const diagnose = (_) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-
             const _diagnosisFormValue = {
-                systolic: Number(form.systolic.value),
-                diastolic: Number(form.diastolic.value),
-                height: Number(form.height.value),
-                weight: Number(form.weight.value),
-                "cigarettes-smoked": Number(form.cigarettesSmoked.value),
-                hours: Number(form.hours.value),
-                minutes: Number(form.minutes.value),
+                systolic: Number(e.target.systolic.value),
+                diastolic: Number(e.target.diastolic.value),
+                height: Number(e.target.height.value),
+                weight: Number(e.target.weight.value),
+                cigarettesSmoked: Number(e.target.cigarettesSmoked.value),
+                hours: Number(e.target.hours.value),
+                minutes: Number(e.target.minutes.value),
             };
 
-            console.log(_diagnosisFormValue);
+            /*********************************************
+             * @function()bloodPressure @execute,
+             * @function()cigarettesSmokedPerWeek @execute,
+             * @function()physicalActivity @execute,
+             * @function()bodyMassIndex @execute,
+             *********************************************/
 
-            ///API operation here
-            ///Should show user the result if user clicks ok button
-            window.location.assign("/instant-result");
-            form.reset();
+            bloodPressure(_diagnosisFormValue.systolic, _diagnosisFormValue.diastolic);
+            cigarettesSmokedPerWeek(_diagnosisFormValue.cigarettesSmoked);
+            physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
+            bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
+            //window.location.assign("/instant-result");
+            e.target.reset();
         });
     };
+    diagnose();
 
-    ///form input verification
+    //*********************************************
+    //@validation() form input validation
+    //*********************************************
     form.addEventListener("keydown", (e) => {
-        console.log(e.target.value);
         if (RegExp[e.target.name].test(e.target.value)) {
             e.target.classList.remove("failed__regexp");
             e.target.classList.add("passed__regexp");
-
-            ///invoke sendDiagonosisToBackend
-            sendDiagonosisToBackend();
         } else {
             e.target.classList.remove("passed__regexp");
             e.target.classList.add("failed__regexp");

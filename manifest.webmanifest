@@ -10,15 +10,47 @@
   "background_color": "#011220",
   "theme_color": "#ffffff",
   "icons": [
-    { "src": "", "type": "image/png", "sizes": "" },
-    { "src": "", "type": "image/png", "sizes": "" },
-    { "src": "", "type": "image/png", "sizes": "" },
-    { "src": "", "type": "image/png", "sizes": "" },
-    { "src": "", "type": "image/png", "sizes": "" }
+    {
+      "src": "",
+      "type": "image/png",
+      "sizes": ""
+    },
+    {
+      "src": "",
+      "type": "image/png",
+      "sizes": ""
+    },
+    {
+      "src": "",
+      "type": "image/png",
+      "sizes": ""
+    },
+    {
+      "src": "",
+      "type": "image/png",
+      "sizes": ""
+    },
+    {
+      "src": "",
+      "type": "image/png",
+      "sizes": ""
+    }
   ],
   "shortcuts": [
-    { "short_name": "About", "name": "About xStroke", "url": "/about.html" },
-    { "short_name": "Diagnosis", "name": "Diagnosis xStroke", "url": "/diagnosis.html" },
-    { "short_name": "Result", "name": "Result xStroke", "url": "/instant-result.html" }
+    {
+      "short_name": "About",
+      "name": "About xStroke",
+      "url": "/about.html"
+    },
+    {
+      "short_name": "Diagnosis",
+      "name": "Diagnosis xStroke",
+      "url": "/diagnosis.html"
+    },
+    {
+      "short_name": "Result",
+      "name": "Result xStroke",
+      "url": "/instant-result.html"
+    }
   ]
 }

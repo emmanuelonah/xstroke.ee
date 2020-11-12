@@ -1,21 +1,7 @@
-///import utility function for api request here
-window.addEventListener("DOMContentLoaded", (_) => {
-    const modalDetails = {
-        successModalContainer: "modal success--modal",
-        errorModalContainer: "modal error--modal",
-        errorModalImg: "https://i.ibb.co/K2K8fDd/error.png",
-        successModalImg: "https://i.ibb.co/2511HCS/success.png",
-        errorModalButtonClass: "okay--button error__button",
-        successModalButtonClass: "okay--button success__ok",
-        errorButtonText: "Go home",
-        successButtonText: "Login",
-        errorButtonNavigationLink: "/signup",
-        successButtonNavigationLink: "/login",
-        successModalH4Text: "Successful",
-        errorModalH4Text: "Error",
-        htmlBodyToInsertTheModalIn: document.querySelector("body"),
-    };
+import { genericModal } from "../../components/modal/generic.modal";
+import { modalDetails } from "../utils/modal.setup.js";
 
+window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".signup--form");
     const RegExp = {
         user_avatar: / /,
@@ -24,81 +10,10 @@ window.addEventListener("DOMContentLoaded", (_) => {
         password: /^[\w@-]{8,20}$/i,
         estonian_id: /^[\d]{10}$/,
     };
-    ///1...Work with Cookies and LocalStorage to Set user signup status
-    ///2...modal function
-    const messageModal = (
-        modalClass,
-        modalType,
-        modalImg,
-        modalButtonClass,
-        successMessage,
-        buttonText,
-        buttonNavigationLink,
-        htmlBodyToInsertTheModalIn
-    ) => {
-        ///div modal container
-        const modalContainer = document.createElement("div");
-        modalContainer.setAttribute("class", modalClass);
 
-        ///div menuIcon wrapper
-        const menuIconDiv = document.createElement("div");
-        menuIconDiv.setAttribute("class", "menu--bar modal__menu__icon");
-
-        ///span
-        const menuSpan1 = document.createElement("span");
-        menuSpan1.setAttribute("class", "top");
-
-        ///span
-        const menuSpan2 = document.createElement("span");
-        menuSpan2.setAttribute("class", "bottom");
-
-        ///append menu spans to menuIcon wrapper
-        menuIconDiv.append(menuSpan1);
-        menuIconDiv.append(menuSpan2);
-
-        ///img
-        const img = document.createElement("img");
-        img.setAttribute("src", modalImg);
-        img.setAttribute("alt", "");
-
-        ///h4
-        const h4 = document.createElement("h4");
-        h4.textContent = modalType;
-
-        // paragraph
-        const p = document.createElement("p");
-        p.textContent = successMessage;
-
-        // button
-        const button = document.createElement("button");
-        button.setAttribute("class", modalButtonClass);
-        button.textContent = buttonText;
-
-        ///Append all elements to modalContainer
-        modalContainer.append(menuIconDiv);
-        modalContainer.append(img);
-        modalContainer.append(h4);
-        modalContainer.append(p);
-        modalContainer.append(button);
-
-        ///remove this element parent from the DOM when menuIconDiv is clicked
-        menuIconDiv.addEventListener("click", (_) => {
-            htmlBodyToInsertTheModalIn.removeChild(modalContainer);
-        });
-
-        ///click event on button
-        button.addEventListener("click", (e) => {
-            window.location.assign(buttonNavigationLink);
-        });
-
-        ///Insert the modal to the htmlBodyElement
-        htmlBodyToInsertTheModalIn.insertBefore(
-            modalContainer,
-            htmlBodyToInsertTheModalIn.childNodes[0]
-        );
-    };
-
-    ///3...form validation event
+    //******************************************
+    //@DOMevent() keydown for input validation
+    //******************************************
     form.addEventListener("keydown", (e) => {
         if (RegExp[e.target.name].test(e.target.value)) {
             e.target.style.borderBottomColor = "green";
@@ -107,8 +22,10 @@ window.addEventListener("DOMContentLoaded", (_) => {
         }
     });
 
-    ///4...user signup function
-    const signupUser = (_) => {
+    //******************************************
+    //@function() signupUser for signup
+    //******************************************
+    const signupUser = () => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
@@ -120,13 +37,12 @@ window.addEventListener("DOMContentLoaded", (_) => {
                 estonian_id: form.estonian_id.value,
             };
 
-            ///firebase signup
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(signupData.email, signupData.password)
                 .then(() => {
                     window.localStorage.setItem("userLoggedInEmail", signupData.email);
-                    messageModal(
+                    genericModal(
                         modalDetails.successModalContainer,
                         modalDetails.successModalH4Text,
                         modalDetails.successModalImg,
@@ -137,25 +53,24 @@ window.addEventListener("DOMContentLoaded", (_) => {
                         modalDetails.htmlBodyToInsertTheModalIn
                     );
 
-                    ///send user data to users table**document in firestore:::this is only ones
+                    //******************************************
+                    //@firestore() add user to user table in db
+                    //******************************************
                     db.collection("users")
                         .add(signupData)
                         .then((res) => {
                             const userDocId = res.id;
                             window.localStorage.setItem("userDocId", userDocId);
-
-                            console.log("New user successfully created");
                         })
                         .catch((err) => console.error(err));
                 })
                 .catch((error) => {
-                    console.error("User not created", error);
-                    messageModal(
+                    genericModal(
                         modalDetails.errorModalContainer,
                         modalDetails.errorModalH4Text,
                         modalDetails.errorModalImg,
                         modalDetails.errorModalButtonClass,
-                        `${signupData.email} was not created because ${errorMessage}`,
+                        `${signupData.email} was not created because ${error.message}`,
                         modalDetails.errorButtonText,
                         modalDetails.errorButtonNavigationLink,
                         modalDetails.htmlBodyToInsertTheModalIn

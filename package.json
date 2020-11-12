@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A school project for preventing stroke in Estonia",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "cypress": "^5.2.0",
     "lite-server": "^2.5.4",
@@ -22,10 +23,9 @@
     "start": "lite-server",
     "test": "npx cypress run",
     "dev": "parcel  *.html watch",
-    "babel":"npx babel *.html watch",
+    "babel": "npx babel *.html watch",
     "build": "parcel build *.html --out-dir /public/prod",
     "tsc": "tsc /src/components/*.ts --watch"
-
   },
   "author": "Emmanuel Onah AfricLite",
   "license": "ISC"

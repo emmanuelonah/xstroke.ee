@@ -17,13 +17,14 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
+            crossorigin="anonymous"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
             rel="stylesheet"
         />
         <!-- Manifest link -->
-        <link rel="manifest" href="./manifest.webmanifest" />
+        <link rel="manifest" href="./manifest.webmanifest" crossorigin="anonymous" />
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
         <!-- Styles -->
@@ -129,7 +130,7 @@
                             ><input
                                 required
                                 type="number"
-                                id="cigarettes-smoked"
+                                id="cigarettesSmoked"
                                 name="cigarettesSmoked"
                                 value="0"
                                 aria-label="Cigarettes smoked"
@@ -139,7 +140,7 @@
                     </div>
                     <!-- Physical activity -->
                     <div class="physical--activity--wrapper">
-                        <h4>Physical activity</h4>
+                        <h4>Physical activity/week</h4>
                         <span role="input"
                             ><input
                                 required
@@ -279,6 +280,6 @@
         <script src="./src/components/authentication/user-verification.js"></script>
         <script src="./src/components/armburger-menu.component.js" defer></script>
         <script src="./src/components/authentication/signout.component.js"></script>
-        <script src="./src/components/diagnosis.component.js"></script>
+        <script src="./src/components/diagnosis.component.js" type="module"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-const firestore = {
+export const firestore = {
     get(collection = "") {
         const getOperation = db.collection(collection).onSnapshot((snapshot) => {
             snapshot.onChanges.map((change) => {
