@@ -1,6 +1,7 @@
 import { genericModal } from "../../components/modal/generic.modal.js";
 import { modalDetails } from "../utils/modal.setup.js";
 
+console.log(genericModal);
 window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".signup--form");
     const RegExp = {
