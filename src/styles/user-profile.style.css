@@ -9,7 +9,6 @@
     width: 100%;
 }
 
-/* Mobile style */
 .user--profile--container2 {
     width: 100%;
     max-width: 100%;
@@ -19,7 +18,6 @@
     height: 100vh;
 }
 
-/* sidebar style */
 .sidebar--wrapper {
     width: 40%;
     background-color: var(--tertiary);
@@ -81,7 +79,6 @@
     color: var(--primary);
 }
 
-/* history style */
 .sidebar--panel {
     width: 60%;
     max-width: 70%;
@@ -159,26 +156,14 @@
 footer {
     padding-left: 20px;
 }
-/* mini ipad screen*/
+
 @media screen and (min-width: 620px) {
     .sidebar--wrapper {
         top: 44px;
     }
 }
 
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
-
     .update--profile {
         height: 40px;
     }
@@ -186,11 +171,5 @@ footer {
     .sidebar--wrapper {
         width: 25%;
         top: 50px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    html {
-        font-size: 20px;
     }
 }

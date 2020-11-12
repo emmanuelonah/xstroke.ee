@@ -4,7 +4,6 @@
     --tertiary: #011220;
 }
 
-/* Menu Items */
 .menu--items {
     width: 60%;
     margin: 0 auto;
@@ -39,23 +38,7 @@
     transform: translate(5px, 0);
 }
 
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
-}
-
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
-
     .menu--items {
         width: 35%;
         max-width: 35%;

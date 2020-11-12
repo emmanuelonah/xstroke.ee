@@ -32,7 +32,6 @@
         <link rel="stylesheet" href="./src/styles/header.style.css" />
         <link rel="stylesheet" href="./src/styles/footer.style.css" />
         <link rel="stylesheet" href="./src/styles/menu-items.style.css" />
-        <link rel="stylesheet" href="./src/styles/error-404.style.css" />
         <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
         <link rel="stylesheet" href="./src/styles/diagnosis.style.css" />
     </head>
@@ -246,8 +245,6 @@
                 </div>
             </footer>
         </div>
-
-        <!-- Noscript tage -->
         <noscript class="noscript">
             <img src="./src/assets/images/error-404.png" alt="" />
             <h1>Something's missing</h1>
@@ -278,16 +275,13 @@
                 appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
                 measurementId: "G-597LPMLF5W",
             };
-            Object.freeze(firebaseConfig);
-            // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-            //firebase.analytics();
             const db = firebase.firestore();
+            Object.freeze(firebaseConfig);
         </script>
-        <!-- Scripts -->
         <script src="./src/components/authentication/user-verification.js" type="module"></script>
-        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/authentication/signout.component.js" type="module"></script>
+        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/diagnosis.component.js" type="module"></script>
     </body>
 </html>

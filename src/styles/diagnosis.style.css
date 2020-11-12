@@ -4,7 +4,9 @@
     --tertiary: #011220;
 }
 
-/* Menubar */
+/****************************/
+/*menubar settings
+/****************************/
 .diagonosis--page--container {
     background-color: #eee;
     position: relative;
@@ -23,7 +25,9 @@
     cursor: pointer;
 }
 
-/* Diagnosis form */
+/****************************/
+/*diagnosis form
+/****************************/
 .stroke--diagnosis--form {
     width: 100%;
     margin: 0 auto;
@@ -37,7 +41,9 @@
     align-content: center;
 }
 
-/* Body pressure */
+/****************************/
+/*body pressure 
+/****************************/
 .blood--pressure--wrapper,
 .body--mass--index--wrapper,
 .cigarretes--smoked--wrapper,
@@ -63,7 +69,9 @@
     color: #fff !important;
 }
 
-/* Body mass index */
+/****************************/
+/*body mass index
+/****************************/
 .body--mass--index--wrapper {
     color: var(--primary);
 }
@@ -72,7 +80,9 @@
     color: var(--primary);
 }
 
-/* Blood pressure */
+/****************************/
+/*menubar settings
+/****************************/
 .blood--pressure--wrapper {
     background-color: #eee;
     color: var(--secondary);
@@ -85,7 +95,9 @@
     color: var(--secondary) !important;
 }
 
-/* cigarretes smoked */
+/****************************/
+/*cigarretes smoked
+/****************************/
 .cigarretes--smoked--wrapper {
     color: var(--secondary) !important;
     background-color: #eee;
@@ -95,7 +107,9 @@
     border-bottom: solid 1px var(--secondary) !important;
 }
 
-/* Physical activity */
+/****************************/
+/*Physical activity
+/****************************/
 .physical--activity--wrapper {
     color: var(--primary) !important;
 }
@@ -147,22 +161,7 @@
     border-bottom: solid 1px #ff0000 !important;
 }
 
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
-}
-
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
     .diagonosis--page--container {
         padding: 40px 60px;
     }

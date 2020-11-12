@@ -1,4 +1,3 @@
-/* variables */
 :root {
     --primary: #fff;
     --secondary: #000;
@@ -83,7 +82,6 @@ a[href="../../index.html"] {
     color: var(--secondary);
 }
 
-/* mini ipad screen*/
 @media screen and (min-width: 768px) {
     .img--form--wrapper {
         padding: 0 60px;
@@ -94,23 +92,13 @@ a[href="../../index.html"] {
     }
 }
 
-/* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-    html {
-        font-size: 16px;
-    }
-
     .img--form--wrapper {
         padding: 0 100px;
     }
 }
 
-/* desktop screen*/
 @media screen and (min-width: 1000px) {
-    html {
-        font-size: 16px;
-    }
-
     .img--form--wrapper {
         width: 100%;
         margin: 0 auto;

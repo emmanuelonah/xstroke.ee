@@ -3,7 +3,7 @@
     --secondary: #000;
     --tertiary: #011220;
 }
-/* mobile style */
+
 .security--heading {
     font-size: 1.5rem;
     margin-top: 50px;
@@ -43,28 +43,13 @@
     height: 10px !important;
     padding-right: 5px;
 }
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
+
+.security--page--container .security--bg {
+    width: 50% !important;
+    max-width: 50%;
 }
 
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-
-    .security--page--container .security--bg {
-        width: 50% !important;
-        max-width: 50%;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 18px;
-    }
-
     .security--page--container {
         padding-top: 40px;
     }

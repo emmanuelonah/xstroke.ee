@@ -1,4 +1,3 @@
-/* Variable */
 :root {
     --primary: #fff;
     --secondary: #000;
@@ -7,7 +6,6 @@
     --yellow: #ffd000;
 }
 
-/* mobile style */
 .modal {
     background-color: var(--primary);
     width: 90%;
@@ -66,28 +64,14 @@
     color: var(--secondary);
 }
 
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
-}
-
-/* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-
     .modal {
         width: 60%;
         margin: 0 auto;
     }
 }
 
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
-
     .modal {
         width: 40%;
     }

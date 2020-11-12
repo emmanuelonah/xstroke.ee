@@ -31,7 +31,6 @@
         <link rel="stylesheet" href="./src/styles/header.style.css" />
         <link rel="stylesheet" href="./src/styles/footer.style.css" />
         <link rel="stylesheet" href="./src/styles/menu-items.style.css" />
-        <link rel="stylesheet" href="./src/styles/error-404.style.css" />
         <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
         <link rel="stylesheet" href="./src/styles/user-profile.style.css" />
     </head>
@@ -64,7 +63,6 @@
                 <li class="logout"><a href="#">Logout</a></li>
             </ul>
 
-            <!-- Content Goes Here -->
             <div class="user--profile--container2">
                 <!-- sidebar -->
                 <div role="tab" class="sidebar--wrapper">
@@ -84,7 +82,7 @@
                     <h2 class="health--history--header">Health history</h2>
 
                     <div class="health--history--wrapper">
-                        <!-- Health Template -->
+                        <!-- health template -->
                         <time class="history--date">12.02.2020</time>
                         <img src="./src/assets/images/user.png" alt="" class="user--profile" />
                         <h4 class="history--heading stroke--level--heading">Stoke level</h4>
@@ -104,7 +102,6 @@
                 </div>
             </div>
         </div>
-        <!-- Noscript tage -->
         <noscript class="noscript">
             <img src="./src/assets/images/error-404.png" alt="" />
             <h1>Something's missing</h1>
@@ -117,14 +114,10 @@
                 >
             </p>
         </noscript>
-        <!-- Firebase Configuration -->
-        <!-- Script Files and Firebase CDNS -->
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
         <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
             var firebaseConfig = {
                 apiKey: "AIzaSyCDHJOXGHOD1Aaf87PRw9G0R58S8RI46C8",
                 authDomain: "xstroke-ee.firebaseapp.com",
@@ -135,17 +128,14 @@
                 appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
                 measurementId: "G-597LPMLF5W",
             };
-            Object.freeze(firebaseConfig);
-            // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-            //firebase.analytics();
             const db = firebase.firestore();
+            Object.freeze(firebaseConfig);
         </script>
-        <!-- Scripts -->
         <script src="./src/components/authentication/user-verification.js" type="module"></script>
-        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/authentication/signout.component.js" type="module"></script>
-        <script src="./src/components/user-profile.component.js" type="module"></script>
+        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/footer.component.js" type="module"></script>
+        <script src="./src/components/user-profile.component.js" type="module"></script>
     </body>
 </html>

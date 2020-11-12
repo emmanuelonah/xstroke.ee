@@ -30,9 +30,7 @@
         <link rel="stylesheet" href="./src/styles/general.style.css" />
         <link rel="stylesheet" href="./src/styles/header.style.css" />
         <link rel="stylesheet" href="./src/styles/login.style.css" />
-        <link rel="stylesheet" href="./src/styles/error-404.style.css" />
         <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
-        <link rel="stylesheet" href="./src/styles/signup.style.css" />
     </head>
     <body class="view--body">
         <div class="container signup--container form--container" role="main">
@@ -146,13 +144,10 @@
                 appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
                 measurementId: "G-597LPMLF5W",
             };
-            Object.freeze(firebaseConfig);
-            // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-            //firebase.analytics();
             const db = firebase.firestore();
+            Object.freeze(firebaseConfig);
         </script>
-        <!-- Scripts -->
         <script src="./src/components/authentication/signup.component.js" type="module"></script>
     </body>
 </html>

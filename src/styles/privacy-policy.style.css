@@ -12,24 +12,8 @@
     padding-top: 50px;
 }
 
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
-}
-
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
     .privacy-page-container {
         padding-top: 40px;
-    }
-
-    html {
-        font-size: 20px;
     }
 }

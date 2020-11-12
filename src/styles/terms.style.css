@@ -4,7 +4,6 @@
     --tertiary: #011220;
 }
 
-/* Mobile Style */
 .terms--page--container {
     padding: 10px 30px;
 }
@@ -39,30 +38,20 @@
     border-radius: 5px;
     box-shadow: 0 2px 2px 2px #dbdbdb;
 }
-/* mini ipad screen*/
+
 @media screen and (min-width: 760px) {
     .terms--accept--decline--button--wrapper {
         flex-direction: column !important;
     }
 }
 
-/* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-    html {
-        font-size: 17px;
-    }
-
     .terms--page--container p {
         text-align: start;
     }
 }
 
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 17px;
-    }
-
     .terms--page--container {
         padding-top: 40px;
     }

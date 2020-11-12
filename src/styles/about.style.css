@@ -4,7 +4,6 @@
     --tertiary: #011220;
 }
 
-/* Mobile style */
 .about-page-container.logo {
     padding-left: 0;
 }
@@ -46,27 +45,13 @@
     padding: 0 20px 20px 20px;
 }
 
-/* mini ipad screen*/
-@media screen and (min-width: 620px) {
-}
-
-/* max ipad and mini laptop screen*/
 @media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-
     .about-page-container {
         padding: 0 70px;
     }
 }
 
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
-
     .about-page-container {
         padding-top: 40px;
     }

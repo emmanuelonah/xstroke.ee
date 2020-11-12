@@ -1,11 +1,9 @@
-/* Variable */
 :root {
     --primary: #fff;
     --secondary: #000;
     --tertiary: #011220;
 }
 
-/* Mobile Style */
 footer {
     width: 100%;
     margin: 0 auto;
@@ -16,6 +14,7 @@ footer {
     color: var(--primary);
     margin-top: 50px;
 }
+
 .row-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -67,7 +66,6 @@ footer select {
     width: 50%;
 }
 
-/* mini ipad screen*/
 @media screen and (min-width: 760px) {
     footer {
         display: flex;
@@ -96,21 +94,9 @@ footer select {
     }
 }
 
-/* max ipad and mini laptop screen*/
-@media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* desktop screen*/
 @media screen and (min-width: 1200px) {
     footer {
         margin-top: 20px !important;
         padding-top: 30px !important;
-    }
-
-    html {
-        font-size: 20px;
     }
 }
