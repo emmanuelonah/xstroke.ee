@@ -1,10 +1,9 @@
 window.addEventListener("DOMContentLoaded", (_) => {
     const form = document.querySelector(".email--login--form");
-    ///Work with Cookies and LocalStorage to Set user login status
 
-    /*-----------------------------
-    check log in status
-    ------------------------------*/
+    //*******************************
+    //check log in status
+    //*******************************
     ///local state
     const state = {
         isUserLoggedIn: false,
@@ -43,7 +42,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
                     .then((res) => {
                         res.forEach((doc) => {
                             window.localStorage.setItem("userDocId", doc.id);
-                            //After setting it, then execute the below method because the method depends on the above ajax operation
                             updateUserLogInState();
                         });
                     });

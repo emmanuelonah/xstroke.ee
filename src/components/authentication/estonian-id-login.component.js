@@ -1,5 +1,3 @@
-///import utility function for api request here
-
 window.addEventListener("DOMContentLoaded", (_) => {
     const form = document.querySelector(".estonian--id--login--form");
 
