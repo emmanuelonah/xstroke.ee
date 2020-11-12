@@ -57,7 +57,7 @@ export const genericModal = (
     modalContainer.append(button);
 
     ///remove this element parent from the DOM when menuIconDiv is clicked
-    menuIconDiv.addEventListener("click", (_) => {
+    menuIconDiv.addEventListener("click", () => {
         htmlBodyToInsertTheModalIn.removeChild(modalContainer);
     });
 
