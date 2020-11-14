@@ -36,11 +36,11 @@ export const physicalActivity = (hours, minutes) => {
         case hoursPerDay === 0 && hoursPerDay <= 3600:
             return 4;
 
-        //1hrs = 3600secs & 3.999hrs = 14396.4secs
-        case hoursPerDay === 3600 && hoursPerDay <= 14396.4:
+        //1hr = 3600secs & 1.4hrs = 5040secs
+        case hoursPerDay === 3600 && hoursPerDay <= 5040:
             return 3;
 
-        //1.4hrs = 5040secs & 2.4hr =8640
+        //1.5hrs = 5400secs & 2.4hr =8640
         case hoursPerDay === 5040 && hoursPerDay <= 8640:
             return 2;
 

@@ -48,29 +48,30 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
 
     //check the physicalActivitiesDiagnose and update the physicalActivityResult
     switch (true) {
-        case physicalActivityDiagnose < 1:
+        case physicalActivityDiagnose === 4:
             physicalActivityDiagnose = "1hr - 2hr:40mins";
             break;
 
-        case physicalActivityDiagnose === 1 && physicalActivityDiagnose < 1.4:
+        case physicalActivityDiagnose === 3:
             physicalActivityDiagnose = "1hr:40mins - 2hrs:40mins";
             break;
 
-        case physicalActivityDiagnose === 1.4 && physicalActivityDiagnose < 2.4:
+        case physicalActivityDiagnose === 2:
             physicalActivityMessage = "2hrs:40mins - 3hrs:50mins";
             break;
 
-        case physicalActivityDiagnose === 2.4 && physicalActivityDiagnose < 3.4:
-            physicalActivityDiagnose = "3hrs:50mins - more hours";
+        case physicalActivityDiagnose === 1:
+            physicalActivityDiagnose = "3hrs:50mins - if possible more hours";
             break;
 
-        case physicalActivityDiagnose >= 3.4:
+        case physicalActivityDiagnose === 0:
             physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
             break;
 
         default:
             physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
     }
+
     // check the bodyMassIndexDiagnose and update the massIndexMessage
     switch (true) {
         case bodyMassIndexDiagnose >= 35:

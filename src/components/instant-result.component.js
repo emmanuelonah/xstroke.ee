@@ -2,8 +2,6 @@ const instantResultContainer = document.querySelector(".instant-result-container
 const actualStrokeLevelContainer = document.querySelector(".actual-stroke-level-container");
 const strokeLevel = Number(window.localStorage.getItem("strokeLevel"));
 
-console.log(actualStrokeLevelContainer);
-console.log(strokeLevel);
 //**************************************
 //instant result renderer fn
 //**************************************
