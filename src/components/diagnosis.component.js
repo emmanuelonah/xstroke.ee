@@ -1,9 +1,4 @@
-import {
-    bloodPressure,
-    bodyMassIndex,
-    cigarettesSmokedPerWeek,
-    physicalActivity,
-} from "./utils/diagnosis.js";
+import { bloodPressure, bodyMassIndex, cigarettesSmokedPerWeek, physicalActivity } from "./utils/diagnosis.js";
 
 const form = document.querySelector(".stroke--diagnosis--form");
 const time = document.querySelectorAll(".system--date");
@@ -17,20 +12,16 @@ const RegExp = {
     minutes: /^[\d]{0,}$/,
 };
 
-const diagnoseResult = (
-    cigarettesDiagnose,
-    physicalActivityDiagnose,
-    bodyMassIndexDiagnose,
-    bloodPressureDiagnose
-) => {
-    let physicalActivityResult = "1.4 to 2.4h/week";
-    let cigarreteResult = "";
-    let massIndexResult = "25 to 29.99";
+const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose) => {
+    let cigarreteResult;
+    let physicalActivityResult;
+    let massIndexResult;
+    let bloodPressureResult;
 
     let cigarretesMessage = `Decrease you cigarrete consumption to ${cigarreteResult}`;
     let physicalActivityMessage = `Increase your physical activity to ${physicalActivityResult}`;
-    let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
     let massIndexMessage = `Decrease your body mass index to reach the target of ${massIndexResult}`;
+    let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
 
     console.log("******Diagnosis Result Below*******");
     console.log("Cigarrets", cigarettesDiagnose);
@@ -79,13 +70,11 @@ const diagnoseResult = (
             break;
 
         case physicalActivityDiagnose >= 3.4:
-            physicalActivityMessage =
-                "Keep up the great work while you continue the regular diagnosis";
+            physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
             break;
 
         default:
-            physicalActivityMessage =
-                "Keep up the great work while you continue the regular diagnosis";
+            physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
 
             // check the bodyMassIndexDiagnose and update the massIndexMessage
             switch (true) {
@@ -102,8 +91,7 @@ const diagnoseResult = (
                     break;
 
                 case bodyMassIndexDiagnose === 18.5 && bloodPressureDiagnose <= 24.99:
-                    massIndexMessage =
-                        "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
+                    massIndexMessage = "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
                     break;
 
                 case bodyMassIndexDiagnose < 18.5:
@@ -115,12 +103,7 @@ const diagnoseResult = (
             }
     }
 
-    if (
-        physicalActivityMessage.length &&
-        bloodPressureMessage.length &&
-        cigarretesMessage.length &&
-        massIndexMessage.length
-    ) {
+    if (physicalActivityMessage.length && bloodPressureMessage.length && cigarretesMessage.length && massIndexMessage.length) {
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
         window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
@@ -130,7 +113,7 @@ const diagnoseResult = (
 };
 
 //*********************************************
-//@submition() of diagnosis´ to db
+//@submit()diagnose to db
 //*********************************************
 const diagnose = () => {
     form.addEventListener("submit", (e) => {
@@ -144,33 +127,13 @@ const diagnose = () => {
             hours: Number(e.target.hours.value),
             minutes: Number(e.target.minutes.value),
         };
-        /*********************************************
-         * @function()bloodPressure @execute,
-         * @function()cigarettesSmokedPerWeek @execute,
-         * @function()physicalActivity @execute,
-         * @function()bodyMassIndex @execute,
-         *********************************************/
 
-        const bloodPressureDiagnose = bloodPressure(
-            _diagnosisFormValue.systolic,
-            _diagnosisFormValue.diastolic
-        );
+        const bloodPressureDiagnose = bloodPressure(_diagnosisFormValue.systolic, _diagnosisFormValue.diastolic);
         const cigarettesDiagnose = cigarettesSmokedPerWeek(_diagnosisFormValue.cigarettesSmoked);
-        const physicalActivityDiagnose = physicalActivity(
-            _diagnosisFormValue.hours,
-            _diagnosisFormValue.minutes
-        );
-        const bodyMassIndexDiagnose = bodyMassIndex(
-            _diagnosisFormValue.height,
-            _diagnosisFormValue.weight
-        );
+        const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
+        const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
 
-        diagnoseResult(
-            cigarettesDiagnose,
-            physicalActivityDiagnose,
-            bodyMassIndexDiagnose,
-            bloodPressureDiagnose
-        );
+        diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
         e.target.reset();
     });
 };
@@ -188,10 +151,6 @@ form.addEventListener("keydown", (e) => {
         e.target.classList.add("failed__regexp");
     }
 });
-
-//*********************************************
-//@update() The Date of the System
-//*********************************************
 time.forEach((time) => {
     time.textContent = new Date().getFullYear();
 });

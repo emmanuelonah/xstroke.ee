@@ -1,7 +1,6 @@
 export const bloodPressure = (systolic, diastolic) => {
     const calculation = Number(diastolic) / Number(systolic);
     const bloodPressure = Math.round(calculation);
-    // console.log("Blood pressure", bloodPressure);
     return bloodPressure;
 };
 
@@ -13,7 +12,6 @@ export const bodyMassIndex = (height, weigth) => {
     const calculation = Number(weigth) / heightCalculation;
     const bodyMassIndex = Math.round(calculation);
 
-    // console.log("Body mass", bodyMassIndex);
     switch (true) {
         case bodyMassIndex >= 35.0:
             return 3;
@@ -40,7 +38,6 @@ export const bodyMassIndex = (height, weigth) => {
 //**************************************************
 export const cigarettesSmokedPerWeek = (cigarettesPiecesSmoked) => {
     const cigSmokedPerWeek = Number(cigarettesPiecesSmoked);
-    // console.log("Cigarretes smoked", cigSmokedPerWeek);
 
     switch (true) {
         case cigSmokedPerWeek >= 24:

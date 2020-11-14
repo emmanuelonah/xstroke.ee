@@ -5,23 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="application-name" content="XSTROKE EE" />
         <meta name="author" name="Emmanuel Onah AfricLite" />
-        <meta
-            name="keywords"
-            name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor"
-        />
+        <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
         <meta name="theme-color" content="#ffffff" />
         <title>Estonian ID Login| XSTROKE EE</title>
         <!-- Browser Fav icon -->
         <link rel="icon" href="./src/assets/images/xstroke-logo.png" />
         <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
         <!-- Manifest link -->
         <link rel="manifest" href="./manifest.webmanifest" />
         <!-- Font Awesome -->
@@ -34,38 +25,23 @@
     </head>
     <body class="view--body">
         <div class="container login--container form--container" role="main">
-            <a
-                href="/index"
-                aria-describedat="This is an icon button that takes you back to the landing page"
-                ><i class="fa fa-home"></i
-            ></a>
+            <a href="/index" aria-describedat="This is an icon button that takes you back to the landing page"><i class="fa fa-home"></i></a>
             <div class="img--form--wrapper">
                 <img src="./src/assets/images/login-page-bg.png" alt="" class="login--bg--img" />
 
                 <div class="login--container--row--two form--wrapper">
                     <h2 class="logo">🩺XSTROKE EE</h2>
                     <h1>Welcome Back</h1>
-                    <p class="new--to--xstroke">
-                        New to XSTROKE EE? <a href="./signup">Sign up</a>
-                    </p>
+                    <p class="new--to--xstroke">New to XSTROKE EE? <a href="./signup">Sign up</a></p>
                     <form class="estonian--id--login--form">
                         <label for="estonianId">Estonian ID</label>
-                        <input
-                            type="text"
-                            name="estonian_id"
-                            id="estonianId"
-                            placeholder="Your estonian Id"
-                            required
-                        />
+                        <input type="text" name="estonian_id" id="estonianId" placeholder="Your estonian Id" required />
                         <input type="submit" value="Login" id="login" aria-label="Click to login" />
 
                         <p class="or--login--with">Or log in with</p>
                         <button class="estonian__id email__login">Email</button>
                         <span class="checkbox--wrapper"> </span>
-                        <p class="terms--and--privacy">
-                            By continuing you accept our <a href="./terms">Terms of Use</a> and
-                            <a href="./privacy-policy">Privacy Policy</a>.
-                        </p>
+                        <p class="terms--and--privacy">By continuing you accept our <a href="./terms">Terms of Use</a> and <a href="./privacy-policy">Privacy Policy</a>.</p>
                     </form>
                 </div>
             </div>
@@ -75,9 +51,7 @@
             <h1>Something's missing</h1>
             <p>
                 For full functionality of this site its necessary you enable javascript.
-                <a
-                    href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE"
-                    taregt="_blank"
+                <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank"
                     >Instructions on how to do that</a
                 >
             </p>
@@ -100,9 +74,6 @@
             const db = firebase.firestore();
             Object.freeze(firebaseConfig);
         </script>
-        <script
-            src="./src/components/authentication/estonian-id-login.component.js"
-            type="module"
-        ></script>
+        <script src="./src/components/authentication/estonian-id-login.component.js" type="module"></script>
     </body>
 </html>
