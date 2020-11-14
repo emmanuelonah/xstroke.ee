@@ -75,7 +75,7 @@ export const bodyMassIndex = (height, weigth) => {
         case bodyMassIndex === 25.0 && bodyMassIndex <= 29.99:
             return 1;
 
-        case bodyMassIndex === 18.5 && bodyMassIndex <= 24.99:
+        case bodyMassIndex >= 18.5 && bodyMassIndex <= 24.99:
             return 0;
 
         case bodyMassIndex <= 18.5:

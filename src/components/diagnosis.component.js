@@ -23,11 +23,6 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     let massIndexMessage = `Decrease your body mass index to reach the target of ${massIndexResult}`;
     let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
 
-    console.log("#Diagnosis Results#");
-    console.log("Cigarretes", cigarettesDiagnose);
-    console.log("Physical activities", physicalActivityDiagnose);
-    console.log("Body mass", bodyMassIndexDiagnose);
-
     //check the cigarettesDianose and update the cigarreteResult
     switch (true) {
         case cigarettesDiagnose > 24:
@@ -74,38 +69,32 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
 
         default:
             physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
-
-            // check the bodyMassIndexDiagnose and update the massIndexMessage
-            switch (true) {
-                case bodyMassIndexDiagnose >= 35:
-                    massIndexResult = "30 - 29.99";
-                    break;
-
-                case bodyMassIndexDiagnose === 30 && bloodPressureDiagnose <= 34.99:
-                    massIndexResult = "25 - 24.99";
-                    break;
-
-                case bodyMassIndexDiagnose === 25 && bloodPressureDiagnose <= 29.99:
-                    massIndexResult = "18.50";
-                    break;
-
-                case bodyMassIndexDiagnose === 18.5 && bloodPressureDiagnose <= 24.99:
-                    massIndexMessage = "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
-                    break;
-
-                case bodyMassIndexDiagnose < 18.5:
-                    massIndexMessage = "Increase your body mass to 24.99 - 29.99";
-                    break;
-
-                default:
-                    massIndexMessage = "Increase your body mass to 24.99 - 29.99";
-            }
     }
+    // check the bodyMassIndexDiagnose and update the massIndexMessage
+    switch (true) {
+        case bodyMassIndexDiagnose >= 35:
+            massIndexResult = "30 - 29.99";
+            break;
 
-    console.log("cigarretesMessage", cigarretesMessage);
-    console.log("physicalActivityMessage", physicalActivityMessage);
-    console.log("massIndexMessage", massIndexMessage);
-    console.log("bloodPressureMessage", bloodPressureMessage);
+        case bodyMassIndexDiagnose === 30 && bloodPressureDiagnose <= 34.99:
+            massIndexResult = "25 - 24.99";
+            break;
+
+        case bodyMassIndexDiagnose === 25 && bloodPressureDiagnose <= 29.99:
+            massIndexResult = "18.50";
+            break;
+
+        case bodyMassIndexDiagnose === 18.5 && bloodPressureDiagnose <= 24.99:
+            massIndexMessage = "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
+            break;
+
+        case bodyMassIndexDiagnose < 18.5:
+            massIndexMessage = "Increase your body mass to 24.99 - 29.99";
+            break;
+
+        default:
+            massIndexMessage = "Increase your body mass to 24.99 - 29.99";
+    }
 
     if (physicalActivityMessage.length && bloodPressureMessage.length && cigarretesMessage.length && massIndexMessage.length) {
         window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
@@ -113,7 +102,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
         //programmatic redirection to instant-result view
-        // window.location.assign("/instant-result");
+        window.location.assign("/instant-result");
     } else {
         window.alert("Unexpected error encountered");
     }

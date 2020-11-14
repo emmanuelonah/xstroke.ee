@@ -23,6 +23,16 @@ const renderInstantResult = () => {
         cigarretesMessage = window.localStorage.getItem("cigarretesMessage");
         massIndexMessage = window.localStorage.getItem("massIndexMessage");
     }
-    //console.log(physicalActivityMessage, bloodPressureMessage, cigarretesMessage, massIndexMessage);
+    console.log(physicalActivityMessage, bloodPressureMessage, cigarretesMessage, massIndexMessage);
+
+    // hook result to ui
+    const instantResultTemplate = `
+    <li class="physical-activities">Your physical activities: ${physicalActivityMessage}</li>
+    <li class="blood-pressure">Your blood pressure: ${bloodPressureMessage}</li>
+    <li class="cigarrete">Your cigarrete status: ${cigarretesMessage}</li>
+    <li class="mass-index">Your mass index: ${massIndexMessage}</li>
+    `;
+
+    instantResultContainer.innerHTML += instantResultTemplate;
 };
 renderInstantResult();
