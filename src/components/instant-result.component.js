@@ -1,12 +1,6 @@
 const instantResultContainer = document.querySelector(".instant-result-container");
-
-document.querySelector(".diagonise").addEventListener("click", () => {
-    window.location.assign("/diagnosis");
-});
-
-document.querySelector(".home").addEventListener("click", () => {
-    window.location.assign("/user-profile");
-});
+const actualStrokeLevelContainer = document.querySelector(".actual-stroke-level-container");
+const strokeLevel = Number(window.localStorage.getItem("strokeLevel"));
 
 //**************************************
 //instant result renderer fn
@@ -36,3 +30,12 @@ const renderInstantResult = () => {
     instantResultContainer.innerHTML += instantResultTemplate;
 };
 renderInstantResult();
+//******************************
+//Navigation functionality
+//******************************
+document.querySelector(".diagonise").addEventListener("click", () => {
+    window.location.assign("/diagnosis");
+});
+document.querySelector(".home").addEventListener("click", () => {
+    window.location.assign("/user-profile");
+});

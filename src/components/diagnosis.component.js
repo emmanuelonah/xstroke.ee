@@ -1,4 +1,5 @@
 import { bloodPressure, bodyMassIndex, cigarettesSmokedPerWeek, physicalActivity } from "./utils/diagnosis.js";
+import { _strokeLevel } from "./utils/stroke-level.js";
 
 const form = document.querySelector(".stroke--diagnosis--form");
 const time = document.querySelectorAll(".system--date");
@@ -131,8 +132,18 @@ const diagnose = () => {
         const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
         const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
 
+        //Stroke level calculation and invocation of the util that adds it to storage for usage in instant-result view
+        const strokeLevel = bloodPressureDiagnose + cigarettesDiagnose + physicalActivityDiagnose + bloodPressureDiagnose / 4;
+        _strokeLevel(strokeLevel);
+
         diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
         e.target.reset();
+
+        console.log("BP", bloodPressureDiagnose);
+        console.log("Cg", cigarettesDiagnose);
+        console.log("PA", physicalActivityDiagnose);
+        console.log("BM", bloodPressureDiagnose);
+        console.log("Stroke level is", strokeLevel);
     });
 };
 diagnose();

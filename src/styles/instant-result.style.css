@@ -43,15 +43,23 @@
     cursor: pointer;
 }
 
-.risk--number span:nth-child(3) {
-    background-color: #ffa500;
+.level-0 {
+    background-color: #0066ff;
 }
 
-.risk--number span:hover:nth-child(1) {
+.level-1 {
     background-color: #008000;
 }
 
-.risk--number span:hover:nth-child(5) {
+.level-2 {
+    background-color: #a3b34b;
+}
+
+.level-3 {
+    background-color: #ffa500;
+}
+
+.level-4 {
     background-color: #ff0000;
 }
 
