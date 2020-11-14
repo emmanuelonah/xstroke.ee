@@ -10,7 +10,7 @@ const renderHistory = (snapshot) => {
                           <img src="./src/assets/images/user.png" alt="" class="user--profile" />
                           <h4 class="history--heading stroke--level--heading">Stoke level</h4>
                           <p class="stoke--level">
-                              <span class="stoke--level--is level-${data.strokeLevel.toString()}">${data.strokeLevel}</span>
+                              <span class="stoke--level--is level-${data.strokeLevel}">${data.strokeLevel}</span>
                               <span class="out--of"> out of</span> <span class="out--of--5"> 5 </span>
                           </p>
                           <h4 class="history--heading suggestion--heading">We Suggested that</h4>
