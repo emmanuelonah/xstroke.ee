@@ -14,18 +14,17 @@ const RegExp = {
 };
 
 const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose) => {
-    let cigarreteResult;
-    let physicalActivityResult;
-    let massIndexResult;
-    let bloodPressureResult;
+    let cigarreteResult = "";
+    let physicalActivityResult = "";
+    let massIndexResult = "";
+    let bloodPressureResult = "";
 
-    let cigarretesMessage = `Decrease your cigarrete consumption to ${cigarreteResult}`;
-    let physicalActivityMessage = `Increase your physical activity to ${physicalActivityResult}`;
-    let massIndexMessage = `Decrease your body mass index to reach the target of ${massIndexResult}`;
-    let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
+    let cigarretesReMessage = "";
+    let physicalActivityReMessage = "";
+    let massIndexReMessage = "";
 
     //check the cigarettesDianose and update the cigarreteResult
-    switch (cigarettesDiagnose) {
+    switch (true) {
         case cigarettesDiagnose === 4:
             cigarreteResult = "13 - 12";
             break;
@@ -43,15 +42,15 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
             break;
 
         case cigarettesDiagnose === 0:
-            cigarretesMessage = "Please keep up the great work of zero cigarretes";
+            cigarretesReMessage = "Please keep up the great work of zero cigarretes";
             break;
 
         default:
-            cigarretesMessage = "Please keep up the great work of zero cigarretes";
+            cigarretesReMessage = "Please keep up the great work of zero cigarretes";
     }
 
     //check the physicalActivitiesDiagnose and update the physicalActivityResult
-    switch (physicalActivityDiagnose) {
+    switch (true) {
         case physicalActivityDiagnose === 4:
             physicalActivityResult = "1hr - 2hr:40mins";
             break;
@@ -69,7 +68,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
             break;
 
         case physicalActivityDiagnose === 0:
-            physicalActivityMessage = "Keep up the great work while you continue the regular diagnosis";
+            physicalActivityReMessage = "Keep up the great work while you continue the regular diagnosis";
             break;
 
         default:
@@ -77,7 +76,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     }
 
     // check the bodyMassIndexDiagnose and update the massIndexMessage
-    switch (bodyMassIndexDiagnose) {
+    switch (true) {
         case bodyMassIndexDiagnose === 3:
             massIndexResult = "30 - 29.99";
             break;
@@ -91,16 +90,21 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
             break;
 
         case bodyMassIndexDiagnose === 0:
-            massIndexMessage = "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
+            massIndexReMessage = "Your mass index is perfect, keep up the good work while you continue your regular diagnosis";
             break;
 
         case bodyMassIndexDiagnose === -1:
-            massIndexMessage = "Increase your body mass to 24.99 - 29.99";
+            massIndexResult = "24.99 - 29.99";
             break;
 
         default:
-            massIndexMessage = "Increase your body mass to 24.99 - 29.99";
+            massIndexMessage = "24.99 - 29.99";
     }
+
+    let cigarretesMessage = cigarretesReMessage.length ? cigarretesReMessage : `Decrease your cigarrete consumption to ${cigarreteResult.length ? cigarreteResult : ""}`;
+    let physicalActivityMessage = physicalActivityReMessage ? physicalActivityReMessage : `Increase your physical activity to ${physicalActivityResult.length ? physicalActivityResult : ""}`;
+    let massIndexMessage = massIndexReMessage ? massIndexReMessage : `Decrease your body mass index to reach the target of ${massIndexResult.length ? massIndexResult : ""}`;
+    let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
 
     if (physicalActivityMessage.length && bloodPressureMessage.length && cigarretesMessage.length && massIndexMessage.length) {
         window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
@@ -108,9 +112,9 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
         //programmatic redirection to instant-result view
-        // window.location.assign("/instant-result");
+        window.location.assign("/instant-result");
     } else {
-        window.alert("Unexpected error encountered");
+        window.alert("Unexpected error occured");
     }
     //send diagonised message/prescription to backend to backend here
 };
