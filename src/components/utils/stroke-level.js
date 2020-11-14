@@ -1,6 +1,6 @@
 export const _strokeLevel = (strokeLevel) => {
-    let strokeLevel = Math.round(strokeLevel);
-    if (strokeLevel >= 4) strokeLevel = 4;
+    let strokeLevelRoundUp = Math.round(strokeLevel);
+    if (strokeLevelRoundUp >= 4) strokeLevelRoundUp = 4;
 
-    window.localStorage.setItem("strokeLevel");
+    window.localStorage.setItem("strokeLevel", strokeLevelRoundUp);
 };

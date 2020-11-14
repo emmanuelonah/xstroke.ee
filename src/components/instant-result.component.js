@@ -2,6 +2,8 @@ const instantResultContainer = document.querySelector(".instant-result-container
 const actualStrokeLevelContainer = document.querySelector(".actual-stroke-level-container");
 const strokeLevel = Number(window.localStorage.getItem("strokeLevel"));
 
+console.log(actualStrokeLevelContainer);
+console.log(strokeLevel);
 //**************************************
 //instant result renderer fn
 //**************************************
@@ -17,8 +19,6 @@ const renderInstantResult = () => {
         cigarretesMessage = window.localStorage.getItem("cigarretesMessage");
         massIndexMessage = window.localStorage.getItem("massIndexMessage");
     }
-    console.log(physicalActivityMessage, bloodPressureMessage, cigarretesMessage, massIndexMessage);
-
     // hook result to ui
     const instantResultTemplate = `
     <li class="physical-activities">Your physical activities: ${physicalActivityMessage}</li>
@@ -26,8 +26,12 @@ const renderInstantResult = () => {
     <li class="cigarrete">Your cigarrete status: ${cigarretesMessage}</li>
     <li class="mass-index">Your mass index: ${massIndexMessage}</li>
     `;
-
     instantResultContainer.innerHTML += instantResultTemplate;
+
+    const actualStrokeLevelTemplate = `
+    <span class="level-${strokeLevel} current-stroke-level">${strokeLevel}</span>
+    `;
+    actualStrokeLevelContainer.innerHTML += actualStrokeLevelTemplate;
 };
 renderInstantResult();
 //******************************
