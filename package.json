@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "cypress": "^5.2.0",
+    "firebase": "^8.0.2",
     "lite-server": "^2.5.4",
     "parcel": "^1.12.4",
     "typescript": "^4.0.2",

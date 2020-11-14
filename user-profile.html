@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="./src/styles/footer.style.css" />
         <link rel="stylesheet" href="./src/styles/menu-items.style.css" />
         <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
+        <link rel="stylesheet" href="./src//styles/instant-result.style.css" />
         <link rel="stylesheet" href="./src/styles/user-profile.style.css" />
     </head>
     <body>
@@ -68,22 +69,8 @@
                 <div class="sidebar--panel">
                     <h2 class="health--history--header">Health history</h2>
 
-                    <div class="health--history--wrapper">
-                        <!-- health template -->
-                        <time class="history--date">12.02.2020</time>
-                        <img src="./src/assets/images/user.png" alt="" class="user--profile" />
-                        <h4 class="history--heading stroke--level--heading">Stoke level</h4>
-                        <p class="stoke--level">
-                            <span class="stoke--level--is">3</span>
-                            <span class="out--of"> out of</span> <span class="out--of--5"> 5</span>
-                        </p>
-                        <h4 class="history--heading suggestion--heading">We Suggest that</h4>
-                        <ul>
-                            <li>Increase your physical activities to 2.4 hr/week.</li>
-                            <li>Decrease your blood pressure by agents describe by a doctor.</li>
-                            <li>Decrease your body mass index to reach the target of 25 to 29.99</li>
-                        </ul>
-                    </div>
+                    <!-- Test history goes into here -->
+                    <div class="health--history--wrapper test-history-container"></div>
                 </div>
             </div>
         </div>
@@ -119,6 +106,7 @@
         <script src="./src/components/authentication/signout.component.js" type="module"></script>
         <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/footer.component.js" type="module"></script>
+        <script src="./src/components/renderTestHistory.component.js" type="module"></script>
         <script src="./src/components/user-profile.component.js" type="module"></script>
     </body>
 </html>

@@ -1,8 +1,10 @@
 import { bloodPressure, bodyMassIndex, cigarettesSmokedPerWeek, physicalActivity } from "./utils/diagnosis.js";
 import { _strokeLevel } from "./utils/stroke-level.js";
+import { testHistoryCollection } from "../data/collections.js";
 
 const form = document.querySelector(".stroke--diagnosis--form");
 const time = document.querySelectorAll(".system--date");
+
 const RegExp = {
     systolic: /^\d+(\.\d{0,})?$/,
     diastolic: /^\d+(\.\d{0,})?$/,
@@ -111,12 +113,27 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
-        //programmatic redirection to instant-result view
         window.location.assign("/instant-result");
     } else {
         window.alert("Unexpected error occured");
     }
-    //send diagonised message/prescription to backend to backend here
+    //send history to backend
+    const diagnoseHistory = {
+        cigarreteMsg: cigarretesMessage,
+        physicalActivitiesMsg: physicalActivityMessage,
+        massIndexMsg: massIndexMessage,
+        bloodPressureMsg: bloodPressureMessage,
+        date: new Date().toLocaleString(),
+        strokeLevel: window.localStorage.getItem(strokeLevel),
+    };
+
+    db.collection(testHistoryCollection)
+        .add(diagnoseHistory)
+        .then(() => console.log("Successfully Posted"))
+        .catch((error) => {
+            window.alert("Error trying to save test history");
+            console.error(error);
+        });
 };
 
 //*********************************************
