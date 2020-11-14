@@ -113,11 +113,11 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
         //programmatic redirection to instant-result view
-        window.location.assign("/instant-result");
+        // window.location.assign("/instant-result");
     } else {
         window.alert("Unexpected error encountered");
     }
-    //send  diagonised message/prescription to backend to backend here
+    //send diagonised message/prescription to backend to backend here
 };
 
 //*********************************************

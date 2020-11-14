@@ -23,6 +23,6 @@ const renderInstantResult = () => {
         cigarretesMessage = window.localStorage.getItem("cigarretesMessage");
         massIndexMessage = window.localStorage.getItem("massIndexMessage");
     }
-    console.log(physicalActivityMessage, bloodPressureMessage, cigarretesMessage, massIndexMessage);
+    //console.log(physicalActivityMessage, bloodPressureMessage, cigarretesMessage, massIndexMessage);
 };
 renderInstantResult();
