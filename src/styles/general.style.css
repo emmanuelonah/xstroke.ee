@@ -63,6 +63,7 @@ button {
 
 img {
     display: block;
+    object-fit: contain;
 }
 
 li {

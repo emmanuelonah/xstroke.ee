@@ -13,6 +13,8 @@ footer {
     border-top: solid 1px #eee;
     color: var(--primary);
     margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .row-wrapper {
@@ -63,7 +65,7 @@ footer select {
 }
 
 .footer-logo-wrapper img {
-    width: 50%;
+    width: 150px;
 }
 
 @media screen and (min-width: 760px) {
