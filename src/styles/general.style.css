@@ -162,10 +162,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 960px) {
-    html {
-        font-size: 18px;
-    }
-
     .heading--h1 {
         color: var(--tertiary);
     }
@@ -179,11 +175,5 @@ input[type="checkbox"] {
         border: solid 0.5px #333;
         padding: 20px 5px;
         border-left: solid 3px #02335c;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
     }
 }
