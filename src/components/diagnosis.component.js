@@ -104,10 +104,10 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     }
 
     if (physicalActivityMessage.length && bloodPressureMessage.length && cigarretesMessage.length && massIndexMessage.length) {
+        window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
-        window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
-        window.localStorage.setItem("massIndexMessage", physicalActivityMessage);
+        window.localStorage.setItem("massIndexMessage", massIndexMessage);
     }
     //send to backend here
 };
