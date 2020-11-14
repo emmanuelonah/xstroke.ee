@@ -23,11 +23,10 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     let massIndexMessage = `Decrease your body mass index to reach the target of ${massIndexResult}`;
     let bloodPressureMessage = `Decrease your blood pressure using agents prescribed by a doctor`;
 
-    console.log("******Diagnosis Result Below*******");
-    console.log("Cigarrets", cigarettesDiagnose);
+    console.log("#Diagnosis Results#");
+    console.log("Cigarretes", cigarettesDiagnose);
     console.log("Physical activities", physicalActivityDiagnose);
     console.log("Body mass", bodyMassIndexDiagnose);
-    window.location.assign("/instant-result");
 
     //check the cigarettesDianose and update the cigarreteResult
     switch (true) {
@@ -103,13 +102,22 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
             }
     }
 
+    console.log("cigarretesMessage", cigarretesMessage);
+    console.log("physicalActivityMessage", physicalActivityMessage);
+    console.log("massIndexMessage", massIndexMessage);
+    console.log("bloodPressureMessage", bloodPressureMessage);
+
     if (physicalActivityMessage.length && bloodPressureMessage.length && cigarretesMessage.length && massIndexMessage.length) {
         window.localStorage.setItem("cigarretesMessage", cigarretesMessage);
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
-        window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
+        window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
+        //programmatic redirection to instant-result view
+        window.location.assign("/instant-result");
+    } else {
+        window.alert("Unexpected error encountered");
     }
-    //send to backend here
+    //send  diagonised message/prescription to backend to backend here
 };
 
 //*********************************************
@@ -118,6 +126,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
 const diagnose = () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
+
         const _diagnosisFormValue = {
             systolic: Number(e.target.systolic.value),
             diastolic: Number(e.target.diastolic.value),
