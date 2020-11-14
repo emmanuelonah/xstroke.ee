@@ -1,8 +1,7 @@
 export const bloodPressure = (systolic, diastolic) => {
     const calculation = Number(diastolic) / Number(systolic);
     const bloodPressure = Math.round(calculation);
-
-    console.log("Blood pressure", bloodPressure);
+    // console.log("Blood pressure", bloodPressure);
     return bloodPressure;
 };
 
@@ -14,8 +13,7 @@ export const bodyMassIndex = (height, weigth) => {
     const calculation = Number(weigth) / heightCalculation;
     const bodyMassIndex = Math.round(calculation);
 
-    console.log("Body mass", bodyMassIndex);
-
+    // console.log("Body mass", bodyMassIndex);
     switch (true) {
         case bodyMassIndex >= 35.0:
             return 3;
@@ -42,8 +40,8 @@ export const bodyMassIndex = (height, weigth) => {
 //**************************************************
 export const cigarettesSmokedPerWeek = (cigarettesPiecesSmoked) => {
     const cigSmokedPerWeek = Number(cigarettesPiecesSmoked);
+    // console.log("Cigarretes smoked", cigSmokedPerWeek);
 
-    console.log("Cigarretes smoked", cigSmokedPerWeek);
     switch (true) {
         case cigSmokedPerWeek >= 24:
             return 4;
@@ -69,35 +67,28 @@ export const cigarettesSmokedPerWeek = (cigarettesPiecesSmoked) => {
 //Physical activities analysis
 //**************************************************
 export const physicalActivity = (hours, minutes) => {
-    const hoursPerWeek = hours * 3600 + minutes * 60; //converted to seconds
-    console.log("Hours Per Week", hoursPerWeek);
-
-    if (hoursPerWeek === 0 && hoursPerWeek <= 3600) console.log("Heyy");
+    const hoursPerDay = hours * 3600 + minutes * 60; //converted to seconds
+    console.log("Hours Per Day", hoursPerDay);
 
     switch (true) {
         //1hrs = 3600secs
-        case hoursPerWeek === 0 && hoursPerWeek <= 3600:
-            console.log("H/W", 4);
+        case hoursPerDay === 0 && hoursPerDay <= 3600:
             return 4;
 
         //1hrs = 3600secs & 3.999hrs = 14396.4secs
-        case hoursPerWeek === 3600 && hoursPerWeek <= 14396.4:
-            console.log("H/W", 3);
+        case hoursPerDay === 3600 && hoursPerDay <= 14396.4:
             return 3;
 
         //1.4hrs = 5040secs & 2.4hr =8640
-        case hoursPerWeek === 5040 && hoursPerWeek <= 8640:
-            console.log("H/W", 2);
+        case hoursPerDay === 5040 && hoursPerDay <= 8640:
             return 2;
 
         //2.5hrs = 9000 & 3.4hrs = 12240
-        case hoursPerWeek === 9000 && hoursPerWeek <= 12240:
-            console.log("H/W", 1);
+        case hoursPerDay === 9000 && hoursPerDay <= 12240:
             return 1;
 
         //3.5hrs = 12600secs
-        case hoursPerWeek >= 12600:
-            console.log("H/W", 0);
+        case hoursPerDay >= 12600:
             return 0;
 
         default:
