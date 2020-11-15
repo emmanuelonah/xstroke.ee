@@ -5,6 +5,7 @@ const isLoading = document.querySelector("#isLoading");
 const renderHistory = (snapshot) => {
     snapshot.map((change) => {
         const data = change.doc.data();
+        if (data.length) isLoading.textContent = "Loading...";
         const historyTemplate = `
                     <div>
                           <time class="history--date">${data.date}</time>
