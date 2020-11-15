@@ -64,9 +64,6 @@ export const bodyMassIndex = (height, weigth) => {
     const heightCalculation = Number(height / 100) ** 2;
     const calculation = Number(weigth) / heightCalculation;
     const bodyMassIndex = Math.round(calculation);
-
-    console.log(bodyMassIndex);
-
     switch (true) {
         case bodyMassIndex >= 35.0:
             return 3;
