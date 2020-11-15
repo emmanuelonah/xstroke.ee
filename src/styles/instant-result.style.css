@@ -82,6 +82,11 @@
 .redirection--button--wrapper button i {
     padding-right: 5px;
 }
+.instant--result--bg {
+    object-fit: contain;
+    width: 60%;
+    margin: 20px auto;
+}
 
 @media screen and (min-width: 620px) {
     .instant--result--bg {
