@@ -137,6 +137,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         })
         .catch((error) => {
             window.alert("Error trying to save test history");
+            console.log(error);
         });
 };
 

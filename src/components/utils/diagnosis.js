@@ -5,7 +5,7 @@ export const cigarettesSmokedPerWeek = (cigarettesPiecesSmoked) => {
     const cigSmokedPerWeek = Number(cigarettesPiecesSmoked);
 
     switch (true) {
-        case cigSmokedPerWeek >= 24:
+        case cigSmokedPerWeek > 24:
             return 4;
 
         case cigSmokedPerWeek === 13 && cigSmokedPerWeek <= 24:
@@ -33,11 +33,11 @@ export const physicalActivity = (hours, minutes) => {
 
     switch (true) {
         //1hrs = 3600secs
-        case hoursPerDay === 0 && hoursPerDay <= 3600:
+        case hoursPerDay === 0 && hoursPerDay > 3600:
             return 4;
 
         //1hr = 3600secs & 1.4hrs = 5040secs
-        case hoursPerDay === 3600 && hoursPerDay <= 5040:
+        case hoursPerDay === 3600 && hoursPerDay < 5040:
             return 3;
 
         //1.5hrs = 5400secs & 2.4hr =8640
@@ -49,7 +49,7 @@ export const physicalActivity = (hours, minutes) => {
             return 1;
 
         //3.5hrs = 12600secs
-        case hoursPerDay >= 12600:
+        case hoursPerDay > 12600:
             return 0;
 
         default:
