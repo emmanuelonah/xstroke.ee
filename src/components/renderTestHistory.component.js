@@ -5,7 +5,7 @@ const isLoading = document.querySelector("#isLoading");
 const renderHistory = (snapshot) => {
     snapshot.map((change) => {
         const data = change.doc.data();
-        if (!Object.values(data).length) isLoading.textContent = "No test done yet";
+
         const historyTemplate = `
                     <div>
                           <time class="history--date">${data.date}</time>
@@ -35,6 +35,9 @@ const getData = () => {
     db.collection(testHistoryCollection).onSnapshot((snapshot) => {
         const snap = snapshot.docChanges();
         renderHistory(snap);
+
+        //update isLoading bar
+        if (!snap.length) isLoading.textContent = "No test done yet";
     });
 };
 getData();
