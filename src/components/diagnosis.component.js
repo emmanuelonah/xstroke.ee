@@ -16,6 +16,9 @@ const RegExp = {
 };
 
 const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose) => {
+    const sumDiagnosis = cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose + bloodPressureDiagnose;
+    const strokeLevel = sumDiagnosis / 4;
+
     let cigarreteResult = "";
     let physicalActivityResult = "";
     let massIndexResult = "";
@@ -124,7 +127,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         massIndexMsg: massIndexMessage,
         bloodPressureMsg: bloodPressureMessage,
         date: new Date().toLocaleString(),
-        strokeLevel: window.localStorage.getItem("strokeLevel"),
+        strokeLevel,
     };
 
     db.collection(testHistoryCollection)
@@ -132,7 +135,6 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         .then(() => console.log("Successfully Posted"))
         .catch((error) => {
             window.alert("Error trying to save test history");
-            console.error(error);
         });
 };
 
