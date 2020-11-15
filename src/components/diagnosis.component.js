@@ -116,7 +116,6 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
-        window.location.assign("/instant-result");
     } else {
         window.alert("Unexpected error occured");
     }
@@ -132,7 +131,10 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
 
     db.collection(testHistoryCollection)
         .add(diagnoseHistory)
-        .then(() => console.log("Successfully Posted"))
+        .then(() => {
+            console.log("Successfully Posted");
+            window.location.assign("/instant-result");
+        })
         .catch((error) => {
             window.alert("Error trying to save test history");
         });
