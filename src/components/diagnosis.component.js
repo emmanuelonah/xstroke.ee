@@ -113,7 +113,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         window.localStorage.setItem("physicalActivityMessage", physicalActivityMessage);
         window.localStorage.setItem("massIndexMessage", massIndexMessage);
         window.localStorage.setItem("bloodPressureMessage", bloodPressureMessage);
-        //window.location.assign("/instant-result");
+        window.location.assign("/instant-result");
     } else {
         window.alert("Unexpected error occured");
     }
