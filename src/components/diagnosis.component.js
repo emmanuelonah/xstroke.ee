@@ -164,11 +164,11 @@ const diagnose = () => {
         diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
         e.target.reset();
 
-        console.log("BP", bloodPressureDiagnose);
-        console.log("Cg", cigarettesDiagnose);
-        console.log("PA", physicalActivityDiagnose);
-        console.log("BM", bloodPressureDiagnose);
-        console.log("Stroke level is", strokeLevel);
+        // console.log("BP", bloodPressureDiagnose);
+        // console.log("Cg", cigarettesDiagnose);
+        // console.log("PA", physicalActivityDiagnose);
+        // console.log("BM", bloodPressureDiagnose);
+        // console.log("Stroke level is", strokeLevel);
     });
 };
 diagnose();
