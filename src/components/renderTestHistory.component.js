@@ -25,7 +25,7 @@ const renderHistory = (snapshot) => {
                     </div>
 `;
 
-        isLoading.textContent = "";
+        isLoading.style.display = "none";
         testHistoryContainer.innerHTML += historyTemplate;
     });
 };
