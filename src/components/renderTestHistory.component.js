@@ -1,5 +1,6 @@
 import { testHistoryCollection } from "../data/collections.js";
 const testHistoryContainer = document.querySelector(".test-history-container");
+const isLoading = document.querySelector("#isLoading");
 
 const renderHistory = (snapshot) => {
     snapshot.map((change) => {
@@ -24,6 +25,7 @@ const renderHistory = (snapshot) => {
                     </div>
 `;
 
+        isLoading.textContent = "";
         testHistoryContainer.innerHTML += historyTemplate;
     });
 };
