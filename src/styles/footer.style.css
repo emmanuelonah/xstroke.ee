@@ -19,7 +19,7 @@ footer {
 
 .row-wrapper {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 footer ul li a {
@@ -51,7 +51,6 @@ footer select {
 .copyright {
     font-size: 0.8rem;
     display: flex;
-    flex-direction: row !important;
 }
 
 .copyright span[role="img"] {
@@ -100,5 +99,11 @@ footer select {
     footer {
         margin-top: 20px !important;
         padding-top: 30px !important;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .footer-logo-wrapper {
+        display: none;
     }
 }
