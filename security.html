@@ -29,21 +29,7 @@
         <div>
             <div class="container security--page--container" role="main">
                 <!-- Header -->
-                <header>
-                    <nav>
-                        <ul>
-                            <li class="logo"><a href="/index">🩺XSTROKE EE</a></li>
-                            <li>
-                                <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
-                            </li>
-                        </ul>
-                        <!-- Menu Bar -->
-                        <div class="menu--bar">
-                            <span class="top"></span>
-                            <span class="bottom"></span>
-                        </div>
-                    </nav>
-                </header>
+                <header></header>
 
                 <!-- Menu items -->
                 <ul class="menu--items">
@@ -82,7 +68,9 @@
             <h1>Something's missing</h1>
             <p>
                 For full functionality of this site its necessary you enable javascript.
-                <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank">Instructions on how to do that</a>
+                <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank"
+                    >Instructions on how to do that</a
+                >
             </p>
         </noscript>
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
@@ -103,8 +91,8 @@
             const db = firebase.firestore();
             Object.freeze(firebaseConfig);
         </script>
+        <script src="./src/structures/header/header.component.js"></script>
         <script src="./src/components/authentication/user-verification.js" type="module"></script>
-        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/structures/footer/footer.component.js"></script>
         <script src="./src/components/security.component.js" type="module"></script>
     </body>

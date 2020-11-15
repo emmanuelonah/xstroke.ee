@@ -29,21 +29,7 @@
     <body>
         <div class="container user-profile-page-container" role="main">
             <!-- Header -->
-            <header>
-                <nav>
-                    <ul>
-                        <li class="logo"><a href="./index">XSTROKE EE</a></li>
-                        <li>
-                            <a href="./user-profile"><i class="fa fa-user-alt"></i>User Profile</a>
-                        </li>
-                    </ul>
-                    <!-- Menu Bar -->
-                    <div class="menu--bar">
-                        <span class="top"></span>
-                        <span class="bottom"></span>
-                    </div>
-                </nav>
-            </header>
+            <header></header>
 
             <!-- Menu items -->
             <ul class="menu--items">
@@ -103,9 +89,9 @@
             const db = firebase.firestore();
             Object.freeze(firebaseConfig);
         </script>
+        <script src="./src/structures/header/header.component.js"></script>
         <script src="./src/components/authentication/user-verification.js" type="module"></script>
         <script src="./src/components/authentication/signout.component.js" type="module"></script>
-        <script src="./src/components/armburger-menu.component.js" type="module"></script>
         <script src="./src/components/footer.component.js" type="module"></script>
         <script src="./src/components/renderTestHistory.component.js" type="module"></script>
         <script src="./src/components/user-profile.component.js" type="module"></script>

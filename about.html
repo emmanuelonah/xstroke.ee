@@ -29,22 +29,7 @@
     <body>
         <div>
             <div class="container about-page-container" role="main">
-                <!-- Header -->
-                <header>
-                    <nav>
-                        <ul>
-                            <li class="logo"><a href="/index">🩺XSTROKE EE</a></li>
-                            <li>
-                                <a href="./user-profile.html"><i class="fa fa-user-alt"></i>User Profile</a>
-                            </li>
-                        </ul>
-                        <!-- Menu Bar -->
-                        <div class="menu--bar">
-                            <span class="top"></span>
-                            <span class="bottom"></span>
-                        </div>
-                    </nav>
-                </header>
+                <header></header>
 
                 <!-- Menu items -->
                 <ul class="menu--items">
@@ -54,8 +39,6 @@
                     <li class="logout"><a href="#">Logout</a></li>
                 </ul>
 
-                <!-- Content Goes Here -->
-                <!-- Testing Steps -->
                 <div class="testing-steps-wrapper">
                     <!-- Steps Scroller -->
                     <ul class="steps-scroller-wrapper">
@@ -115,7 +98,7 @@
             const db = firebase.firestore();
             Object.freeze(firebaseConfig);
         </script>
-        <script src="./src/components/armburger-menu.component.js" type="module"></script>
+        <script src="./src/structures/header/header.component.js"></script>
         <script src="./src/structures/footer/footer.component.js"></script>
     </body>
 </html>
