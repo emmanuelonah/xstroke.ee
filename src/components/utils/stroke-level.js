@@ -2,12 +2,11 @@ export const _strokeLevel = (strokeLevel) => {
     let _computedstrokeLevel;
     let strokeDivision = Number(strokeLevel) / 4;
     let strokeLevelRoundUp = Math.round(strokeDivision);
+    _computedstrokeLevel = strokeLevelRoundUp;
 
-    if (strokeLevelRoundUp >= 4) {
+    if (_computedstrokeLevel >= 4) {
         _computedstrokeLevel = 4;
-        window.localStorage.setItem("strokeLevel", strokeLevelRoundUp);
-    } else {
-        _computedstrokeLevel = strokeLevelRoundUp;
+        window.localStorage.setItem("strokeLevel", _computedstrokeLevel);
     }
     return _computedstrokeLevel;
 };

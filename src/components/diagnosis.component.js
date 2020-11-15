@@ -129,6 +129,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         strokeLevel,
     };
 
+    /*
     db.collection(testHistoryCollection)
         .add(diagnoseHistory)
         .then(() => {
@@ -139,6 +140,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
             window.alert("Error trying to save test history");
             console.log(error);
         });
+        */
 };
 
 //*********************************************
@@ -162,13 +164,15 @@ const diagnose = () => {
         const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
         const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
         diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
+
+        const strokeLevelSumation = bloodPressureDiagnose + cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose;
+        _strokeLevel(strokeLevelSumation);
         e.target.reset();
 
-        // console.log("BP", bloodPressureDiagnose);
-        // console.log("Cg", cigarettesDiagnose);
-        // console.log("PA", physicalActivityDiagnose);
-        // console.log("BM", bloodPressureDiagnose);
-        // console.log("Stroke level is", strokeLevel);
+        console.log("BP", bloodPressureDiagnose);
+        console.log("Cg", cigarettesDiagnose);
+        console.log("PA", physicalActivityDiagnose);
+        console.log("BM", bloodPressureDiagnose);
     });
 };
 diagnose();
