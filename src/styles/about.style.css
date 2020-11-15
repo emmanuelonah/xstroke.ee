@@ -4,6 +4,10 @@
     --tertiary: #011220;
 }
 
+.about-stroke-heading {
+    margin-top: 40px;
+}
+
 .about-page-container.logo {
     padding-left: 0;
 }
