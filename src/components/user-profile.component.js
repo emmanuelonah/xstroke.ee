@@ -8,11 +8,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
     const _userLoggedInMail = window.localStorage.getItem("userLoggedInEmail");
     const _userId = window.localStorage.getItem("userDocId");
 
-    const diagnoseNow = document.querySelector(".diagnose-now");
-
-    console.log(diagnoseNow);
-    diagnoseNow.addEventListener("click", () => window.location.assign("/diagnosis.html"));
-
     //******************************
     //update user details fn
     //*******************************
