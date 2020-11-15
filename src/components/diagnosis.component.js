@@ -19,6 +19,8 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     const sumDiagnosis = cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose + bloodPressureDiagnose;
     const strokeLevel = _strokeLevel(sumDiagnosis);
 
+    _strokeLevel(sumDiagnosis);
+
     let cigarreteResult = "";
     let physicalActivityResult = "";
     let massIndexResult = "";
@@ -164,9 +166,6 @@ const diagnose = () => {
         const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
         const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
         diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
-
-        const strokeLevelSumation = bloodPressureDiagnose + cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose;
-        _strokeLevel(strokeLevelSumation);
         e.target.reset();
 
         console.log("BP", bloodPressureDiagnose);
