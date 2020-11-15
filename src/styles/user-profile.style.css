@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 :root {
     --primary: #fff;
     --secondary: #000;
@@ -28,7 +30,7 @@
     box-sizing: border-box;
     text-align: center;
     height: 100vh;
-    top: 40px;
+    top: 30px;
     position: fixed;
 }
 
@@ -137,7 +139,7 @@
 }
 
 .out--of--5 {
-    background-color: red;
+    background-color: #ff0000;
     padding: 10px;
 }
 
@@ -156,10 +158,36 @@
     list-style: georgian;
 }
 
-footer {
-    padding-left: 20px;
+.prevention-advice {
+    margin-top: 50px;
+    display: none;
 }
 
+.prevention-advice div {
+    width: 30%;
+    height: 150px;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.prevention-advice div img {
+    object-fit: contain;
+    width: 50px;
+    margin: 0 auto;
+}
+
+.health-is-life {
+    background-color: #008000;
+}
+
+.prevention-cure {
+    background-color: #ffdb99;
+}
+
+.our-system {
+    background-color: #0180ff;
+}
 @media screen and (min-width: 620px) {
     .sidebar--wrapper {
         top: 44px;
@@ -174,5 +202,9 @@ footer {
     .sidebar--wrapper {
         width: 25%;
         top: 50px;
+    }
+
+    .prevention-advice {
+        display: flex;
     }
 }
