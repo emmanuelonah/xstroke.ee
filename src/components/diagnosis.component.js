@@ -19,13 +19,13 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     const sumDiagnosis = cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose + bloodPressureDiagnose;
     const strokeLevel = _strokeLevel(sumDiagnosis);
 
+    //execute the _strokeLevel util
     _strokeLevel(sumDiagnosis);
 
     let cigarreteResult = "";
     let physicalActivityResult = "";
     let massIndexResult = "";
     let bloodPressureResult = "";
-
     let cigarretesReMessage = "";
     let physicalActivityReMessage = "";
     let massIndexReMessage = "";
@@ -121,6 +121,7 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
     } else {
         window.alert("Unexpected error occured");
     }
+
     //send history to backend
     const diagnoseHistory = {
         cigarreteMsg: cigarretesMessage,
@@ -131,18 +132,16 @@ const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIn
         strokeLevel,
     };
 
-    /*
     db.collection(testHistoryCollection)
         .add(diagnoseHistory)
         .then(() => {
-            console.log("Successfully Posted");
+            console.log("✅successful");
             window.location.assign("/instant-result");
         })
         .catch((error) => {
             window.alert("Error trying to save test history");
-            console.log(error);
+            console.log("❌failed", error);
         });
-        */
 };
 
 //*********************************************
@@ -165,13 +164,8 @@ const diagnose = () => {
         const cigarettesDiagnose = cigarettesSmokedPerWeek(_diagnosisFormValue.cigarettesSmoked);
         const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
         const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
-        diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
+        diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bloodPressureDiagnose, bodyMassIndexDiagnose);
         e.target.reset();
-
-        console.log("BP", bloodPressureDiagnose);
-        console.log("Cg", cigarettesDiagnose);
-        console.log("PA", physicalActivityDiagnose);
-        console.log("BM", bloodPressureDiagnose);
     });
 };
 diagnose();
