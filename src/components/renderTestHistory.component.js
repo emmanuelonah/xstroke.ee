@@ -21,7 +21,7 @@ const renderHistory = (snapshot) => {
                              <li>Your blood pressure: ${data.bloodPressureMsg}</li>
                              <li>Your cigarrete status: ${data.cigarreteMsg}</li>
                              <li>Your mass index: ${data.massIndexMsg}</li>
-                             <li>Created on: ${data.date}</li>
+                             <li class="created-on">Created on: ${data.date}</li>
                           </ul>
                     </div>
 `;

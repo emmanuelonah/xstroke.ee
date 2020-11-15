@@ -120,6 +120,10 @@
     color: #c9c9c9;
 }
 
+.created-on {
+    margin-bottom: 20px;
+}
+
 .stoke--level {
     border: solid 2px #ffa500;
     text-align: center;
