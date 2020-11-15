@@ -17,7 +17,7 @@ const RegExp = {
 
 const diagnoseResult = (cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose) => {
     const sumDiagnosis = cigarettesDiagnose + physicalActivityDiagnose + bodyMassIndexDiagnose + bloodPressureDiagnose;
-    const strokeLevel = sumDiagnosis / 4;
+    const strokeLevel = _strokeLevel(sumDiagnosis);
 
     let cigarreteResult = "";
     let physicalActivityResult = "";
@@ -160,13 +160,7 @@ const diagnose = () => {
         const cigarettesDiagnose = cigarettesSmokedPerWeek(_diagnosisFormValue.cigarettesSmoked);
         const physicalActivityDiagnose = physicalActivity(_diagnosisFormValue.hours, _diagnosisFormValue.minutes);
         const bodyMassIndexDiagnose = bodyMassIndex(_diagnosisFormValue.height, _diagnosisFormValue.weight);
-
         diagnoseResult(cigarettesDiagnose, physicalActivityDiagnose, bodyMassIndexDiagnose, bloodPressureDiagnose);
-
-        //Stroke level calculation and invocation of the util that adds it to storage for usage in instant-result view
-        const strokeLevelAddition = bloodPressureDiagnose + cigarettesDiagnose + physicalActivityDiagnose + bloodPressureDiagnose;
-        const strokeLevel = strokeLevelAddition / 4;
-        _strokeLevel(strokeLevel);
         e.target.reset();
 
         console.log("BP", bloodPressureDiagnose);

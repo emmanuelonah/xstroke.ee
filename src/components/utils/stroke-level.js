@@ -3,4 +3,6 @@ export const _strokeLevel = (strokeLevel) => {
     if (strokeLevelRoundUp >= 4) strokeLevelRoundUp = 4;
 
     window.localStorage.setItem("strokeLevel", strokeLevelRoundUp);
+
+    return strokeLevel;
 };
