@@ -18,7 +18,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
                 snapshot.docChanges().forEach((change) => {
                     const data = change.doc.data();
 
-                    console.log(data);
                     if (change.type === "added" && data.email.toString() === _userLoggedInMail.toString()) {
                         if (data.user_avatar) {
                             _userProfileContainer.setAttribute("data-id", change.doc.id);
