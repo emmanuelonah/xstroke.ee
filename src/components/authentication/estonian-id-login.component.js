@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
 
                 if (change.type === "added" && data.estonian_id === estonian_id) {
                     window.localStorage.setItem("userLoggedIn", true);
+                    window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
                 } else {
                     window.alert("🚨 this user is not recognized or registered");
