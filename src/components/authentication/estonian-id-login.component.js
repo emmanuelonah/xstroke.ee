@@ -9,7 +9,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
 
                 if (change.type === "added" && data.estonian_id === estonian_id) {
                     window.localStorage.setItem("userLoggedIn", true);
-                    window.localStorage.setItem("userLoggedInEstonianId");
                     window.location.replace("/user-profile");
                 } else {
                     window.alert("🚨 this user is not recognized or registered");
@@ -22,11 +21,11 @@ window.addEventListener("DOMContentLoaded", (_) => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const estonian_id = form.estonian_id.value;
-        ///perform api login operation here and then if successfully, take user to their respective profile
+        //perform api login operation here and then if successfully, take user to their respective profile
         getUsers(estonian_id);
     });
 
-    ///redirect user to email login form
+    //redirect user to email login form
     document.querySelector(".email__login").addEventListener("click", (e) => {
         e.stopPropagation();
         e.preventDefault();
