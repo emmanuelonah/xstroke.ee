@@ -9,10 +9,9 @@ window.addEventListener("DOMContentLoaded", (_) => {
 
                 if (change.type === "added" && data.estonian_id === estonian_id) {
                     window.localStorage.setItem("userLoggedIn", true);
+                    window.localStorage.setItem("userDocId", change.doc.id);
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
-                } else {
-                    window.alert("🚨 this user is not recognized or registered");
                 }
             });
         });
@@ -23,7 +22,11 @@ window.addEventListener("DOMContentLoaded", (_) => {
         e.preventDefault();
         const estonian_id = form.estonian_id.value;
         //perform api login operation here and then if successfully, take user to their respective profile
-        getUsers(estonian_id);
+        try {
+            getUsers(estonian_id);
+        } catch (error) {
+            window.alert("🚨 this user is not recognized or registered", error);
+        }
     });
 
     //redirect user to email login form

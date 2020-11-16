@@ -1,10 +1,6 @@
 window.addEventListener("DOMContentLoaded", (_) => {
     const form = document.querySelector(".email--login--form");
 
-    //*******************************
-    //check log in status
-    //*******************************
-    ///local state
     const state = {
         isUserLoggedIn: false,
     };
@@ -16,7 +12,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
                 window.localStorage.setItem("uid", user.uid);
                 window.localStorage.setItem("userLoggedInEmail", user.email);
 
-                ///send user to their profile ones verified
+                //send user to their profile ones verified
                 window.location.replace("/user-profile");
             } else {
                 state.isUserLoggedIn = false;
@@ -25,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
         });
     };
 
-    ///api login operation
+    //api login operation
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const loginData = {
@@ -51,7 +47,7 @@ window.addEventListener("DOMContentLoaded", (_) => {
                 window.alert(err);
             });
     });
-    ///redirect user to email login form
+    //redirect user to email login form
     document.querySelector(".estonian__id").addEventListener("click", (e) => {
         e.stopPropagation();
         e.preventDefault();
