@@ -32,7 +32,6 @@ window.addEventListener("DOMContentLoaded", () => {
     //redirect user to email login form
     document.querySelector(".email__login").addEventListener("click", (e) => {
         e.stopPropagation();
-        e.preventDefault();
         window.location.assign("/login");
     });
 });
