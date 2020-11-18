@@ -13,20 +13,19 @@ window.addEventListener("DOMContentLoaded", () => {
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
                 }
+
+                else{
+                    window.alert("🚨 this user is not recognized or registered", error);
+                }
             });
         });
     };
-    getUsers();
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const estonian_id = form.estonian_id.value;
         //perform api login operation here and then if successfully, take user to their respective profile
-        try {
             getUsers(estonian_id);
-        } catch (error) {
-            window.alert("🚨 this user is not recognized or registered", error);
-        }
     });
 
     //redirect user to email login form
