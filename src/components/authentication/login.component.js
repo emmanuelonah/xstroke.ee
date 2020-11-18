@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (_) => {
+window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".email--login--form");
 
     const state = {
@@ -50,7 +50,6 @@ window.addEventListener("DOMContentLoaded", (_) => {
     //redirect user to email login form
     document.querySelector(".estonian__id").addEventListener("click", (e) => {
         e.stopPropagation();
-        e.preventDefault();
         window.location.assign("/estonian-id-login");
     });
 });

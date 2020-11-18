@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (_) => {
+window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".estonian--id--login--form");
 
     //function to getUsers and check if Estonian id is a registered user
