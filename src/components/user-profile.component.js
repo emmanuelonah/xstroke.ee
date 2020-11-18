@@ -1,3 +1,5 @@
+import { db } from "../config/firebase.js";
+
 window.addEventListener("DOMContentLoaded", (_) => {
     const _userMail = document.querySelector(".user--mail");
     const _userName = document.querySelector(".user--name");
