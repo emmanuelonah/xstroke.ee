@@ -32,7 +32,9 @@ textarea,
 input[type="text"],
 input[type="email"],
 input[type="password"],
-button {
+input[type="submit"],
+input[type="reset"],
+input[type="button"] button {
     -webkit-appearance: none;
     border-radius: 0;
     -webkit-border-radius: 0;
