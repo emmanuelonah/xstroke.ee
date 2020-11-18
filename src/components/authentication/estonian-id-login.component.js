@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".estonian--id--login--form");
 
-    //function to getUsers and check if Estonian id is a registered user
+    //function to getUser and check if Estonian id is a registered user, if so then take user to their profile
     const getUsers = (estonian_id) => {
         db.collection("users").onSnapshot((snapshot) => {
             snapshot.docChanges().filter((change) => {
@@ -12,9 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     window.localStorage.setItem("userDocId", change.doc.id);
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
-                }
-
-                else{
+                } else {
                     window.alert("🚨 this user is not recognized or registered", error);
                 }
             });
@@ -24,11 +22,10 @@ window.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const estonian_id = form.estonian_id.value;
-        //perform api login operation here and then if successfully, take user to their respective profile
-            getUsers(estonian_id);
+        getUsers(estonian_id);
+        e.target.reset();
     });
 
-    //redirect user to email login form
     document.querySelector(".email__login").addEventListener("click", (e) => {
         e.stopPropagation();
         window.location.assign("/login");
