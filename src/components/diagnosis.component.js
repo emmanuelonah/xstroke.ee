@@ -1,3 +1,5 @@
+import { db } from "../config/firebase.js";
+
 import { bloodPressure, bodyMassIndex, cigarettesSmokedPerWeek, physicalActivity } from "./utils/diagnosis.js";
 import { _strokeLevel } from "./utils/stroke-level.js";
 import { testHistoryCollection } from "../data/collections.js";

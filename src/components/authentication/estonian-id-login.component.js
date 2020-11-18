@@ -1,3 +1,5 @@
+import { db } from "../../config/firebase.js";
+
 window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".estonian--id--login--form");
 
@@ -12,8 +14,6 @@ window.addEventListener("DOMContentLoaded", () => {
                     window.localStorage.setItem("userDocId", change.doc.id);
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
-                } else if (data.estonian_id !== estonian_id) {
-                    window.alert("🚨 this user is not recognized or registered");
                 }
             });
         });
@@ -22,7 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const estonian_id = form.estonian_id.value;
-        getUsers(estonian_id);
+        try {
+            getUsers(estonian_id);
+        } catch (error) {
+            window.alert("🚨 this user is not recognized or registered", error);
+        }
         e.target.reset();
     });
 

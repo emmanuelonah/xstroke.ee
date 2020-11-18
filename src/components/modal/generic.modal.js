@@ -1,16 +1,7 @@
 //******************************************
 // Generic modal function
 //******************************************/
-export const genericModal = (
-    modalClass,
-    modalType,
-    modalImg,
-    modalButtonClass,
-    successMessage,
-    buttonText,
-    buttonNavigationLink,
-    htmlBodyToInsertTheModalIn
-) => {
+export const genericModal = (modalClass, modalType, modalImg, modalButtonClass, successMessage, buttonText, buttonNavigationLink, htmlBodyToInsertTheModalIn) => {
     ///div modal container
     const modalContainer = document.createElement("div");
     modalContainer.setAttribute("class", modalClass);
@@ -67,8 +58,5 @@ export const genericModal = (
     });
 
     ///Insert the modal to the htmlBodyElement
-    htmlBodyToInsertTheModalIn.insertBefore(
-        modalContainer,
-        htmlBodyToInsertTheModalIn.childNodes[0]
-    );
+    htmlBodyToInsertTheModalIn.insertBefore(modalContainer, htmlBodyToInsertTheModalIn.childNodes[0]);
 };

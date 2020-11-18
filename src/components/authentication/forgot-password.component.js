@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (_) => {
+window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".forgot--password--form");
 
     ///redirect user to login if email button is clicked

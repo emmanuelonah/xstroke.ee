@@ -1,123 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="application-name" content="XSTROKE EE" />
-        <meta name="author" name="Emmanuel Onah AfricLite" />
-        <meta name="keywords" name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
-        <meta name="theme-color" content="#ffffff" />
-        <title>Diagnosis| XSTROKE EE</title>
-        <!-- Browser Fav icon -->
-        <link rel="icon" href="./src/assets/images/xstroke-logo.png" />
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
-        <!-- Manifest link -->
-        <link rel="manifest" href="./manifest.webmanifest" crossorigin="anonymous" />
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
-        <!-- Styles -->
-        <link rel="stylesheet" href="./src/styles/general.style.css" />
-        <link rel="stylesheet" href="./src/styles/header.style.css" />
-        <link rel="stylesheet" href="./src/styles/footer.style.css" />
-        <link rel="stylesheet" href="./src/styles/menu-items.style.css" />
-        <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
-        <link rel="stylesheet" href="./src/styles/diagnosis.style.css" />
-    </head>
-    <body>
-        <div>
-            <div class="container diagonosis--page--container" role="main">
-                <header></header>
 
-                <!-- Menu items -->
-                <ul role="menu" class="menu--items">
-                    <li role="menu-item"><a href="./about">About</a></li>
-                    <li role="menu-item"><a href="./diagnosis">Diagnosis</a></li>
-                    <li role="menu-item"><a href="./user-profile">Health history</a></li>
-                    <li role="menu-item" class="logout"><a href="#">Logout</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="XSTROKE EE" />
+    <meta name="author" name="Emmanuel Onah AfricLite" />
+    <meta name="keywords"
+        name="XSTROKE EE,Expert System,Stroke Application,AfricLite Systems,AfricLite,Estonia Stroke Preventor" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Diagnosis| XSTROKE EE</title>
+    <!-- Browser Fav icon -->
+    <link rel="icon" href="./src/assets/images/xstroke-logo.png" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
+    <!-- Manifest link -->
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/054170e3d7.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/general.style.css" />
+    <link rel="stylesheet" href="./src/styles/header.style.css" />
+    <link rel="stylesheet" href="./src/styles/footer.style.css" />
+    <link rel="stylesheet" href="./src/styles/menu-items.style.css" />
+    <link rel="stylesheet" href="./src/styles/error&success.modal.style.css" />
+    <link rel="stylesheet" href="./src/styles/diagnosis.style.css" />
+</head>
 
-                <main>
-                    <!-- Stroke prevention form -->
-                    <form class="stroke--diagnosis--form" id="stroke--test--form">
-                        <h3>Stroke Prevention System <time class="system--date"></time></h3>
-                        <p>Please provide your today's data</p>
-                        <!-- Blood pressure section -->
-                        <div class="blood--pressure--wrapper">
-                            <h4>Blood pressure</h4>
-                            <label
-                                for="systolic"
-                                arial-label="The blood pressure reading is measured in millimeters of mercury (mmHg) and is written as systolic pressure.Its the top value when you measure the blood pressure"
-                                >Systolic</label
-                            >
-                            <span role="input"><input required type="text" name="systolic" id="systolic" placeholder="Systolic" /> mm Hg</span>
+<body>
+    <div>
+        <div class="container diagonosis--page--container" role="main">
+            <header></header>
 
-                            <label for="diastolic" aria-label="Its the blood pressure between heartbeats and its the bottom value when blood pressure is measured">Diastolic</label>
-                            <span role="input"><input required type="text" name="diastolic" id="diastolic" placeholder="Diastolic" /> mm Hg</span>
-                        </div>
-                        <!-- Body mass index -->
-                        <div class="body--mass--index--wrapper">
-                            <h4>Body mass index</h4>
-                            <label for="height">Height</label>
-                            <span role="input"><input required type="text" name="height" id="height" placeholder="Height" /> cm</span>
-                            <label for="weight">Weight</label>
-                            <span role="input"><input required type="text" name="weight" id="weight" placeholder="Weight" /> kg</span>
-                        </div>
-                        <!-- Cigarettes smoked -->
-                        <div class="cigarretes--smoked--wrapper">
-                            <h4>Cigarettes smoked</h4>
-                            <span role="input"><input required type="number" id="cigarettesSmoked" name="cigarettesSmoked" value="0" aria-label="Cigarettes smoked" /> Pcs</span>
-                        </div>
-                        <!-- Physical activity -->
-                        <div class="physical--activity--wrapper">
-                            <h4>Physical activity/week</h4>
-                            <span role="input"><input required type="text" name="hours" id="hours" value="0" aria-label="hours" /> h</span>
-                            <span role="input"><input required type="text" name="minutes" id="minutes" value="30" aria-label="hours" /> min</span>
-                        </div>
-                        <!-- Buttons -->
-                        <div class="form--buttons--wrapper">
-                            <input type="reset" value="Clear" id="clear-button" aria-label="Clear form button" />
-                            <input type="submit" value="Ok" id="okay-button" name="okay-button" aria-label="Submit report button" />
-                        </div>
-                    </form>
-                </main>
-            </div>
-            <footer></footer>
+            <!-- Menu items -->
+            <ul role="menu" class="menu--items">
+                <li role="menu-item"><a href="./about">About</a></li>
+                <li role="menu-item"><a href="./diagnosis">Diagnosis</a></li>
+                <li role="menu-item"><a href="./user-profile">Health history</a></li>
+                <li role="menu-item" class="logout"><a href="#">Logout</a></li>
+            </ul>
+
+            <main>
+                <!-- Stroke prevention form -->
+                <form class="stroke--diagnosis--form" id="stroke--test--form">
+                    <h3>Stroke Prevention System <time class="system--date"></time></h3>
+                    <p>Please provide your today's data</p>
+                    <!-- Blood pressure section -->
+                    <div class="blood--pressure--wrapper">
+                        <h4>Blood pressure</h4>
+                        <label for="systolic"
+                            arial-label="The blood pressure reading is measured in millimeters of mercury (mmHg) and is written as systolic pressure.Its the top value when you measure the blood pressure">Systolic</label>
+                        <span role="input"><input required type="text" name="systolic" id="systolic"
+                                placeholder="Systolic" /> mm Hg</span>
+
+                        <label for="diastolic"
+                            aria-label="Its the blood pressure between heartbeats and its the bottom value when blood pressure is measured">Diastolic</label>
+                        <span role="input"><input required type="text" name="diastolic" id="diastolic"
+                                placeholder="Diastolic" /> mm Hg</span>
+                    </div>
+                    <!-- Body mass index -->
+                    <div class="body--mass--index--wrapper">
+                        <h4>Body mass index</h4>
+                        <label for="height">Height</label>
+                        <span role="input"><input required type="text" name="height" id="height" placeholder="Height" />
+                            cm</span>
+                        <label for="weight">Weight</label>
+                        <span role="input"><input required type="text" name="weight" id="weight" placeholder="Weight" />
+                            kg</span>
+                    </div>
+                    <!-- Cigarettes smoked -->
+                    <div class="cigarretes--smoked--wrapper">
+                        <h4>Cigarettes smoked</h4>
+                        <span role="input"><input required type="number" id="cigarettesSmoked" name="cigarettesSmoked"
+                                value="0" aria-label="Cigarettes smoked" /> Pcs</span>
+                    </div>
+                    <!-- Physical activity -->
+                    <div class="physical--activity--wrapper">
+                        <h4>Physical activity/week</h4>
+                        <span role="input"><input required type="text" name="hours" id="hours" value="0"
+                                aria-label="hours" /> h</span>
+                        <span role="input"><input required type="text" name="minutes" id="minutes" value="30"
+                                aria-label="hours" /> min</span>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="form--buttons--wrapper">
+                        <input type="reset" value="Clear" id="clear-button" aria-label="Clear form button" />
+                        <input type="submit" value="Ok" id="okay-button" name="okay-button"
+                            aria-label="Submit report button" />
+                    </div>
+                </form>
+            </main>
         </div>
-        <noscript class="noscript">
-            <img src="./src/assets/images/error-404.png" alt="" />
-            <h1>Something's missing</h1>
-            <p>
-                For full functionality of this site its necessary you enable javascript.
-                <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE" taregt="_blank"
-                    >Instructions on how to do that</a
-                >
-            </p>
-        </noscript>
+        <footer></footer>
+    </div>
+    <noscript class="noscript">
+        <img src="./src/assets/images/error-404.png" alt="" />
+        <h1>Something's missing</h1>
+        <p>
+            For full functionality of this site its necessary you enable javascript.
+            <a href="https://www.enablejavascript.io/?gclid=CjwKCAjw2Jb7BRBHEiwAXTR4jQ40-Y6EICxN9eW1ZQtde2VXpkAXUvydxTrTr6qRjw22VYudSjubJxoCt4IQAvD_BwE"
+                taregt="_blank">Instructions on how to do that</a>
+        </p>
+    </noscript>
 
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-        <script>
-            var firebaseConfig = {
-                apiKey: "AIzaSyCDHJOXGHOD1Aaf87PRw9G0R58S8RI46C8",
-                authDomain: "xstroke-ee.firebaseapp.com",
-                databaseURL: "https://xstroke-ee.firebaseio.com",
-                projectId: "xstroke-ee",
-                storageBucket: "xstroke-ee.appspot.com",
-                messagingSenderId: "258650641006",
-                appId: "1:258650641006:web:c37b3d78703e79523d8c7f",
-                measurementId: "G-597LPMLF5W",
-            };
-            firebase.initializeApp(firebaseConfig);
-            const db = firebase.firestore();
-            Object.freeze(firebaseConfig);
-        </script>
-        <script src="./src/structures/header/header.component.js"></script>
-        <script src="./src/components/authentication/user-verification.js" type="module"></script>
-        <script src="./src/components/authentication/signout.component.js" type="module"></script>
-        <script src="./src/structures/footer/footer.component.js"></script>
-        <script src="./src/components/diagnosis.component.js" type="module"></script>
-    </body>
+    <!-- firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+
+    <script src="./src/structures/header/header.component.js"></script>
+    <script src="./src/components/authentication/user-verification.js" type="module"></script>
+    <script src="./src/components/authentication/signout.component.js" type="module"></script>
+    <script src="./src/structures/footer/footer.component.js"></script>
+    <script src="./src/components/diagnosis.component.js" type="module"></script>
+</body>
+
 </html>

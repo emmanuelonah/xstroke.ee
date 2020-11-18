@@ -1,3 +1,5 @@
+import { db } from "../../config/firebase.js";
+
 window.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".email--login--form");
 

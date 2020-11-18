@@ -1,4 +1,5 @@
-// import { db, auth } from "../../config/firebase.js";
+import firebase from "../../config/firebase.js";
+import { db } from "../../config/firebase.js";
 import { genericModal } from "../../components/modal/generic.modal.js";
 import { modalDetails } from "../utils/modal.setup.js";
 
@@ -38,7 +39,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 estonian_id: form.estonian_id.value,
             };
 
-            auth()
+            firebase
+                .auth()
                 .createUserWithEmailAndPassword(signupData.email, signupData.password)
                 .then(() => {
                     window.localStorage.setItem("userLoggedInEmail", signupData.email);
