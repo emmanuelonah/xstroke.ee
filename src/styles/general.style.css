@@ -31,7 +31,8 @@ body {
 textarea,
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+button {
     -webkit-appearance: none;
     border-radius: 0;
     -webkit-border-radius: 0;
