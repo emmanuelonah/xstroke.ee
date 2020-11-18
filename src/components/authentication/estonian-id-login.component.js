@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     window.localStorage.setItem("userDocId", change.doc.id);
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
-                } else {
+                } else if (data.estonian_id !== estonian_id) {
                     window.alert("🚨 this user is not recognized or registered");
                 }
             });
