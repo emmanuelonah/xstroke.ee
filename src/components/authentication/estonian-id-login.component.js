@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     window.localStorage.setItem("userLoggedInEmail", data.email);
                     window.location.replace("/user-profile");
                 } else {
-                    window.alert("🚨 this user is not recognized or registered", error);
+                    window.alert("🚨 this user is not recognized or registered");
                 }
             });
         });
